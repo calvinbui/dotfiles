@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+
+import os
+import shutil
+import yaml
+
+CONFIG = "install.conf.yaml"
+stream = open(CONFIG, "r")
+conf = yaml.load(stream)
+
+for section in conf:
+    if 'link' in section:
+        for target, value in section['link'].items():
+            if 'path' in value:
+                dotfile = value['path']
+            else: dotfile = value
+
+            realpath = os.path.expanduser(target)
+            if os.path.islink(realpath):
+                print("removing symlink to", realpath)
+                os.unlink(realpath)
+
+            print("replacing {0} with {1}".format(target, dotfile))
+            shutil.copyfile(dotfile, realpath)
