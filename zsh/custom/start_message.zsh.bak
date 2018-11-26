@@ -1,9 +1,0 @@
-# get list of cows
-#cows=(`cowsay -l |grep -v '/'`)
-#for i in "${!cows[@]}"; do
-#  printf "%s\t%s\n" "$i" "${cows[$i]}"
-#done
-# select a random cow
-#cow=${cows[$RANDOM % ${#cows[@]} ]}
-# short quote + all quotes (offensive included)
-fortune -s -a | cowsay "$@"
