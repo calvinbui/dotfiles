@@ -4,3 +4,5 @@ colorama
 cookiecutter
 PyYAML
 ruamel.yaml
+python-language-server
+cfn-lint

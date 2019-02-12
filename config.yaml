@@ -3,10 +3,15 @@
 - defaults:
     link:
       create: true
+      force: true
 - clean: ['~']
 
 - link:
     # dotfiles
+    ~/.atom/config.cson:
+      path: atom/config.cson
+    ~/.atom/styles.less:
+      path: atom/styles.less
     ~/.gitconfig:
       path: git/gitconfig
     ~/Library/KeyBindings/DefaultKeyBinding.dict:
@@ -20,11 +25,11 @@
     ~/.oh-my-zsh/custom:
       path: zsh/custom
 
-- shell:
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  - cd mac && brew bundle
-  - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  - pip install -r pip/requirements.txt
-  - < npm/packages.txt xargs npm install -g
-
+# - shell:
+#   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+#   - cd mac && brew bundle
+#   - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#   - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#   - pip install -r pip/requirements.txt
+#   - < npm/packages.txt xargs npm install -g
+#

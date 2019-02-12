@@ -4,3 +4,5 @@ eslint
 yaml-js
 eslint-plugin-import
 eslint-config-airbnb-base
+bash-language-server
+dockerfile-language-server-nodejs

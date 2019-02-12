@@ -1,0 +1,56 @@
+"*":
+  "atom-ide-ui":
+    use:
+      "atom-ide-diagnostics-ui": "never"
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  "autocomplete-python":
+    useKite: false
+  core:
+    disabledPackages: [
+      "markdown-preview"
+    ]
+    packagesWithKeymapsDisabled: [
+      "platformio-ide-terminal"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 17
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+  "exception-reporting":
+    userId: "273f03c4-e9b6-4518-87a9-1fcc417436ba"
+  "git-blame":
+    columnWidth: 299
+  "git-diff": {}
+  linter:
+    lintOnChange: false
+  "linter-pylint":
+    rcFile: "/Users/calvin/repos/linter_configs/pylint"
+  "linter-ui-default": {}
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      selection: true
+      selectionDecorationsZIndex: 0
+  "platformio-ide-terminal":
+    style:
+      fontFamily: "Hack Nerd Font"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
