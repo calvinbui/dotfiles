@@ -3,17 +3,14 @@
 - defaults:
     link:
       create: true
-
 - clean: ['~']
 
 - link:
     # dotfiles
-    ~/.bash_rc:
-      path: bash/bash_rc
-    ~/.bash_profile:
-      path: bash/bash_profile
     ~/.gitconfig:
       path: git/gitconfig
+    ~/Library/KeyBindings/DefaultKeyBinding.dict:
+      path: mac/DefaultKeyBinding.dict
     ~/.ssh/config:
       path: ssh/config
     ~/.vimrc:
@@ -25,8 +22,9 @@
 
 - shell:
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  - cd mac && brew bundle
   - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  - pip install pip/requirements.txt
+  - pip install -r pip/requirements.txt
   - < npm/packages.txt xargs npm install -g
-  - cd mac && brew bundle
+

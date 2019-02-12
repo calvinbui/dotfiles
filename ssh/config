@@ -1,11 +1,9 @@
 Host *switchboardcms.com
-	StrictHostKeyChecking no
-	User ubuntu
+  StrictHostKeyChecking no
+  User ubuntu
 Host *coates.io
-	StrictHostKeyChecking no
-	User ubuntu
+  StrictHostKeyChecking no
+  User ubuntu
 Host *coatesdigital.com.au
-	User ubuntu
-
-Host *gitlab.com
-	IdentityFile ~/.ssh/id_rsa_git
+  StrictHostKeyChecking no
+  User ubuntu

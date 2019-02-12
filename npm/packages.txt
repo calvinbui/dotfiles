@@ -2,3 +2,5 @@ jsonlint
 htmlhint
 eslint
 yaml-js
+eslint-plugin-import
+eslint-config-airbnb-base

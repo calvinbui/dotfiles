@@ -63,7 +63,6 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  # official
   git
   aws
   pip
@@ -71,7 +70,6 @@ plugins=(
   docker-compose
   npm
   autojump
-  # custom
   history-search-multi-word
   alias-tips
   you-should-use
