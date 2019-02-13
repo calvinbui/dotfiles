@@ -6,30 +6,43 @@
       force: true
 - clean: ['~']
 
+- shell:
+  # oh-my-zsh
+  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  # homebrew
+  - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  - cd mac && brew bundle
+  # pip
+  - pip install -r pip/requirements.txt
+  # npm
+  - < npm/packages.txt xargs npm install -g
+  # Nano
+  - git-clone-idempotent git@github.com:scopatz/nanorc.git ~/.nano
+  # VIM
+  - git-clone-idempotent https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  - vim +PluginInstall +qall
+# dotfiles
 - link:
-    # dotfiles
-    ~/.atom/config.cson:
-      path: atom/config.cson
-    ~/.atom/styles.less:
-      path: atom/styles.less
-    ~/.gitconfig:
-      path: git/gitconfig
-    ~/Library/KeyBindings/DefaultKeyBinding.dict:
-      path: mac/DefaultKeyBinding.dict
-    ~/.ssh/config:
-      path: ssh/config
-    ~/.vimrc:
-      path: vim/vimrc
-    ~/.zshrc:
-      path: zsh/zshrc
-    ~/.oh-my-zsh/custom:
-      path: zsh/custom
+  ~/.atom/config.cson:
+    path: atom/config.cson
+  ~/.atom/keymap.cson:
+    path: atom/keymap.cson
+  ~/.atom/styles.less:
+    path: atom/styles.less
+  ~/.gitconfig:
+    path: git/gitconfig
+  ~/.gitignore_global:
+    path: git/gitignore_global
+  ~/Library/KeyBindings/DefaultKeyBinding.dict:
+    path: mac/DefaultKeyBinding.dict
+  ~/.nanorc:
+    path: nano/nanorc
+  ~/.ssh/config:
+    path: ssh/config
+  ~/.vimrc:
+    path: vim/vimrc
+  ~/.zshrc:
+    path: zsh/zshrc
+  ~/.oh-my-zsh/custom:
+    path: zsh/custom
 
-# - shell:
-#   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-#   - cd mac && brew bundle
-#   - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-#   - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#   - pip install -r pip/requirements.txt
-#   - < npm/packages.txt xargs npm install -g
-#

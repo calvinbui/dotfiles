@@ -6,3 +6,4 @@ eslint-plugin-import
 eslint-config-airbnb-base
 bash-language-server
 dockerfile-language-server-nodejs
+git-clone-idempotent
