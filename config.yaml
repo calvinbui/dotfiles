@@ -1,5 +1,3 @@
-# indent 4 spaces for a valid dict in list
-
 - defaults:
     link:
       create: true
@@ -21,28 +19,30 @@
   # VIM
   - git-clone-idempotent https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   - vim +PluginInstall +qall
+
 # dotfiles
+# indent 4 spaces for a valid dict in list
 - link:
-  ~/.atom/config.cson:
-    path: atom/config.cson
-  ~/.atom/keymap.cson:
-    path: atom/keymap.cson
-  ~/.atom/styles.less:
-    path: atom/styles.less
-  ~/.gitconfig:
-    path: git/gitconfig
-  ~/.gitignore_global:
-    path: git/gitignore_global
-  ~/Library/KeyBindings/DefaultKeyBinding.dict:
-    path: mac/DefaultKeyBinding.dict
-  ~/.nanorc:
-    path: nano/nanorc
-  ~/.ssh/config:
-    path: ssh/config
-  ~/.vimrc:
-    path: vim/vimrc
-  ~/.zshrc:
-    path: zsh/zshrc
-  ~/.oh-my-zsh/custom:
-    path: zsh/custom
+    ~/.atom/config.cson:
+      path: atom/config.cson
+    ~/.atom/keymap.cson:
+      path: atom/keymap.cson
+    ~/.atom/styles.less:
+      path: atom/styles.less
+    ~/.gitconfig:
+      path: git/gitconfig
+    ~/.gitignore_global:
+      path: git/gitignore_global
+    ~/Library/KeyBindings/DefaultKeyBinding.dict:
+      path: mac/DefaultKeyBinding.dict
+    ~/.nanorc:
+      path: nano/nanorc
+    ~/.ssh/config:
+      path: ssh/config
+    ~/.vimrc:
+      path: vim/vimrc
+    ~/.zshrc:
+      path: zsh/zshrc
+    ~/.oh-my-zsh/custom:
+      path: zsh/custom
 
