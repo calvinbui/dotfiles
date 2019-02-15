@@ -7,3 +7,4 @@ eslint-config-airbnb-base
 bash-language-server
 dockerfile-language-server-nodejs
 git-clone-idempotent
+yaml-language-server
