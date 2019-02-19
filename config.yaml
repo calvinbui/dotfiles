@@ -23,26 +23,16 @@
 # dotfiles
 # indent 4 spaces for a valid dict in list
 - link:
-    ~/.atom/config.cson:
-      path: atom/config.cson
-    ~/.atom/keymap.cson:
-      path: atom/keymap.cson
-    ~/.atom/styles.less:
-      path: atom/styles.less
-    ~/.gitconfig:
-      path: git/gitconfig
-    ~/.gitignore_global:
-      path: git/gitignore_global
-    ~/Library/KeyBindings/DefaultKeyBinding.dict:
-      path: mac/DefaultKeyBinding.dict
-    ~/.nanorc:
-      path: nano/nanorc
-    ~/.ssh/config:
-      path: ssh/config
-    ~/.vimrc:
-      path: vim/vimrc
-    ~/.zshrc:
-      path: zsh/zshrc
-    ~/.oh-my-zsh/custom:
-      path: zsh/custom
+    ~/.atom/:
+      path: atom/*
+      glob: true
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/Library/KeyBindings/DefaultKeyBinding.dict: mac/DefaultKeyBinding.dict
+    ~/.nanorc: nano/nanorc
+    ~/.ssh/config: ssh/config
+    ~/.vimrc: vim/vimrc
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom: zsh/custom
+    ~/.mackup.cfg: mac/mackup.cfg
 
