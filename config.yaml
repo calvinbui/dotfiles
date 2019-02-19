@@ -28,7 +28,6 @@
       glob: true
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
-    ~/Library/KeyBindings/DefaultKeyBinding.dict: mac/DefaultKeyBinding.dict
     ~/.nanorc: nano/nanorc
     ~/.ssh/config: ssh/config
     ~/.vimrc: vim/vimrc
