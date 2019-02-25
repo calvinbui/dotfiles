@@ -28,7 +28,9 @@
     lintOnChange: false
   "linter-pylint":
     rcFile: "/Users/calvin/repos/linter_configs/pylint"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 179
+    showPanel: true
   minimap:
     plugins:
       cursorline: true
