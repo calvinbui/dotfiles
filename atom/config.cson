@@ -15,7 +15,7 @@
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 17
+    fontSize: 19
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -28,9 +28,7 @@
     lintOnChange: false
   "linter-pylint":
     rcFile: "/Users/calvin/repos/linter_configs/pylint"
-  "linter-ui-default":
-    panelHeight: 179
-    showPanel: true
+  "linter-ui-default": {}
   minimap:
     plugins:
       cursorline: true
@@ -52,6 +50,8 @@
   "platformio-ide-terminal":
     style:
       fontFamily: "Hack Nerd Font"
+  "tree-view":
+    alwaysOpenExisting: true
   welcome:
     showOnStartup: false
   whitespace:
