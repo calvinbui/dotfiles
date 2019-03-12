@@ -48125,9 +48125,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 103 606 469 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>485 468 937 464 0 0 1680 1027 </string>
+	<string>968 815 958 470 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 257 905 575 0 0 1680 1027 </string>
+	<string>542 416 1114 575 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -48942,6 +48942,10 @@
 	<real>0.10000000000000001</real>
 	<key>StretchTabsToFillBar</key>
 	<false/>
+	<key>SwitchPaneModifier</key>
+	<integer>9</integer>
+	<key>SwitchWindowModifier</key>
+	<integer>6</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>3</integer>
 	<key>Use background pattern indicator</key>
