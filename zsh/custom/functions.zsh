@@ -4,7 +4,10 @@ PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
 PATH="/usr/local/opt/curl/bin:$PATH"
 # coreutils https://www.gnu.org/software/coreutils/
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
+# ruby
+PATH="/usr/local/opt/ruby/bin:$PATH"
+# gnu-tar
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 # serverless
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`

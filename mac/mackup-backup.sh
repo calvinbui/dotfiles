@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mackup backup
+mackup backup --force

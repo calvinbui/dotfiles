@@ -7,9 +7,6 @@
   "autocomplete-python":
     useKite: false
   core:
-    disabledPackages: [
-      "markdown-preview"
-    ]
     packagesWithKeymapsDisabled: [
       "platformio-ide-terminal"
     ]
