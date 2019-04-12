@@ -48127,7 +48127,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>968 815 958 470 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>542 416 1114 575 0 0 1680 1027 </string>
+	<string>0 57 2560 1360 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -48935,7 +48935,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
@@ -48963,7 +48963,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.7</string>
+	<string>3.2.8</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>

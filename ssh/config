@@ -7,3 +7,9 @@ Host *coates.io
 Host *coatesdigital.com.au
   StrictHostKeyChecking no
   User ubuntu
+Host *
+  cipher chacha20-poly1305@openssh.com
+  ForwardAgent yes
+  AddKeysToAgent yes
+  Compression yes
+  ForwardX11 yes
