@@ -12,7 +12,6 @@
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 21
     invisibles: {}
     showInvisibles: true
     softWrap: true

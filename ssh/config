@@ -12,4 +12,3 @@ Host *
   ForwardAgent yes
   AddKeysToAgent yes
   Compression yes
-  ForwardX11 yes
