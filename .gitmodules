@@ -1,3 +1,24 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+[submodule "zsh/custom/plugins/alias-tips"]
+	path = zsh/custom/plugins/alias-tips
+	url = git@github.com:djui/alias-tips.git
+[submodule "zsh/custom/plugins/history-search-multi-word"]
+	path = zsh/custom/plugins/history-search-multi-word
+	url = git@github.com:zdharma/history-search-multi-word.git
+[submodule "zsh/custom/plugins/zsh-autosuggestions"]
+	path = zsh/custom/plugins/zsh-autosuggestions
+	url = git@github.com:zsh-users/zsh-autosuggestions.git
+[submodule "zsh/custom/plugins/zsh-history-substring-search"]
+	path = zsh/custom/plugins/zsh-history-substring-search
+	url = git@github.com:zsh-users/zsh-history-substring-search.git
+[submodule "zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/custom/plugins/zsh-syntax-highlighting
+	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+[submodule "zsh/custom/plugins/you-should-use"]
+	path = zsh/custom/plugins/you-should-use
+	url = git@github.com:MichaelAquilina/zsh-you-should-use.git
+[submodule "zsh/custom/plugins/autoupdate"]
+	path = zsh/custom/plugins/autoupdate
+	url = git@github.com:TamCore/autoupdate-oh-my-zsh-plugins.git
