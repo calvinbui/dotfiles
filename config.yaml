@@ -5,20 +5,33 @@
 - clean: ['~']
 
 - shell:
-  # oh-my-zsh
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-  # homebrew
-  - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  - cd mac && brew bundle
-  # pip
-  - pip install -r pip/requirements.txt
-  # npm
-  - < npm/packages.txt xargs npm install -g
-  # Nano
-  - git-clone-idempotent git@github.com:scopatz/nanorc.git ~/.nano
-  # VIM
-  - git-clone-idempotent https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-  - vim +PluginInstall +qall
+  - description: oh-my-zsh
+    command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    stdout: true
+  - description: install homebrew
+    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    stdout: true
+  - description: install homebrew formulas
+    command: bash -c "cd mac && brew bundle"
+    stdout: true
+  - description: install pip modules
+    command: bash -c "pip install -r pip/requirements.txt"
+    stdout: true
+  - description: install npm packages
+    command: bash -c "< npm/packages.txt xargs npm install -g"
+    stdout: true
+  - description: install nano themes
+    command: git-clone-idempotent git@github.com:scopatz/nanorc.git ~/.nano
+    stdout: true
+  - description: install vundle
+    command: git-clone-idempotent https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    stdout: true
+  - description: install vundle plugins
+    command: vim +PluginInstall +qall
+    stdout: true
+  - description: restore mackup backup
+    command: bash -c "cd mac && ./mackup-restore.sh"
+    stdout: true
 
 # dotfiles
 # indent 4 spaces for a valid dict in list

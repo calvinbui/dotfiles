@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-mackup restore
+mackup restore --force
