@@ -22,3 +22,6 @@
 [submodule "zsh/custom/plugins/autoupdate"]
 	path = zsh/custom/plugins/autoupdate
 	url = git@github.com:TamCore/autoupdate-oh-my-zsh-plugins.git
+[submodule "zsh/custom/themes/powerlevel9k"]
+	path = zsh/custom/themes/powerlevel9k
+	url = git@github.com:bhilburn/powerlevel9k.git
