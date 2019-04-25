@@ -33,6 +33,9 @@
   - description: restore mackup backup
     command: bash -c "cd mac && ./mackup-restore.sh"
     stdout: true
+  - description: install atom packages
+    command: apm install --packages-file ~/.atom/package-list.txt
+    stdout: true
 
 # dotfiles
 # indent 4 spaces for a valid dict in list
