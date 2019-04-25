@@ -58,3 +58,4 @@
 [submodule "vim/bundle/vim-colorscheme"]
 	path = vim/bundle/vim-colorscheme
 	url = git@github.com:flazz/vim-colorschemes.git
+	ignore = dirty
