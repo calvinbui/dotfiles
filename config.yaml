@@ -29,6 +29,7 @@
   - description: install vundle plugins
     command: vim +PluginInstall +qall
     stdout: true
+    stdin: true
   - description: restore mackup backup
     command: bash -c "cd mac && ./mackup-restore.sh"
     stdout: true
@@ -44,6 +45,7 @@
     ~/.nanorc: nano/nanorc
     ~/.ssh/config: ssh/config
     ~/.vimrc: vim/vimrc
+    ~/.vim/bundle: vim/bundle
     ~/.zshrc: zsh/zshrc
     ~/.oh-my-zsh/custom: zsh/custom
     ~/.mackup.cfg: mac/mackup.cfg
