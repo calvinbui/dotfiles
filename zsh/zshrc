@@ -73,6 +73,7 @@ plugins=(
   history-search-multi-word
   alias-tips
   you-should-use
+  zsh-completions
   zsh-history-substring-search
   zsh-autosuggestions
   zsh-syntax-highlighting
