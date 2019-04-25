@@ -23,13 +23,6 @@
   - description: install nano themes
     command: git-clone-idempotent git@github.com:scopatz/nanorc.git ~/.nano
     stdout: true
-  - description: install vundle
-    command: git-clone-idempotent https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    stdout: true
-  - description: install vundle plugins
-    command: vim +PluginInstall +qall
-    stdout: true
-    stdin: true
   - description: restore mackup backup
     command: bash -c "cd mac && ./mackup-restore.sh"
     stdout: true
