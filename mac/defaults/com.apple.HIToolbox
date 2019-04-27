@@ -1,0 +1,40 @@
+{
+    AppleCurrentKeyboardLayoutInputSourceID = "com.apple.keylayout.Australian";
+    AppleEnabledInputSources =     (
+                {
+            InputSourceKind = "Keyboard Layout";
+            "KeyboardLayout ID" = 15;
+            "KeyboardLayout Name" = Australian;
+        },
+                {
+            "Bundle ID" = "com.apple.CharacterPaletteIM";
+            InputSourceKind = "Non Keyboard Input Method";
+        },
+                {
+            "Bundle ID" = "com.apple.KeyboardViewer";
+            InputSourceKind = "Non Keyboard Input Method";
+        },
+                {
+            "Bundle ID" = "com.apple.inputmethod.EmojiFunctionRowItem";
+            InputSourceKind = "Non Keyboard Input Method";
+        }
+    );
+    AppleInputSourceHistory =     (
+                {
+            InputSourceKind = "Keyboard Layout";
+            "KeyboardLayout ID" = 15;
+            "KeyboardLayout Name" = Australian;
+        }
+    );
+    AppleSelectedInputSources =     (
+                {
+            InputSourceKind = "Keyboard Layout";
+            "KeyboardLayout ID" = 15;
+            "KeyboardLayout Name" = Australian;
+        },
+                {
+            "Bundle ID" = "com.apple.inputmethod.EmojiFunctionRowItem";
+            InputSourceKind = "Non Keyboard Input Method";
+        }
+    );
+}

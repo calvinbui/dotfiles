@@ -1,0 +1,119 @@
+{
+    SpacesDisplayConfiguration =     {
+        "Management Data" =         {
+            Age = "66121.84046716001";
+            Double =             {
+                CreatedCount = 0;
+                DeletedCount = 0;
+                LifetimeEntryCount = 0;
+                LifetimeMax = 0;
+                LifetimeMin = 0;
+                LifetimeSum = 0;
+                PersistedCount = 0;
+            };
+            "Management Mode" = 1;
+            Manager =             {
+                CreatedCount = 3;
+                DeletedCount = 3;
+                LifetimeEntryCount = 3;
+                LifetimeMax = "320.1827430150006";
+                LifetimeMin = "45.18465302000186";
+                LifetimeSum = "663.3223911860023";
+                PersistedCount = 0;
+            };
+            Monitors =             (
+                                {
+                    "Current Space" =                     {
+                        ManagedSpaceID = 1;
+                        id64 = 1;
+                        type = 0;
+                        uuid = "";
+                        wsid = 1;
+                    };
+                    "Display Identifier" = Main;
+                    Spaces =                     (
+                                                {
+                            ManagedSpaceID = 1;
+                            id64 = 1;
+                            type = 0;
+                            uuid = "";
+                            wsid = 1;
+                        }
+                    );
+                },
+                                {
+                    "Collapsed Space" =                     {
+                        ManagedSpaceID = 81;
+                        id64 = 81;
+                        type = 0;
+                        uuid = "9D3F9796-67BA-4755-B6E6-876F6C64EADF";
+                    };
+                    "Display Identifier" = "E9C6B659-5B18-4172-0C33-E0D3CC55184F";
+                },
+                                {
+                    "Collapsed Space" =                     {
+                        ManagedSpaceID = 80;
+                        id64 = 80;
+                        type = 0;
+                        uuid = "AC65A5BD-1A11-4F0D-A49E-84566FC6B823";
+                    };
+                    "Display Identifier" = "CB71E6EB-8837-40D0-B916-F0AAE7EC6452";
+                }
+            );
+            Primary =             {
+                CreatedCount = 3;
+                DeletedCount = 3;
+                LifetimeEntryCount = 3;
+                LifetimeMax = "319.6452003720005";
+                LifetimeMin = "44.65070357999866";
+                LifetimeSum = "661.7162765069988";
+                PersistedCount = 0;
+            };
+            Secondary =             {
+                CreatedCount = 0;
+                DeletedCount = 0;
+                LifetimeEntryCount = 0;
+                LifetimeMax = 0;
+                LifetimeMin = 0;
+                LifetimeSum = 0;
+                PersistedCount = 0;
+            };
+            Single =             {
+                CreatedCount = 3;
+                DeletedCount = 3;
+                LifetimeEntryCount = 3;
+                LifetimeMax = "320.1815486280029";
+                LifetimeMin = "45.18407570700219";
+                LifetimeSum = "663.3202084560053";
+                PersistedCount = 0;
+            };
+            Tile =             {
+                CreatedCount = 3;
+                DeletedCount = 3;
+                LifetimeEntryCount = 3;
+                LifetimeMax = "320.1815977839979";
+                LifetimeMin = "45.18411663799998";
+                LifetimeSum = "663.3203275979977";
+                PersistedCount = 0;
+            };
+        };
+        "Space Properties" =         (
+                        {
+                name = "";
+                windows =                 (
+                    611,
+                    1357,
+                    976,
+                    973,
+                    972,
+                    984,
+                    931,
+                    1178,
+                    43,
+                    29
+                );
+            }
+        );
+    };
+    "spans-displays" = 1;
+}

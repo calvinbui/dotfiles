@@ -1,0 +1,628 @@
+{
+    "SCStockMetadata-AAPL" =     {
+        "avg_3m_volume" =         {
+            fmt = "27,976,161";
+            raw = 27976161;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.91";
+            raw = "0.905921";
+        };
+        currency = USD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "207.75";
+            raw = "207.75";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "203.90";
+            raw = "203.9";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/AAPL?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "1.54%";
+            raw = "1.54";
+        };
+        eps =         {
+            fmt = "12.12";
+            raw = "12.121";
+        };
+        exchange = NMS;
+        "id_symbol" = AAPL;
+        "issuer_name" = "Apple Inc.";
+        "issuer_name_lang" = "Apple Inc.";
+        name = "Apple Inc.";
+        open =         {
+            "data_source" = 1;
+            fmt = "204.43";
+            raw = "204.43";
+        };
+        "pe_ratio" =         {
+            fmt = "17.12";
+            raw = "17.1174";
+        };
+        symbol = AAPL;
+        volume =         {
+            "data_source" = 1;
+            fmt = "22,691,501";
+            raw = 22691501;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "233.47";
+            raw = "233.47";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "142.00";
+            raw = "142.0";
+        };
+    };
+    "SCStockMetadata-BHP.AX" =     {
+        "avg_3m_volume" =         {
+            fmt = "6,695,894";
+            raw = 6695894;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.76";
+            raw = "0.763033";
+        };
+        currency = AUD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "38.55";
+            raw = "38.55";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "38.16";
+            raw = "38.16";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/BHP.AX?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "4.23%";
+            raw = "4.23";
+        };
+        eps =         {
+            fmt = "1.02";
+            raw = "1.024";
+        };
+        exchange = ASX;
+        "id_symbol" = "BHP.AX";
+        "issuer_name" = "BHP Billiton Limited";
+        "issuer_name_lang" = "BHP Billiton Limited";
+        name = "BHP Billiton Limited";
+        open =         {
+            "data_source" = 1;
+            fmt = "38.48";
+            raw = "38.48";
+        };
+        "pe_ratio" =         {
+            fmt = "37.43";
+            raw = "37.43164";
+        };
+        symbol = "BHP.AX";
+        volume =         {
+            "data_source" = 1;
+            fmt = "6,085,934";
+            raw = 6085934;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "40.13";
+            raw = "40.13";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "30.31";
+            raw = "30.31";
+        };
+    };
+    "SCStockMetadata-CBA.AX" =     {
+        "avg_3m_volume" =         {
+            fmt = "3,026,737";
+            raw = 3026737;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.86";
+            raw = "0.857133";
+        };
+        currency = AUD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "74.33";
+            raw = "74.33";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "73.29";
+            raw = "73.29";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/CBA.AX?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "6.09%";
+            raw = "6.09";
+        };
+        eps =         {
+            fmt = "4.96";
+            raw = "4.963";
+        };
+        exchange = ASX;
+        "id_symbol" = "CBA.AX";
+        "issuer_name" = "Commonwealth Bank of Australia";
+        "issuer_name_lang" = "Commonwealth Bank of Australia";
+        name = "Commonwealth Bank of Australia";
+        open =         {
+            "data_source" = 1;
+            fmt = "73.58";
+            raw = "73.58";
+        };
+        "pe_ratio" =         {
+            fmt = "14.95";
+            raw = "14.950635";
+        };
+        symbol = "CBA.AX";
+        volume =         {
+            "data_source" = 1;
+            fmt = "3,027,492";
+            raw = 3027492;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "76.74";
+            raw = "76.74";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "65.23";
+            raw = "65.23";
+        };
+    };
+    "SCStockMetadata-DIS" =     {
+        "avg_3m_volume" =         {
+            fmt = "12,952,696";
+            raw = 12952696;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.51";
+            raw = "0.505262";
+        };
+        currency = USD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "134.24";
+            raw = "134.24";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "132.65";
+            raw = "132.65";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/DIS?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "1.59%";
+            raw = "1.59";
+        };
+        eps =         {
+            fmt = "7.30";
+            raw = "7.3";
+        };
+        exchange = NYQ;
+        "id_symbol" = DIS;
+        "issuer_name" = "The Walt Disney Company";
+        "issuer_name_lang" = "The Walt Disney Company";
+        name = "The Walt Disney Company";
+        open =         {
+            "data_source" = 1;
+            fmt = "133.39";
+            raw = "133.39";
+        };
+        "pe_ratio" =         {
+            fmt = "18.27";
+            raw = "18.268494";
+        };
+        symbol = DIS;
+        volume =         {
+            "data_source" = 1;
+            fmt = "11,630,115";
+            raw = 11630115;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "134.24";
+            raw = "134.24";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "97.68";
+            raw = "97.68";
+        };
+    };
+    "SCStockMetadata-GE" =     {
+        "avg_3m_volume" =         {
+            fmt = "93,011,509";
+            raw = 93011509;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.91";
+            raw = "0.913574";
+        };
+        currency = USD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "9.35";
+            raw = "9.35";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "9.22";
+            raw = "9.22";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/GE?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "0.38%";
+            raw = "0.38";
+        };
+        eps =         {
+            fmt = "-2.63";
+            raw = "-2.629";
+        };
+        exchange = NYQ;
+        "id_symbol" = GE;
+        "issuer_name" = "General Electric Company";
+        "issuer_name_lang" = "General Electric Company";
+        name = "General Electric Company";
+        open =         {
+            "data_source" = 1;
+            fmt = "9.30";
+            raw = "9.3";
+        };
+        symbol = GE;
+        volume =         {
+            "data_source" = 1;
+            fmt = "37,882,796";
+            raw = 37882796;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "14.99";
+            raw = "14.990385";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "6.40";
+            raw = "6.4038463";
+        };
+    };
+    "SCStockMetadata-NAB.AX" =     {
+        "avg_3m_volume" =         {
+            fmt = "6,056,616";
+            raw = 6056616;
+        };
+        "beta_coefficient" =         {
+            fmt = "1.04";
+            raw = "1.038911";
+        };
+        currency = AUD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "25.40";
+            raw = "25.4";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "25.15";
+            raw = "25.15";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/NAB.AX?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "7.81%";
+            raw = "7.81";
+        };
+        eps =         {
+            fmt = "1.94";
+            raw = "1.94";
+        };
+        exchange = ASX;
+        "id_symbol" = "NAB.AX";
+        "issuer_name" = "National Australia Bank Limited";
+        "issuer_name_lang" = "National Australia Bank Limited";
+        name = "National Australia Bank Limited";
+        open =         {
+            "data_source" = 1;
+            fmt = "25.30";
+            raw = "25.3";
+        };
+        "pe_ratio" =         {
+            fmt = "13.07";
+            raw = "13.072165";
+        };
+        symbol = "NAB.AX";
+        volume =         {
+            "data_source" = 1;
+            fmt = "5,224,834";
+            raw = 5224834;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "29.64";
+            raw = "29.64";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "22.52";
+            raw = "22.52";
+        };
+    };
+    "SCStockMetadata-NKE" =     {
+        "avg_3m_volume" =         {
+            fmt = "6,070,529";
+            raw = 6070529;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.95";
+            raw = "0.952434";
+        };
+        currency = USD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "87.67";
+            raw = "87.67";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "87.01";
+            raw = "87.0092";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/NKE?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "1.05%";
+            raw = "1.05";
+        };
+        eps =         {
+            fmt = "2.57";
+            raw = "2.567";
+        };
+        exchange = NYQ;
+        "id_symbol" = NKE;
+        "issuer_name" = "NIKE, Inc.";
+        "issuer_name_lang" = "NIKE, Inc.";
+        name = "NIKE, Inc.";
+        open =         {
+            "data_source" = 1;
+            fmt = "87.57";
+            raw = "87.57";
+        };
+        "pe_ratio" =         {
+            fmt = "34.06";
+            raw = "34.059216";
+        };
+        symbol = NKE;
+        volume =         {
+            "data_source" = 1;
+            fmt = "7,054,587";
+            raw = 7054587;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "90.00";
+            raw = "90.0";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "66.25";
+            raw = "66.25";
+        };
+    };
+    "SCStockMetadata-SBUX" =     {
+        "avg_3m_volume" =         {
+            fmt = "10,082,935";
+            raw = 10082935;
+        };
+        "beta_coefficient" =         {
+            fmt = "0.42";
+            raw = "0.420492";
+        };
+        currency = USD;
+        "data_type" = equity;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "76.06";
+            raw = "76.06";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "75.42";
+            raw = "75.415";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/SBUX?.tsrc=applewf";
+        "dividend_yield" =         {
+            fmt = "1.94%";
+            raw = "1.94";
+        };
+        eps =         {
+            fmt = "2.25";
+            raw = "2.246";
+        };
+        exchange = NMS;
+        "id_symbol" = SBUX;
+        "issuer_name" = "Starbucks Corporation";
+        "issuer_name_lang" = "Starbucks Corporation";
+        name = "Starbucks Corporation";
+        open =         {
+            "data_source" = 1;
+            fmt = "75.48";
+            raw = "75.48";
+        };
+        "pe_ratio" =         {
+            fmt = "33.83";
+            raw = "33.83348";
+        };
+        symbol = SBUX;
+        volume =         {
+            "data_source" = 1;
+            fmt = "5,129,097";
+            raw = 5129097;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "76.95";
+            raw = "76.95";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "47.37";
+            raw = "47.37";
+        };
+    };
+    "SCStockMetadata-^AORD" =     {
+        "avg_3m_volume" =         {
+            fmt = "828,129,670";
+            raw = 828129670;
+        };
+        currency = AUD;
+        "data_type" = index;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "6,412.40";
+            raw = "6412.4";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "6,349.90";
+            raw = "6349.9";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/%5EAORD?.tsrc=applewf";
+        exchange = ASX;
+        "id_symbol" = "^AORD";
+        "issuer_name" = "ALL ORDINARIES";
+        "issuer_name_lang" = "ALL ORDINARIES";
+        name = "ALL ORDINARIES";
+        open =         {
+            "data_source" = 1;
+            fmt = "6,349.90";
+            raw = "6349.9";
+        };
+        symbol = "^AORD";
+        volume =         {
+            "data_source" = 1;
+            fmt = 0;
+            raw = 0;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "6,481.30";
+            raw = "6481.3";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "5,478.40";
+            raw = "5478.4";
+        };
+    };
+    "SCStockMetadata-^DJI" =     {
+        "avg_3m_volume" =         {
+            fmt = "303,108,548";
+            raw = 303108548;
+        };
+        currency = USD;
+        "data_type" = index;
+        "day_high" =         {
+            "data_source" = 1;
+            fmt = "26,695.96";
+            raw = "26695.96";
+        };
+        "day_low" =         {
+            "data_source" = 1;
+            fmt = "26,503.60";
+            raw = "26503.6";
+        };
+        "details_url" = "https://finance.yahoo.com/quote/%5EDJI?.tsrc=applewf";
+        exchange = DJI;
+        "id_symbol" = "^DJI";
+        "issuer_name" = "Dow Jones Industrial Average";
+        "issuer_name_lang" = "Dow Jones Industrial Average";
+        name = "Dow Jones Industrial Average";
+        open =         {
+            "data_source" = 1;
+            fmt = "26,513.80";
+            raw = "26513.8";
+        };
+        symbol = "^DJI";
+        volume =         {
+            "data_source" = 1;
+            fmt = "311,690,686";
+            raw = 311690686;
+        };
+        "year_high" =         {
+            "data_source" = 1;
+            fmt = "26,951.81";
+            raw = "26951.81";
+        };
+        "year_low" =         {
+            "data_source" = 1;
+            fmt = "21,712.53";
+            raw = "21712.53";
+        };
+    };
+    "SCSyncedStocksStore-stocks" =     (
+                {
+            companyName = "Dow Jones Industrial Average";
+            exchange = DJI;
+            symbol = "^DJI";
+        },
+                {
+            companyName = "ALL ORDINARIES";
+            exchange = ASX;
+            symbol = "^AORD";
+        },
+                {
+            companyName = "Apple Inc.";
+            exchange = NMS;
+            symbol = AAPL;
+        },
+                {
+            companyName = "BHP Billiton Limited";
+            exchange = ASX;
+            symbol = "BHP.AX";
+        },
+                {
+            companyName = "Commonwealth Bank of Australia";
+            exchange = ASX;
+            symbol = "CBA.AX";
+        },
+                {
+            companyName = "The Walt Disney Company";
+            exchange = NYQ;
+            symbol = DIS;
+        },
+                {
+            companyName = "General Electric Company";
+            exchange = NYQ;
+            symbol = GE;
+        },
+                {
+            companyName = "National Australia Bank Limited";
+            exchange = ASX;
+            symbol = "NAB.AX";
+        },
+                {
+            companyName = "NIKE, Inc.";
+            exchange = NYQ;
+            symbol = NKE;
+        },
+                {
+            companyName = "Starbucks Corporation";
+            exchange = NMS;
+            symbol = SBUX;
+        }
+    );
+}

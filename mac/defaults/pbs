@@ -1,0 +1,13 @@
+{
+    FinderActive =     {
+        "APPEXTENSION-com.apple.finder.CreatePDFQuickAction" = 1;
+        "APPEXTENSION-com.apple.finder.RotateQuickAction" = 1;
+        "APPEXTENSION-com.apple.finder.TrimQuickAction" = 1;
+    };
+    FinderOrdering =     {
+        "APPEXTENSION-com.apple.finder.CreatePDFQuickAction" = 1;
+        "APPEXTENSION-com.apple.finder.MarkupQuickAction" = 3;
+        "APPEXTENSION-com.apple.finder.RotateQuickAction" = 0;
+        "APPEXTENSION-com.apple.finder.TrimQuickAction" = 2;
+    };
+}

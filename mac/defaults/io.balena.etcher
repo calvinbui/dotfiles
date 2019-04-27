@@ -1,0 +1,4 @@
+{
+    NSFullScreenMenuItemEverywhere = 0;
+    NSTreatUnknownArgumentsAsOpen = NO;
+}

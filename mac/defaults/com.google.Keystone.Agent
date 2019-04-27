@@ -1,0 +1,53 @@
+{
+    ActivesInfo =     {
+        "com.google.Chrome" =         {
+            LastActiveDate = "2019-04-27 03:10:28 +0000";
+            LastActivePingDate = "2019-04-27 07:00:00 +0000";
+            LastRollCallPingDate = "2019-04-27 07:00:00 +0000";
+            "ping_freshness" = "9852BCFC-6E50-4098-A4FE-222033B53603";
+        };
+        "com.google.Keystone" =         {
+            LastActiveDate = "2019-04-27 08:29:19 +0000";
+            LastActivePingDate = "2019-04-27 07:00:01 +0000";
+            LastRollCallPingDate = "2019-04-27 07:00:01 +0000";
+            "ping_freshness" = "5777FA4F-51D8-46B5-8145-7DB1B6164A44";
+        };
+    };
+    ReportingAttributes =     {
+        "com.google.Chrome" =         {
+            "_numaccounts" =             {
+                aggregation = 0;
+                expiresAt = "2019-05-25 03:10:28 +0000";
+                type = KSUnsignedReportingAttribute;
+                value = 2;
+            };
+            "_numsignedin" =             {
+                aggregation = 0;
+                expiresAt = "2019-05-25 03:10:28 +0000";
+                type = KSUnsignedReportingAttribute;
+                value = 2;
+            };
+        };
+        "com.google.Keystone" =         {
+            experiments =             {
+                aggregation = 0;
+                expiresAt = "2019-05-11 02:44:07 +0000";
+                type = KSExperimentLabelsAttribute;
+                value =                 {
+                    "_xpcproxying" =                     {
+                        aggregation = 0;
+                        expiresAt = "2019-05-11 02:44:07 +0000";
+                        type = KSStringReportingAttribute;
+                        value = success;
+                    };
+                };
+            };
+        };
+    };
+    checkInterval = 18000;
+    "firstRun-user-1.2.10.105" = "2019-04-24 00:02:47 +0000";
+    "firstRun-user-1.2.13.37" = "2019-04-24 00:02:57 +0000";
+    "lastCheck-user-1.2.13.37" = "2019-04-27 08:29:23 +0000";
+    lastCheckStartDate = "2019-04-27 08:29:19 +0000";
+    lastServerCheckDate = "2019-04-27 08:29:21 +0000";
+}

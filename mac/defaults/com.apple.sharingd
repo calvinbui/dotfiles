@@ -1,0 +1,7 @@
+{
+    AutoUnlockPresentedBluetoothError = 0;
+    AutoUnlockPresentedWiFiError = 0;
+    AutoUnlockWatchCurrentlyInList = 0;
+    AutoUnlockWatchExistedInUnlockList = 0;
+    OneTimeAirDropReset = 1;
+}

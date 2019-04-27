@@ -1,0 +1,28 @@
+{
+    AppExitGraceful = 1;
+    "BootActivity-LastBootVersion" = "16.24.19041401";
+    ChangeInstallLanguageState = 2;
+    CulturePreviousPreferredEditing = "en-AU";
+    CustomerLoggingEnabled = 0;
+    DiagnosticDataTypePreference = FullDiagnosticData;
+    HangDetectedKey = 0;
+    MemoryConsumptionExceededKey = 0;
+    "NSWindow Frame CUIDocumentShellWindowFrameNameDefault" = "0 266 800 600 0 0 1440 877 ";
+    NumberOfHangsDetectedKey = 0;
+    OSLocale = "en_AU";
+    OSVersion = "10.14.4";
+    OUIShouldEstablishWhatsNewBaseline = 1;
+    OUIWhatsNewShownItemIds =     (
+        19030
+    );
+    SendAllTelemetryEnabled = 1;
+    SessionBuildNumber = 190414;
+    SessionDuration = "9.35479199886322";
+    SessionId = "FB9C3388-04D1-4DED-81A9-AF2A4A83B5F0";
+    SessionStartTime = "04/27/2019 02:46:36.737";
+    SessionVersion = "16.24";
+    TemplateDownload = 1;
+    WebKitCacheModelPreferenceKey = 1;
+    kOUIRibbonDefaultCollapse = 0;
+    kSubUIAppCompletedFirstRunSetup1507 = 1;
+}

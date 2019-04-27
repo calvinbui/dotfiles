@@ -1,0 +1,18 @@
+{
+    "allowClassroomLockDevice-00000000-0000-0000-0000-000000000000:0" = 1;
+    "allowClassroomLockDevice-00000000-0000-0000-0000-000000000000:0-ask" = 0;
+    allowClassroomOpenApp = 1;
+    "allowClassroomOpenApp-00000000-0000-0000-0000-000000000000:0" = 1;
+    "allowClassroomOpenApp-00000000-0000-0000-0000-000000000000:0-ask" = 0;
+    "allowClassroomOpenApp-ask" = 0;
+    allowClassroomOpenURL = 1;
+    "allowClassroomOpenURL-00000000-0000-0000-0000-000000000000:0" = 1;
+    "allowClassroomOpenURL-00000000-0000-0000-0000-000000000000:0-ask" = 0;
+    "allowClassroomOpenURL-ask" = 0;
+    "allowClassroomScreenObservation-00000000-0000-0000-0000-000000000000:0" = 1;
+    "allowClassroomScreenObservation-00000000-0000-0000-0000-000000000000:0-ask" = 0;
+    classroomRoles =     (
+    );
+    "forceUnpromptedRemoteScreenObservation-00000000-0000-0000-0000-000000000000:0" = 1;
+    "forceUnpromptedRemoteScreenObservation-00000000-0000-0000-0000-000000000000:0-ask" = 0;
+}

@@ -1,4 +1,5 @@
 "*":
+  "ansible-vault": {}
   "atom-ide-ui":
     use:
       "atom-ide-diagnostics-ui": "never"
@@ -25,9 +26,18 @@
   "git-diff": {}
   linter:
     lintOnChange: false
+  "linter-js-yaml":
+    customTags: [
+      "!vault"
+    ]
   "linter-pylint":
     rcFile: "/Users/calvin/repos/linter_configs/pylint"
-  "linter-ui-default": {}
+  "linter-ui-default":
+    panelHeight: 237
+  "markdown-preview-plus":
+    saveConfig:
+      saveToPDFOptions: {}
+    useGitHubStyle: true
   minimap:
     plugins:
       cursorline: true

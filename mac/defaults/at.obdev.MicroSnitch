@@ -1,0 +1,12 @@
+{
+    LastLaunchedAppBundleVersion = 1307;
+    LogActivity = 0;
+    "NSStatusItem Preferred Position Item-0" = "332.5234";
+    OpenAtLogin = 1;
+    OverlayUserDefinedPosition = 4;
+    "Release Group" = "TNT team";
+    ShowUserNotificationsForDeviceBecameActive = 1;
+    ShowUserNotificationsForDeviceBecameInactive = 1;
+    UnexpectedTerminationCookie = 1;
+    WelcomeWindowVersion = 1;
+}

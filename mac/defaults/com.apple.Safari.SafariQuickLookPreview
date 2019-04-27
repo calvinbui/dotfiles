@@ -1,0 +1,5 @@
+{
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2JavaEnabled" = 0;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2PageVisibilityBasedProcessSuppressionEnabled" = 0;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2PluginsEnabled" = 0;
+}

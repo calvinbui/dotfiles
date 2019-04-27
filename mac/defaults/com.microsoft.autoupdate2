@@ -1,0 +1,30 @@
+{
+    Applications =     {
+        "/Applications/Microsoft Excel.app" =         {
+            "Application ID" = XCEL2019;
+            LCID = 1033;
+        };
+        "/Applications/Microsoft PowerPoint.app" =         {
+            "Application ID" = PPT32019;
+            LCID = 1033;
+        };
+        "/Applications/Microsoft Word.app" =         {
+            "Application ID" = MSWD2019;
+            LCID = 1033;
+        };
+        "/Applications/Skype for Business.app" =         {
+            "Application ID" = MSFB16;
+            LCID = 1033;
+        };
+        "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app" =         {
+            "Application ID" = MSau04;
+            LCID = 1033;
+        };
+    };
+    HowToCheck = AutomaticDownload;
+    LastOptInNotification = "0001-01-01 00:00:00 +0000";
+    LastService = "2019-04-27 02:46:22 +0000";
+    LastUpdate = "2019-04-27 02:46:41 +0000";
+    ShowOptInNotification = 0;
+    StartDaemonOnAppLaunch = 1;
+}

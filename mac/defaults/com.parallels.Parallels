@@ -1,0 +1,11 @@
+{
+    "Parallels.MainApp.Default 'feed' App" = "com.apple.news";
+    "Parallels.MainApp.Default 'feeds' App" = "com.apple.safari";
+    "Parallels.MainApp.Default 'ftp' App" = "com.apple.finder";
+    "Parallels.MainApp.Default 'http' App" = "com.google.chrome";
+    "Parallels.MainApp.Default 'https' App" = "com.google.chrome";
+    "Parallels.MainApp.Default 'mailto' App" = "com.google.chrome";
+    "Parallels.MainApp.Default 'news' App" = "com.googlecode.iterm2";
+    "Parallels.MainApp.Default 'ssh' App" = "com.apple.Terminal";
+    "Parallels.MainApp.Default 'telnet' App" = "com.apple.Terminal";
+}

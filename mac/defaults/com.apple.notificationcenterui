@@ -1,0 +1,33 @@
+{
+    TodayView =     {
+        order =         (
+            "com.apple..NowPlayingWidgetContainer.NowPlayingWidget",
+            "com.apple.reminders.RemindersNC",
+            "com.apple.ncplugin.stocks",
+            "com.apple.iCal.CalendarNC",
+            "com.apple.ncplugin.weather",
+            "com.apple.ncplugin.calculator",
+            "com.apple.ncplugin.FindMyFriends",
+            "com.apple.ncplugin.WorldClock",
+            "com.dmitrynikolaev.numi.NumiExtension"
+        );
+        preferences =         {
+            "com.apple.nc.disclosures" =             {
+                enabled = 1;
+            };
+            "com.apple.nc.today.date" =             {
+                enabled = 1;
+            };
+            "com.apple.nc.today.dnd" =             {
+                enabled = 1;
+            };
+            "com.apple.nc.today.summary" =             {
+                enabled = 0;
+            };
+            "com.apple.nc.tomorrow.summary" =             {
+                enabled = 0;
+            };
+        };
+    };
+    "last-messagetrace-stamp" = "577755479.17966";
+}

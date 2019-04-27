@@ -1,0 +1,20 @@
+{
+    BITApplicationDidEnterBackgroundTime = "1556211287.936027";
+    BITApplicationWasLaunched = 1;
+    HockeySDKAutomaticallySendCrashReports = 0;
+    HockeySDKCrashReportActivated = 1;
+    LastLaunchedVersion = "2.4.3";
+    "NSStatusItem Preferred Position Item-0" = 399;
+    "Release Group" = "TNT team";
+    SUAutomaticallyUpdate = 0;
+    SUEnableAutomaticChecks = 1;
+    SUFeedURL = "https://pasteapp.me/update-feed";
+    SUHasLaunchedBefore = 1;
+    SULastCheckTime = "2019-04-27 02:44:03 +0000";
+    SUScheduledCheckInterval = 86400;
+    SUSendProfileInfo = 0;
+    "enable-sync" = 0;
+    kPSTPreferencesEnableSoundEffects = 0;
+    kPSTPreferencesLaunchAtStartup = 1;
+    "pasteboard-change-token" = 67;
+}

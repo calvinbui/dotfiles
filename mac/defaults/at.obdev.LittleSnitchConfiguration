@@ -1,0 +1,17 @@
+{
+    LastShownWelcomeWindowVersion = 2;
+    NSNavLastRootDirectory = "~";
+    NSNavLastUserSetHideExtensionButtonState = 1;
+    NSNavPanelExpandedSizeForSaveMode = "{712, 448}";
+    "NSSplitView Subview Frames InfoSidebarSplitView" =     (
+        "0.000000, 0.000000, 280.000000, 370.000000, NO, NO",
+        "0.000000, 371.000000, 280.000000, 120.000000, NO, NO"
+    );
+    "NSSplitView Subview Frames WindowContentSplitView" =     (
+        "0.000000, 0.000000, 220.000000, 557.000000, NO, NO",
+        "221.000000, 0.000000, 500.000000, 557.000000, NO, NO",
+        "722.000000, 0.000000, 280.000000, 557.000000, NO, NO"
+    );
+    "NSWindow Frame RulesWindow" = "152 256 1002 557 0 0 1440 877 ";
+    ShowTerminationAlert = 0;
+}

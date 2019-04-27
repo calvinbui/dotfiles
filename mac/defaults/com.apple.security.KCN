@@ -1,0 +1,8 @@
+{
+    absentCircleWithNoReason = 0;
+    applicationDate = "0001-01-01 00:00:00 +0000";
+    lastCircleStatus = "-1";
+    lastWritten = "2019-04-25 18:00:19 +0000";
+    pendingApplicationReminder = "4001-01-01 00:00:00 +0000";
+    pendingApplicationReminderInterval = 86400;
+}

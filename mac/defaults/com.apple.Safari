@@ -1,0 +1,97 @@
+{
+    AutoplayPolicyWhitelistConfigurationUpdateDate = "2019-04-23 23:41:46 +0000";
+    AutoplayQuirksWhitelistConfigurationUpdateDate = "2019-04-23 23:41:46 +0000";
+    DefaultBrowserPromptingState2 = 4;
+    DidAttemptToMigrateExtensionsPlistFromLegacyKeychain = 1;
+    DidClearLegacySpotlightMetadataCaches = 1;
+    DidDisableExtensionsKnownToHarmPerformance = 1;
+    DidDisableIndividualExtensionsAfterRemovingOnOffSwitchIfNecessary = 1;
+    DidMigrateDisabledPlugInsInfoToAllPlugInsInfo = 1;
+    DidMigrateNewBookmarkSheetToReadingListDefault = 1;
+    DidMigrateResourcesToSandbox = 1;
+    DidMigrateStartPageDefaultSidebarVisibility = 1;
+    DidMigrateToCoreSpotlightBasedHistorySearch = 1;
+    DidMigrateToMoreRestrictiveFileURLPolicy = 1;
+    DidReportHistorySettings = 1;
+    DidUnsubscribeFromRSSFeeds = 1;
+    ExtensionsEnabled = 1;
+    ExtensionsKnownToHarmPerformanceConfigurationUpdateDate = "2019-04-23 23:41:43 +0000";
+    FaviconDatabaseDidEraseLegacyDatabase = 1;
+    LastApplicationCacheMessageTraceTime = "577755704.810041";
+    LastCloudHistoryConfigurationUpdateTime = "2019-04-23 23:41:44 +0000";
+    LastExtensionMessageTraceTime = "577755703.659031";
+    LastOSVersionSafariWasLaunchedOn = "10.14.3";
+    LastSharedLinksMessageTraceTime = "577757112.105177";
+    LocalFileRestrictionsEnabled = 1;
+    "NSToolbar Configuration BrowserToolbarIdentifier-v2" =     {
+        "TB Display Mode" = 2;
+        "TB Icon Size Mode" = 1;
+        "TB Is Shown" = 1;
+        "TB Size Mode" = 1;
+    };
+    "NSWindow Frame BrowserWindowFrame" = "88 80 1264 797 0 0 1440 877 ";
+    NewestLaunchedSafariVersion = "606.4.5";
+    OpenWindows =     (
+    );
+    RecentWebSearches =     (
+                {
+            Date = "2019-04-24 00:00:51 +0000";
+            SearchString = "brew skip sha";
+        },
+                {
+            Date = "2019-04-24 00:00:21 +0000";
+            SearchString = "brew chrome sha";
+        },
+                {
+            Date = "2019-04-23 23:41:50 +0000";
+            SearchString = brew;
+        }
+    );
+    SearchProviderIdentifierMigratedToSystemPreference = 1;
+    SearchProvidersNotAllowedToPromptToBeMadeDefault =     {
+    };
+    ShowSidebarInTopSites = 0;
+    SkipLoadingEnabledAppExtensionsAtLaunch = 1;
+    SkipLoadingEnabledContentBlockersAtLaunch = 1;
+    SkipLoadingExtensionsAtLaunch = 1;
+    SuccessfulLaunchTimestamp = "577756807.920513";
+    TouchIDToAutoFill = 0;
+    UniversalSearchFeatureNotificationHasBeenDisplayed = 1;
+    WBSRemoteAutoFillQuirksLastUpdateTime = "2019-04-23 23:41:44 +0000";
+    WebKitRespectStandardStyleKeyEquivalents = 1;
+    cloudBookmarksMigrationEligibilityDataInvalidated = 0;
+    cloudKitBookmarksMigrationRampState =     {
+        dateOfLastSettingsUpdate = "2019-04-23 23:41:44 +0000";
+        rampIncludesUserIdentity = 1;
+        settingsDictionary =         {
+            gmMigrationPercent = 1000;
+            internalMigrationPercent = 1000;
+            minimumMacSafariVersion = "604.4";
+            operatingSystemVersionRanges =             (
+                                {
+                    family = iOS;
+                    minimumVersion = "11.2";
+                },
+                                {
+                    family = OSX;
+                    maximumVersion = "10.13";
+                    minimumVersion = "10.12.6";
+                },
+                                {
+                    family = OSX;
+                    minimumVersion = "10.13.2";
+                }
+            );
+            seedMigrationPercent = 1000;
+        };
+        userIdentity = "_92ae649982652bbdaddb231a9499de28";
+    };
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2AllowsPictureInPictureMediaPlayback" = 1;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2ApplePayEnabled" = 1;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2HiddenPageDOMTimerThrottlingAutoIncreases" = 1;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2InvisibleAutoplayNotPermitted" = 1;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2MediaDevicesEnabled" = 1;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2NeedsStorageAccessFromFileURLsQuirk" = 0;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2ShouldAllowUserInstalledFonts" = 0;
+    "com.apple.Safari.ContentPageGroupIdentifier.WebKit2ShouldSuppressTextInputFromEditingDuringProvisionalNavigation" = 1;
+}

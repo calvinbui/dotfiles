@@ -1,0 +1,10 @@
+{
+    "AMSSamplingSession-TLSSessionTickets" =     {
+        lastSampleDate = "2019-04-25 03:16:48 +0000";
+        lastSampleResult = 1;
+    };
+    AMSStorefrontSuffixes =     {
+    };
+    AMSUserDefaultsIncludeFullRequestInHARLogging = 0;
+    AMSUserDefaultsincludeFullResponseInHARLogging = 0;
+}

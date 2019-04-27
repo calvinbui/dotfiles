@@ -1,0 +1,15 @@
+{
+    AppExitGraceful = 1;
+    HangDetectedKey = 0;
+    MemoryConsumptionExceededKey = 0;
+    NumberOfHangsDetectedKey = 0;
+    OSLocale = "en_AU";
+    OSVersion = "10.14.4";
+    SendAllTelemetryEnabled = 1;
+    SessionBuildNumber = 190414;
+    SessionDuration = "56.45733892917633";
+    SessionId = "F0C66B62-A561-43F1-8303-FD8514B62311";
+    SessionStartTime = "04/27/2019 02:46:19.669";
+    SessionVersion = "4.10";
+    WindowsAzureMobileServicesInstallationId = "91546B52-703B-47B0-94F8-4DE406DD1900";
+}

@@ -1,0 +1,14 @@
+{
+    displayOrder =     (
+        "com.apple.share.Mail.compose",
+        "com.apple.messages.ShareExtension",
+        "com.apple.share.AirDrop.send",
+        "com.apple.share.CloudSharing.invite",
+        "com.apple.share.System.add-to-aperture",
+        "com.apple.share.System.add-to-iphoto",
+        "com.apple.reminders.RemindersShareExtension",
+        "com.apple.Notes.SharingExtension",
+        "com.apple.share.System.add-to-safari-reading-list"
+    );
+    userHasOrdered = 1;
+}

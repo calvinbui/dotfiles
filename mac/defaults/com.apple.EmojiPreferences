@@ -1,0 +1,13 @@
+{
+    EMFDefaultsKey =     {
+        EMFRecentSequenceNumberKey = 1;
+        EMFRecentsKey =         (
+            "\\Ud83d\\Udd12"
+        );
+        EMFUsageHistoryKey =         {
+            "\\Ud83d\\Udd12" =             (
+                0
+            );
+        };
+    };
+}

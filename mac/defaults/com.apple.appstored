@@ -1,0 +1,7 @@
+{
+    BadgeCount = 0;
+    LastUpdatesCheck = "2019-04-27 02:22:47 +0000";
+    WelcomeNotificationExcludedFromSample = 1;
+    WelcomeNotificationLastAppStoreConnectionProductVersion = "10.14.3";
+    WelcomeNotificationOSUpgradeDate = "2019-04-23 23:39:56 +0000";
+}

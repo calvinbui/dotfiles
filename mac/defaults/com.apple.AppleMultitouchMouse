@@ -1,0 +1,12 @@
+{
+    MouseButtonDivision = 55;
+    MouseButtonMode = OneButton;
+    MouseHorizontalScroll = 1;
+    MouseMomentumScroll = 1;
+    MouseOneFingerDoubleTapGesture = 0;
+    MouseTwoFingerDoubleTapGesture = 3;
+    MouseTwoFingerHorizSwipeGesture = 2;
+    MouseVerticalScroll = 1;
+    UserPreferences = 1;
+    version = 1;
+}

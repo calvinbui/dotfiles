@@ -1,0 +1,9 @@
+{
+    NSFullScreenMenuItemEverywhere = 0;
+    NSNavLastRootDirectory = "~/repos/dotfiles/zsh/custom";
+    NSNavLastUserSetHideExtensionButtonState = 0;
+    NSNavPanelExpandedSizeForOpenMode = "{712, 448}";
+    NSNavPanelExpandedSizeForSaveMode = "{712, 448}";
+    NSNavPanelExpandedStateForSaveMode = 1;
+    NSTreatUnknownArgumentsAsOpen = NO;
+}

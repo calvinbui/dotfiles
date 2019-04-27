@@ -1,0 +1,4 @@
+{
+    GKMaxRecentPlayersCount = 50;
+    GKMaxRecentPlayersTime = 314496000;
+}

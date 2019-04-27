@@ -4,6 +4,22 @@
       force: true
 - clean: ['~']
 
+# dotfiles
+# indent 4 spaces for a valid dict in list
+- link:
+    ~/.atom/:
+      path: atom/*
+      glob: true
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+    ~/.nanorc: nano/nanorc
+    ~/.ssh/config: ssh/config
+    ~/.vimrc: vim/vimrc
+    ~/.vim/bundle: vim/bundle
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom: zsh/custom
+    ~/.mackup.cfg: mac/mackup.cfg
+
 - shell:
   - description: oh-my-zsh
     command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -29,20 +45,6 @@
   - description: install atom packages
     command: apm install --packages-file ~/.atom/package-list.txt
     stdout: true
-
-# dotfiles
-# indent 4 spaces for a valid dict in list
-- link:
-    ~/.atom/:
-      path: atom/*
-      glob: true
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore_global
-    ~/.nanorc: nano/nanorc
-    ~/.ssh/config: ssh/config
-    ~/.vimrc: vim/vimrc
-    ~/.vim/bundle: vim/bundle
-    ~/.zshrc: zsh/zshrc
-    ~/.oh-my-zsh/custom: zsh/custom
-    ~/.mackup.cfg: mac/mackup.cfg
-
+  - description: restore & app system preferences
+    command: bash -c "cd mac && ./defaults-restore.sh"
+    stdout: true

@@ -1,14 +1,4 @@
-Host *switchboardcms.com
+Host *.prv.bislr.net
   StrictHostKeyChecking no
-  User ubuntu
-Host *coates.io
-  StrictHostKeyChecking no
-  User ubuntu
-Host *coatesdigital.com.au
-  StrictHostKeyChecking no
-  User ubuntu
-Host *
-  cipher chacha20-poly1305@openssh.com
-  ForwardAgent yes
-  AddKeysToAgent yes
-  Compression yes
+  User root
+  ProxyCommand ssh -o 'ForwardAgent yes' manager@ap2manager.bislr.net 'ssh-add && nc %h %p'

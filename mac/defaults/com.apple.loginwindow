@@ -1,0 +1,6 @@
+{
+    MiniBuddyLaunch = 0;
+    TALLogoutReason = Restart;
+    TALLogoutSavesState = 0;
+    oneTimeSSMigrationComplete = 1;
+}

@@ -1,0 +1,3 @@
+{
+    LogAllIOErrors = 1;
+}

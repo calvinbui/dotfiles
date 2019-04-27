@@ -1,0 +1,16 @@
+{
+    IncomingCallsTTYPreference =     {
+        RTTWildcardContext = 0;
+    };
+    RTTContinuityRTTIsSupportedPreference = 0;
+    RTTSettingsVersionPreference = 2;
+    TTYHardwareEnabledPreference =     {
+        RTTWildcardContext = 0;
+    };
+    TTYShouldBeRealtimePreference =     {
+        RTTWildcardContext = 1;
+    };
+    TTYSoftwareEnabledPreference =     {
+        RTTWildcardContext = 0;
+    };
+}

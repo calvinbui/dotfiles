@@ -1,0 +1,9 @@
+{
+    DUNextCheckDate = "2019-04-27 13:59:18 +0000";
+    DURegisteredApps =     {
+        "/Applications/Dropbox.app" =         {
+            AlternatePath = "~/Library/Application Support/Dropbox/Dropbox.app";
+        };
+    };
+    DUUpdaterId = "CB93A4C7-B761-456B-BEC2-4859EFD3C824-9155-0000016F59FA8F0B";
+}

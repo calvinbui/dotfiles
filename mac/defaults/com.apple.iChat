@@ -1,0 +1,4 @@
+{
+    DidCheckForDuplicateChats = 2;
+    DidMigratePersonCentricIDs = 1;
+}

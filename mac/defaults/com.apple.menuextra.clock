@@ -1,0 +1,5 @@
+{
+    DateFormat = "EEE d MMM  h:mm:ss a";
+    FlashDateSeparators = 0;
+    IsAnalog = 0;
+}

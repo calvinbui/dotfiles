@@ -1,0 +1,12 @@
+{
+    LastUsedPrinters =     (
+                {
+            Network = "192.168.2.1";
+            PrinterID = "Brother_MFC_9340CDW__3c2af4057324_";
+        },
+                {
+            Network = "192.168.1.1";
+            PrinterID = "HP_Color_LaserJet_MFP_M680";
+        }
+    );
+}

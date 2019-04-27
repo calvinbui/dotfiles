@@ -1,0 +1,190 @@
+{
+    NSNavLastRootDirectory = "~/Library/Mobile Documents/com~apple~Pages/Documents";
+    NSNavLastUserSetHideExtensionButtonState = 1;
+    NSNavPanelExpandedSizeForOpenMode = "{799, 448}";
+    NSNavPanelExpandedSizeForSaveMode = "{712, 448}";
+    "NSSplitView Subview Frames NSColorPanelSplitView" =     (
+        "0.000000, 0.000000, 224.000000, 258.000000, NO, NO",
+        "0.000000, 259.000000, 224.000000, 48.000000, NO, NO"
+    );
+    "NSToolbar Configuration BD34DA1C-1BED-4129-BC8C-3AF0E30B91F1" =     {
+        "TB Display Mode" = 1;
+        "TB Icon Size Mode" = 1;
+        "TB Is Shown" = 1;
+        "TB Size Mode" = 1;
+    };
+    "NSToolbar Configuration com.apple.NSColorPanel" =     {
+        "TB Is Shown" = 1;
+    };
+    "NSWindow Frame NSColorPanel" = "0 163 224 275 0 0 1440 877 ";
+    "NSWindow Frame NSNavPanelAutosaveName" = "503 552 427 277 0 0 1440 877 ";
+    "NSWindow Frame TMAFindReplaceWindow" = "460 440 520 78 0 0 1440 877 ";
+    ReplaceMode = 0;
+    TMADidMigrateIWork09Templates = 1;
+    TMAFirstLaunchVersion = 65551;
+    TMAWasMigratingIWork09Templates = 0;
+    TPResetTSDDisplayEdgeGuidesAndTSDDisplayCenterGuides = 1;
+    TSDDisplaySizingGuides = 0;
+    TSDDisplaySpacingGuides = 0;
+    TSDShowSizeAndPositionWhileMovingUserDefault = 1;
+    TSKCloudKitDidCreateSubscriptionForUserIDDictionaryKey =     {
+        "_03dc86131faa4004d08fbdc7b5480b29" =         (
+            "com.apple.iWork.TSKCloudKitPrivateZone"
+        );
+    };
+    TSKCloudKitDidCreateZoneForUserIDDictionaryKey =     {
+        "_03dc86131faa4004d08fbdc7b5480b29" =         (
+            "com.apple.iWork.TSKCloudKitPrivateZone"
+        );
+    };
+    TSKRemoteStringsETag = "\\"2de-5852c61568949\\"";
+    TSKRemoteStringsLastLocalization = "en_AU";
+    TSKRemoteStringsNextUpdate = "2019-04-25 06:38:57 +0000";
+    TSURemoteDefaults =     {
+        CollaborationThresholds =         {
+            Default =             {
+                DataSizeMaximumInMB = 1000;
+                DataSizeWarningInMB = 900;
+            };
+            "com.apple.CloudDocs" =             {
+                DataSizeMaximumInMB = 2000;
+                DataSizeWarningInMB = 1800;
+            };
+        };
+        DownloadableContentURL = "https://www.icloud.com/iwork/st/content";
+        OSXSharingInfo =         {
+            MinimumApplicationVersionRequired =             {
+                "com.apple.iWork.Keynote" = "6.6";
+                "com.apple.iWork.Numbers" = "3.6";
+                "com.apple.iWork.Pages" = "5.6";
+            };
+        };
+        OSXUpdateInfo =         {
+            ApplicationVersion =             {
+                "com.apple.iWork.Keynote" = "9.0.1";
+                "com.apple.iWork.Numbers" = "6.0";
+                "com.apple.iWork.Pages" = "8.0";
+            };
+            MinimumOSVersion = "10.13.0";
+            UnsupportedModels =             (
+                "iMac7,1",
+                "iMac8,1",
+                "iMac9,1",
+                "MacBook4,1",
+                "MacBook5,1",
+                "MacBook5,2",
+                "MacBookAir2,1",
+                "MacBookPro3,1",
+                "MacBookPro4,1",
+                "MacBookPro5,1",
+                "MacBookPro5,2",
+                "MacBookPro5,3",
+                "MacBookPro5,4",
+                "MacBookPro5,5",
+                "Macmini3,1",
+                "MacPro3,1",
+                "MacPro4,1",
+                "Xserve3,1"
+            );
+        };
+        SharingURLFormat = "https://www.icloud.com/%@/%@#%@";
+        TSUIsGilliganMigratedToICloudDrive = YES;
+        TSUIsUnity15Available = YES;
+        iCloudRegionInfo =         {
+            "*.icloud.com" =             {
+                AssetHost = "iwres.icloud.com";
+                Domain = "icloud.com";
+                DownloadableContentURL = "https://www.icloud.com/iwork/st/content";
+                URL = "https://www.icloud.com";
+            };
+            "*.icloud.com.cn" =             {
+                AssetHost = "iwres.icloud.com.cn";
+                Domain = "icloud.com.cn";
+                DownloadableContentURL = "https://www.icloud.com.cn/iwork/st/content";
+                URL = "https://www.icloud.com.cn";
+            };
+        };
+        iOSCollaborationInfo =         {
+            MinimumApplicationVersionRequired =             {
+                "com.apple.Keynote" = "3.3";
+                "com.apple.Numbers" = "3.3";
+                "com.apple.Pages" = "3.3";
+            };
+            "MinimumApplicationVersionRequired.v2" =             {
+                "com.apple.Keynote" = "5.0";
+                "com.apple.Numbers" = "5.0";
+                "com.apple.Pages" = "5.0";
+            };
+        };
+        iOSSharingInfo =         {
+            MinimumApplicationVersionRequired =             {
+                "com.apple.Keynote" = "2.6";
+                "com.apple.Numbers" = "2.6";
+                "com.apple.Pages" = "2.6";
+            };
+        };
+        iOSUpdateInfo =         {
+            ApplicationVersion =             {
+                "com.apple.Keynote" = "5.0.1";
+                "com.apple.Numbers" = "5.0.1";
+                "com.apple.Pages" = "5.0.1";
+            };
+            MinimumOSVersion = "11.0.0";
+            UnsupportedDevices =             (
+                "iPad2,1",
+                "iPad2,2",
+                "iPad2,3",
+                "iPad2,4",
+                "iPad2,5",
+                "iPad2,6",
+                "iPad2,7",
+                "iPad3,1",
+                "iPad3,2",
+                "iPad3,3",
+                "iPad3,4",
+                "iPad3,5",
+                "iPad3,6",
+                "iPhone3,1",
+                "iPhone3,2",
+                "iPhone3,3",
+                "iPhone4,1",
+                "iPhone5,1",
+                "iPhone5,2",
+                "iPhone5,3",
+                "iPhone5,4",
+                "iPod5,1"
+            );
+        };
+        macOSCollaborationInfo =         {
+            MinimumApplicationVersionRequired =             {
+                "com.apple.iWork.Keynote" = "7.3";
+                "com.apple.iWork.Numbers" = "4.3";
+                "com.apple.iWork.Pages" = "6.3";
+            };
+            "MinimumApplicationVersionRequired.v2" =             {
+                "com.apple.iWork.Keynote" = "9.0";
+                "com.apple.iWork.Numbers" = "6.0";
+                "com.apple.iWork.Pages" = "8.0";
+            };
+        };
+    };
+    TSURemoteDefaultsETag = "\\"14bf-5861d777faa8c\\"";
+    TSURemoteDefaultsNextUpdate = "2019-04-25 06:38:54 +0000";
+    TSWPAutomaticallyDetectLinks = 1;
+    TSWPAutomaticallyDetectLists = 1;
+    TSWPGrammarChecking = 0;
+    TSWPIgnoredWordsDictionary =     {
+    };
+    TSWPSpellCheckingEnabled = 1;
+    TSWPSuperscriptNumericalSuffixes = 0;
+    TSWPTextReplacementsDictionary =     {
+        "(c)" = "\\U00a9";
+        "(p)" = "\\U2117";
+        "(r)" = "\\U00ae";
+        TM = "\\U2122";
+        "c/o" = "\\U2105";
+    };
+    TSWPUnderlineLinks = 1;
+    kTPWordCountLastStatisticsTypeUserDefault = 1;
+    kTPWordCountLastVisibleUserDefault = 0;
+}

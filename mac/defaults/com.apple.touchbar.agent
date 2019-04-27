@@ -1,0 +1,6 @@
+{
+    PresentationModeFnModes =     {
+        fullControlStrip = functionKeys;
+    };
+    PresentationModeGlobal = fullControlStrip;
+}

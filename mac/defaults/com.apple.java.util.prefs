@@ -1,0 +1,10 @@
+{
+    "/" =     {
+        "com/" =         {
+            "install4j/" =             {
+                "installations/" =                 {
+                };
+            };
+        };
+    };
+}
