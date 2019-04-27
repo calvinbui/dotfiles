@@ -1,7 +1,0 @@
-{
-    displayOrder =     (
-        "com.apple.MarkupUI.Markup",
-        "net.pornel.ImageOptimizeExtension"
-    );
-    userHasOrdered = 1;
-}

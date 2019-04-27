@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-
-for filename in defaults/*; do
-  echo "Restoring $filename"
-  defaults import "$filename" "$filename"
+cd defaults || exit
+for filename in *; do
+  domain="${filename%".plist"}"
+  echo "restoring $domain"
+  defaults import "$domain" "$filename"
 done

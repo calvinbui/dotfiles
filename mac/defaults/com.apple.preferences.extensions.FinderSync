@@ -1,9 +1,0 @@
-{
-    displayOrder =     (
-        "com.getdropbox.dropbox.garcon",
-        "com.ScooterSoftware.BeyondCompare.BCFinder",
-        "com.microsoft.OneDrive.FinderSync",
-        "com.macitbetter.betterzip.findersyncextension"
-    );
-    userHasOrdered = 1;
-}

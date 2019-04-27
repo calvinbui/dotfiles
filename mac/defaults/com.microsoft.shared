@@ -1,7 +1,0 @@
-{
-    "HostMetadata.F68CB4F4-C5C6-4E26-ABF6-67E6AE77323F" =     {
-        Audience = Production;
-        AudienceChannel = CC;
-        AudienceGroup = Production;
-    };
-}

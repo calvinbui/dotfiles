@@ -1,7 +1,0 @@
-{
-    IMChatVocabularyUpdaterDidPerformInitialUpdateKey = 1;
-    "archivedMessagesChangeToken-syncStoreVersion" = 1;
-    "attachmentZoneChangeToken-syncStoreVersion" = 1;
-    "changeToken-syncStoreVersion" = 1;
-    "messagesChangeToken-syncStoreVersion" = 1;
-}

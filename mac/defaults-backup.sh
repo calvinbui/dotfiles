@@ -12,7 +12,6 @@ readarray -td, a <<<"$domains,"; unset 'a[-1]';
 for domain in "${a[@]}"
 do
   domain=$(echo "$domain" | sed 's/^[[:space:]]*//')
-  if keys=$(defaults read "$domain" 2>/dev/null); then
-    echo "$keys" > "${DIR}/defaults/${domain}"
-  fi
+  echo "backing up $domain"
+  defaults export "$domain" "${DIR}"/defaults/"$domain".plist
 done
