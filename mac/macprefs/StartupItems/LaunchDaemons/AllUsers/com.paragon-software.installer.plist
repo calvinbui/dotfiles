@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDictionaryVersion</key>
+	<string>6.0</string>
+	<key>Label</key>
+	<string>com.paragon-software.installer</string>
+	<key>MachServices</key>
+	<dict>
+		<key>com.paragon-software.installer</key>
+		<true/>
+	</dict>
+	<key>Program</key>
+	<string>/Library/PrivilegedHelperTools/com.paragon-software.installer</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Library/PrivilegedHelperTools/com.paragon-software.installer</string>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ParallelsNetworkConfig schemaVersion="1.0" dyn_lists="VirtualNetworks 1">
+   <SystemFlags></SystemFlags>
+   <IPv6Enabled>1</IPv6Enabled>
+   <NATDAllowEtcHostsWrite>1</NATDAllowEtcHostsWrite>
+   <UDPSendBufSize>4106</UDPSendBufSize>
+   <VirtualNetworks dyn_lists="VirtualNetwork 9" id="0">
+      <VirtualNetwork dyn_lists="" id="0">
+         <Uuid>{b7418c11-69c1-430c-8307-b8a4ecf2577c}</Uuid>
+         <NetworkID>Shared</NetworkID>
+         <Description>Shared Networking</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>1</NetworkType>
+         <BoundCardMac></BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>10.211.55.2</HostIPAddress>
+            <DhcpIPAddress>10.211.55.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>fdb2:2c26:f4e4::1</HostIP6Address>
+            <DhcpIP6Address>fdb2:2c26:f4e4::</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name>Parallels Shared #0</Name>
+               <PrlAdapterIndex>0</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>1</Enabled>
+               <IPScopeStart>10.211.55.1</IPScopeStart>
+               <IPScopeEnd>10.211.55.254</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>1</Enabled>
+               <IPScopeStart>fdb2:2c26:f4e4::</IPScopeStart>
+               <IPScopeEnd>fdb2:2c26:f4e4:0:ffff:ffff:ffff:ffff</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>1</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="1">
+         <Uuid>{df8be29e-35fc-492a-94a1-09f349d597fa}</Uuid>
+         <NetworkID>Host-Only</NetworkID>
+         <Description>Host Only Networking</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>1</NetworkType>
+         <BoundCardMac></BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>10.37.129.2</HostIPAddress>
+            <DhcpIPAddress>10.37.129.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>fdb2:2c26:f4e4:1::1</HostIP6Address>
+            <DhcpIP6Address>fdb2:2c26:f4e4:1::</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name>Parallels Host-Only #1</Name>
+               <PrlAdapterIndex>1</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>1</Enabled>
+               <IPScopeStart>10.37.129.1</IPScopeStart>
+               <IPScopeEnd>10.37.129.254</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>1</Enabled>
+               <IPScopeStart>fdb2:2c26:f4e4:1::</IPScopeStart>
+               <IPScopeEnd>fdb2:2c26:f4e4:1:ffff:ffff:ffff:ffff</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="2">
+         <Uuid>{dc6ea317-7e36-4e4b-8f78-b49d5b183ceb}</Uuid>
+         <NetworkID>en5 (en5)</NetworkID>
+         <Description>en5 (en5)</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>AC:DE:48:00:11:22</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="3">
+         <Uuid>{9b5f32ca-7dd9-4dd1-9183-d6033ff1c83f}</Uuid>
+         <NetworkID>Wi-Fi (en0)</NetworkID>
+         <Description>Wi-Fi (en0)</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>38:F9:D3:AE:39:DF</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="4">
+         <Uuid>{cf0fee38-44a5-4877-b8ff-1016b5164d8e}</Uuid>
+         <NetworkID>p2p0 (p2p0)</NetworkID>
+         <Description>p2p0 (p2p0)</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>0A:F9:D3:AE:39:DF</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="5">
+         <Uuid>{59eb57a6-18e9-4c52-a5ac-cc5b8112047e}</Uuid>
+         <NetworkID>awdl0 (awdl0)</NetworkID>
+         <Description>awdl0 (awdl0)</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>E6:15:B7:55:38:64</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="6">
+         <Uuid>{5d77b423-49b4-4516-9678-f7d2208c414d}</Uuid>
+         <NetworkID>vnic0 (vnic0)</NetworkID>
+         <Description>vnic0 (vnic0)</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>00:1C:42:00:00:08</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="7">
+         <Uuid>{4bd99128-a084-441c-a860-427d474394d1}</Uuid>
+         <NetworkID>vnic1 (vnic1)</NetworkID>
+         <Description>vnic1 (vnic1)</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>00:1C:42:00:00:09</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+      <VirtualNetwork dyn_lists="" id="8">
+         <Uuid>{37c59e67-7a8d-459e-b16c-a74d893104fd}</Uuid>
+         <NetworkID>Default</NetworkID>
+         <Description>Default</Description>
+         <Enabled>1</Enabled>
+         <NetworkType>0</NetworkType>
+         <BoundCardMac>FF:FF:FF:FF:FF:FF</BoundCardMac>
+         <VLANTag>65535</VLANTag>
+         <HostOnlyNetwork dyn_lists="">
+            <HostIPAddress>127.0.0.1</HostIPAddress>
+            <DhcpIPAddress>127.0.0.1</DhcpIPAddress>
+            <IPNetMask>255.255.255.0</IPNetMask>
+            <HostAssignIPv6>0</HostAssignIPv6>
+            <HostIP6Address>::1</HostIP6Address>
+            <DhcpIP6Address>::1</DhcpIP6Address>
+            <IP6NetMask>ffff:ffff:ffff:ffff::</IP6NetMask>
+            <DNSUseEtcHosts>1</DNSUseEtcHosts>
+            <RegVmNameInEtcHosts>1</RegVmNameInEtcHosts>
+            <EnableDNS>1</EnableDNS>
+            <ParallelsAdapter dyn_lists="">
+               <Enabled>1</Enabled>
+               <Name></Name>
+               <PrlAdapterIndex>-2</PrlAdapterIndex>
+               <HiddenAdapter>1</HiddenAdapter>
+            </ParallelsAdapter>
+            <DHCPServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>127.0.0.1</IPScopeStart>
+               <IPScopeEnd>127.0.0.1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPServer>
+            <DHCPv6Server dyn_lists="">
+               <Enabled>0</Enabled>
+               <IPScopeStart>::1</IPScopeStart>
+               <IPScopeEnd>::1</IPScopeEnd>
+               <IPReservations dyn_lists="IPReservation 0"/>
+            </DHCPv6Server>
+            <NATServer dyn_lists="">
+               <Enabled>0</Enabled>
+               <PortForwarding dyn_lists="">
+                  <TCP dyn_lists="ForwardEntry 0"/>
+                  <UDP dyn_lists="ForwardEntry 0"/>
+               </PortForwarding>
+               <IdleConnectionTimeoutSecs>7440</IdleConnectionTimeoutSecs>
+               <UseIPFilter>0</UseIPFilter>
+               <ProvideIPv6Route>-1</ProvideIPv6Route>
+               <NatDNSFilterIPv6Replies>-1</NatDNSFilterIPv6Replies>
+               <UseInterface></UseInterface>
+            </NATServer>
+         </HostOnlyNetwork>
+      </VirtualNetwork>
+   </VirtualNetworks>
+</ParallelsNetworkConfig>
