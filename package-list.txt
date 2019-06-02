@@ -3,11 +3,12 @@ atom-beautify@0.33.4
 atom-cfn-lint@0.7.0
 atom-ide-debugger-python@0.7.3
 atom-ide-ui@0.13.0
+atom-jinja2@0.6.0
 autoclose-html@0.23.0
 autocomplete-paths@2.12.2
 autocomplete-python@1.14.0
 busy-signal@2.0.1
-file-icons@2.1.31
+file-icons@2.1.32
 git-blame@1.8.0
 git-time-machine@2.1.0
 goto-definition@1.3.4
@@ -22,6 +23,7 @@ intentions@1.1.5
 language-ansible@0.2.2
 language-docker@1.1.8
 language-salt@0.4.0
+language-terraform@0.8.1
 linter@2.3.0
 linter-eslint@8.5.5
 linter-hadolint@1.0.0
@@ -45,6 +47,7 @@ pigments@0.40.2
 platformio-ide-terminal@2.9.1
 remote-ftp@2.2.2
 script@3.18.1
-teletype@0.13.3
+teletype@0.13.4
+terraform-fmt@0.3.0
 trailing-spaces@0.4.0
 
