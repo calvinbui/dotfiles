@@ -16,6 +16,7 @@
     ]
     telemetryConsent: "no"
   editor:
+    fontSize: 17
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -30,8 +31,7 @@
     customTags: [
       "!vault"
     ]
-  "linter-pylint":
-    rcFile: "/Users/calvin/repos/linter_configs/pylint"
+  "linter-pylint": {}
   "linter-ui-default":
     panelHeight: 237
   "markdown-preview-plus":
@@ -59,6 +59,8 @@
   "platformio-ide-terminal":
     style:
       fontFamily: "Hack Nerd Font"
+  teletype:
+    askBeforeJoiningPortalViaExternalApp: false
   "tree-view":
     alwaysOpenExisting: true
   welcome:

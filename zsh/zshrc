@@ -78,6 +78,7 @@ plugins=(
   zsh-autosuggestions
   fast-syntax-highlighting
   autoupdate
+  terraform
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -48043,6 +48043,10 @@
 	<false/>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
+	<key>FocusFollowsMouse</key>
+	<false/>
 	<key>HideTab</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -48125,9 +48129,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 103 606 469 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>968 815 958 470 0 0 2560 1417 </string>
+	<string>560 495 796 486 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 57 2560 1360 0 0 2560 1417 </string>
+	<string>322 204 905 575 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -48897,26 +48901,6 @@
 			<key>Action</key>
 			<string>kPasteFromClipboardPointerAction</string>
 		</dict>
-		<key>Gesture,ThreeFingerSwipeDown,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kPrevWindowPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeLeft,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kPrevTabPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeRight,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kNextTabPointerAction</string>
-		</dict>
-		<key>Gesture,ThreeFingerSwipeUp,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kNextWindowPointerAction</string>
-		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/calvin/repos/dotfiles/mac</string>
@@ -48935,7 +48919,7 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
@@ -48943,9 +48927,11 @@
 	<key>StretchTabsToFillBar</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
+	<integer>4</integer>
+	<key>SwitchTabModifier</key>
 	<integer>9</integer>
 	<key>SwitchWindowModifier</key>
-	<integer>6</integer>
+	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>3</integer>
 	<key>Use background pattern indicator</key>
@@ -48963,7 +48949,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.8</string>
+	<string>3.2.9</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>

@@ -10,3 +10,7 @@ PATH="/usr/local/opt/ruby/bin:$PATH"
 PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
 # sed
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# ls colors
+alias ls="gls --color=always"
+
