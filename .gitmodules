@@ -59,3 +59,9 @@
 [submodule "zsh/custom/plugins/zsh-completions"]
 	path = zsh/custom/plugins/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions
+[submodule "zsh/custom/plugins/fast-syntax-highlighting"]
+	path = zsh/custom/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting
+[submodule "zsh/custom/plugins/zsh-syntax-highlighting-filetypes"]
+	path = zsh/custom/plugins/zsh-syntax-highlighting-filetypes
+	url = https://github.com/trapd00r/zsh-syntax-highlighting-filetypes

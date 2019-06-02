@@ -76,7 +76,7 @@ plugins=(
   zsh-completions
   zsh-history-substring-search
   zsh-autosuggestions
-  zsh-syntax-highlighting
+  fast-syntax-highlighting
   autoupdate
 )
 
