@@ -15,13 +15,13 @@
       <MaxVmMemory>131072</MaxVmMemory>
       <RecommendedMaxMemory>12288</RecommendedMaxMemory>
       <HostRamSize>16384</HostRamSize>
-      <AdvancedMemoryInfo dyn_lists="" id="0">
-         <FreeMemSize>3560</FreeMemSize>
-         <WireMemSize>2304</WireMemSize>
-         <InactiveMemSize>5142</InactiveMemSize>
-         <ActiveMemSize>5374</ActiveMemSize>
-         <VirtualMemSize>28435264</VirtualMemSize>
-         <ResidentMemSize>147968</ResidentMemSize>
+      <AdvancedMemoryInfo id="0" dyn_lists="">
+         <FreeMemSize>2260</FreeMemSize>
+         <WireMemSize>5112</WireMemSize>
+         <InactiveMemSize>3451</InactiveMemSize>
+         <ActiveMemSize>3963</ActiveMemSize>
+         <VirtualMemSize>28692128</VirtualMemSize>
+         <ResidentMemSize>510416</ResidentMemSize>
       </AdvancedMemoryInfo>
    </MemorySettings>
    <HostNotebookFlag>1</HostNotebookFlag>
@@ -42,16 +42,16 @@
    </DeviceInterfaceSettings>
    <FloppyDisks dyn_lists="FloppyDisk 0"/>
    <CdROMs dyn_lists="CdROM 0"/>
-   <HardDisks dyn_lists="HardDisk 8">
+   <HardDisks dyn_lists="HardDisk 2">
       <BootCamp>1</BootCamp>
-      <HardDisk dyn_lists="Partition 2" id="0">
+      <HardDisk id="0" dyn_lists="Partition 3">
          <Name>APPLE SSD AP0256M Media (disk0)</Name>
          <Size>251000193024</Size>
          <Uuid>/dev/disk0</Uuid>
          <Type>1</Type>
          <LogicalSectorSize>4096</LogicalSectorSize>
          <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
+         <Partition id="0" dyn_lists="OsDistrInfo 0 Partition 0">
             <Name>EFI System Partition</Name>
             <SystemName>/dev/disk0s1</SystemName>
             <Size>314572800</Size>
@@ -69,10 +69,10 @@
                <OsArchitecture>0</OsArchitecture>
             </OsInfo>
          </Partition>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="1">
+         <Partition id="1" dyn_lists="OsDistrInfo 0 Partition 0">
             <Name>Untitled 2</Name>
             <SystemName>/dev/disk0s2</SystemName>
-            <Size>250685575168</Size>
+            <Size>170000359424</Size>
             <FreeSize>-1</FreeSize>
             <Index>2</Index>
             <InUse>0</InUse>
@@ -87,41 +87,41 @@
                <OsArchitecture>0</OsArchitecture>
             </OsInfo>
          </Partition>
+         <Partition id="2" dyn_lists="OsDistrInfo 0 Partition 0">
+            <Name>Untitled 3</Name>
+            <SystemName>/dev/disk0s3</SystemName>
+            <Size>80684777472</Size>
+            <FreeSize>-1</FreeSize>
+            <Index>3</Index>
+            <InUse>0</InUse>
+            <Type>7</Type>
+            <Logical>0</Logical>
+            <Active>0</Active>
+            <Start>170314956800</Start>
+            <GptType>{ebd0a0a2-b9e5-4433-87c0-68b6b72699c7}</GptType>
+            <TypeName>NTFS</TypeName>
+            <OsInfo dyn_lists="">
+               <OsVersion>2063</OsVersion>
+               <OsArchitecture>2</OsArchitecture>
+            </OsInfo>
+         </Partition>
          <Removable>0</Removable>
          <External>0</External>
          <IsVirtualDevice>0</IsVirtualDevice>
          <IsVirtualDisk>0</IsVirtualDisk>
          <PartitionScheme>1</PartitionScheme>
       </HardDisk>
-      <HardDisk dyn_lists="Partition 4" id="1">
+      <HardDisk id="1" dyn_lists="Partition 4">
          <Name>AppleAPFSMedia (disk1)</Name>
-         <Size>250685575168</Size>
+         <Size>170000359424</Size>
          <Uuid>/dev/disk1</Uuid>
          <Type>1</Type>
          <LogicalSectorSize>4096</LogicalSectorSize>
          <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
+         <Partition id="0" dyn_lists="OsDistrInfo 0 Partition 0">
             <Name>Macintosh HD</Name>
             <SystemName>/dev/disk1s1</SystemName>
-            <Size>250685575168</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>4</Index>
-            <InUse>0</InUse>
-            <Type>255</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>0</Start>
-            <GptType>{41504653-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>APFS Internal</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="1">
-            <Name>Preboot</Name>
-            <SystemName>/dev/disk1s2</SystemName>
-            <Size>250685575168</Size>
+            <Size>170000359424</Size>
             <FreeSize>-1</FreeSize>
             <Index>5</Index>
             <InUse>0</InUse>
@@ -136,10 +136,28 @@
                <OsArchitecture>0</OsArchitecture>
             </OsInfo>
          </Partition>
-         <Partition dyn_lists="OsDistrInfo 1 Partition 0" id="2">
+         <Partition id="1" dyn_lists="OsDistrInfo 0 Partition 0">
+            <Name>Preboot</Name>
+            <SystemName>/dev/disk1s2</SystemName>
+            <Size>170000359424</Size>
+            <FreeSize>-1</FreeSize>
+            <Index>7</Index>
+            <InUse>0</InUse>
+            <Type>255</Type>
+            <Logical>0</Logical>
+            <Active>0</Active>
+            <Start>0</Start>
+            <GptType>{41504653-0000-11aa-aa11-00306543ecac}</GptType>
+            <TypeName>APFS Internal</TypeName>
+            <OsInfo dyn_lists="">
+               <OsVersion>0</OsVersion>
+               <OsArchitecture>0</OsArchitecture>
+            </OsInfo>
+         </Partition>
+         <Partition id="2" dyn_lists="OsDistrInfo 1 Partition 0">
             <Name>Recovery</Name>
             <SystemName>/dev/disk1s3</SystemName>
-            <Size>250685575168</Size>
+            <Size>170000359424</Size>
             <FreeSize>-1</FreeSize>
             <Index>6</Index>
             <InUse>0</InUse>
@@ -149,12 +167,12 @@
             <Start>0</Start>
             <GptType>{41504653-0000-11aa-aa11-00306543ecac}</GptType>
             <TypeName>APFS Internal</TypeName>
-            <OsDistrInfo dyn_lists="" id="0">
+            <OsDistrInfo id="0" dyn_lists="">
                <OsVersion>1795</OsVersion>
                <OsArchitecture>1</OsArchitecture>
                <Major>10</Major>
                <Minor>14</Minor>
-               <Patch>3</Patch>
+               <Patch>5</Patch>
                <DirectoryName>5398693D-75F4-4CE2-9CDC-02A01283D07E</DirectoryName>
             </OsDistrInfo>
             <OsInfo dyn_lists="">
@@ -162,12 +180,12 @@
                <OsArchitecture>0</OsArchitecture>
             </OsInfo>
          </Partition>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="3">
+         <Partition id="3" dyn_lists="OsDistrInfo 0 Partition 0">
             <Name>VM</Name>
             <SystemName>/dev/disk1s4</SystemName>
-            <Size>250685575168</Size>
+            <Size>170000359424</Size>
             <FreeSize>-1</FreeSize>
-            <Index>7</Index>
+            <Index>8</Index>
             <InUse>0</InUse>
             <Type>255</Type>
             <Logical>0</Logical>
@@ -186,238 +204,20 @@
          <IsVirtualDisk>1</IsVirtualDisk>
          <PartitionScheme>3</PartitionScheme>
       </HardDisk>
-      <HardDisk dyn_lists="Partition 2" id="2">
-         <Name>Apple UDIF read-only compressed (ADC) Media (disk2)</Name>
-         <Size>1477607424</Size>
-         <Uuid>/dev/disk2</Uuid>
-         <Type>0</Type>
-         <LogicalSectorSize>512</LogicalSectorSize>
-         <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
-            <Name>Apple</Name>
-            <SystemName>/dev/disk2s1</SystemName>
-            <Size>32256</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>1</Index>
-            <InUse>0</InUse>
-            <Type>255</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>512</Start>
-            <GptType>{2e313465-19b9-463f-8126-8a7993773801}</GptType>
-            <TypeName>Apple SoftRAID Scratch</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="1">
-            <Name>disk image</Name>
-            <SystemName>/dev/disk2s2</SystemName>
-            <Size>1468006400</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>2</Index>
-            <InUse>0</InUse>
-            <Type>175</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>32768</Start>
-            <GptType>{48465300-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>Apple HFS+</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Removable>1</Removable>
-         <External>1</External>
-         <IsVirtualDevice>1</IsVirtualDevice>
-         <IsVirtualDisk>0</IsVirtualDisk>
-         <PartitionScheme>4</PartitionScheme>
-      </HardDisk>
-      <HardDisk dyn_lists="Partition 2" id="3">
-         <Name>Apple UDIF read-only compressed (bzip2) Media (disk3)</Name>
-         <Size>77594624</Size>
-         <Uuid>/dev/disk3</Uuid>
-         <Type>0</Type>
-         <LogicalSectorSize>512</LogicalSectorSize>
-         <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
-            <Name>Apple</Name>
-            <SystemName>/dev/disk3s1</SystemName>
-            <Size>32256</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>1</Index>
-            <InUse>0</InUse>
-            <Type>255</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>512</Start>
-            <GptType>{2e313465-19b9-463f-8126-8a7993773801}</GptType>
-            <TypeName>Apple SoftRAID Scratch</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="1">
-            <Name>disk image</Name>
-            <SystemName>/dev/disk3s2</SystemName>
-            <Size>77561856</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>2</Index>
-            <InUse>0</InUse>
-            <Type>175</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>32768</Start>
-            <GptType>{48465300-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>Apple HFS+</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Removable>1</Removable>
-         <External>1</External>
-         <IsVirtualDevice>1</IsVirtualDevice>
-         <IsVirtualDisk>0</IsVirtualDisk>
-         <PartitionScheme>4</PartitionScheme>
-      </HardDisk>
-      <HardDisk dyn_lists="Partition 1" id="4">
-         <Name>Apple UDIF read-only compressed (zlib) Media (disk4)</Name>
-         <Size>58173440</Size>
-         <Uuid>/dev/disk4</Uuid>
-         <Type>0</Type>
-         <LogicalSectorSize>512</LogicalSectorSize>
-         <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
-            <Name>disk image</Name>
-            <SystemName>/dev/disk4s1</SystemName>
-            <Size>58134528</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>1</Index>
-            <InUse>0</InUse>
-            <Type>175</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>20480</Start>
-            <GptType>{48465300-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>Apple HFS+</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Removable>1</Removable>
-         <External>1</External>
-         <IsVirtualDevice>1</IsVirtualDevice>
-         <IsVirtualDisk>0</IsVirtualDisk>
-         <PartitionScheme>1</PartitionScheme>
-      </HardDisk>
-      <HardDisk dyn_lists="Partition 1" id="5">
-         <Name>Apple UDIF read-only compressed (zlib) (shadowed) Media (disk5)</Name>
-         <Size>20971520</Size>
-         <Uuid>/dev/disk5</Uuid>
-         <Type>0</Type>
-         <LogicalSectorSize>512</LogicalSectorSize>
-         <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
-            <Name>disk image</Name>
-            <SystemName>/dev/disk5s1</SystemName>
-            <Size>20930560</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>1</Index>
-            <InUse>0</InUse>
-            <Type>175</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>20480</Start>
-            <GptType>{48465300-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>Apple HFS+</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Removable>1</Removable>
-         <External>1</External>
-         <IsVirtualDevice>1</IsVirtualDevice>
-         <IsVirtualDisk>0</IsVirtualDisk>
-         <PartitionScheme>1</PartitionScheme>
-      </HardDisk>
-      <HardDisk dyn_lists="Partition 1" id="6">
-         <Name>Apple UDIF read-only compressed (zlib) (shadowed) Media (disk6)</Name>
-         <Size>132120576</Size>
-         <Uuid>/dev/disk6</Uuid>
-         <Type>0</Type>
-         <LogicalSectorSize>512</LogicalSectorSize>
-         <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
-            <Name>disk image</Name>
-            <SystemName>/dev/disk6s1</SystemName>
-            <Size>132079616</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>1</Index>
-            <InUse>0</InUse>
-            <Type>175</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>20480</Start>
-            <GptType>{48465300-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>Apple HFS+</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Removable>1</Removable>
-         <External>1</External>
-         <IsVirtualDevice>1</IsVirtualDevice>
-         <IsVirtualDisk>0</IsVirtualDisk>
-         <PartitionScheme>1</PartitionScheme>
-      </HardDisk>
-      <HardDisk dyn_lists="Partition 1" id="7">
-         <Name>Apple UDIF read-only compressed (zlib) (shadowed) Media (disk8)</Name>
-         <Size>632291328</Size>
-         <Uuid>/dev/disk8</Uuid>
-         <Type>0</Type>
-         <LogicalSectorSize>512</LogicalSectorSize>
-         <Index>0</Index>
-         <Partition dyn_lists="OsDistrInfo 0 Partition 0" id="0">
-            <Name>disk image</Name>
-            <SystemName>/dev/disk8s1</SystemName>
-            <Size>632250368</Size>
-            <FreeSize>-1</FreeSize>
-            <Index>1</Index>
-            <InUse>0</InUse>
-            <Type>175</Type>
-            <Logical>0</Logical>
-            <Active>0</Active>
-            <Start>20480</Start>
-            <GptType>{48465300-0000-11aa-aa11-00306543ecac}</GptType>
-            <TypeName>Apple HFS+</TypeName>
-            <OsInfo dyn_lists="">
-               <OsVersion>0</OsVersion>
-               <OsArchitecture>0</OsArchitecture>
-            </OsInfo>
-         </Partition>
-         <Removable>1</Removable>
-         <External>1</External>
-         <IsVirtualDevice>1</IsVirtualDevice>
-         <IsVirtualDisk>0</IsVirtualDisk>
-         <PartitionScheme>1</PartitionScheme>
-      </HardDisk>
    </HardDisks>
-   <SerialPorts dyn_lists="SerialPort 1">
+   <SerialPorts dyn_lists="SerialPort 2">
       <SerialPort id="0">
          <Name>/dev/cu.Bluetooth-Incoming-Port</Name>
          <Uuid>/dev/cu.Bluetooth-Incoming-Port</Uuid>
       </SerialPort>
+      <SerialPort id="1">
+         <Name>/dev/cu.BlackDiamond-SPPDev</Name>
+         <Uuid>/dev/cu.BlackDiamond-SPPDev</Uuid>
+      </SerialPort>
    </SerialPorts>
    <ParallelPorts dyn_lists="ParallelPort 0"/>
-   <NetworkAdapters dyn_lists="NetworkAdapter 6">
-      <NetworkAdapter dyn_lists="NetAddress DnsIPAddress SearchDomain" id="0">
+   <NetworkAdapters dyn_lists="NetworkAdapter 7">
+      <NetworkAdapter id="0" dyn_lists="NetAddress DnsIPAddress SearchDomain">
          <Name>en5</Name>
          <Uuid>en5</Uuid>
          <index>0</index>
@@ -431,49 +231,63 @@
          <DefaultGatewayIPv6></DefaultGatewayIPv6>
          <VLANTag>65535</VLANTag>
       </NetworkAdapter>
-      <NetworkAdapter dyn_lists="NetAddress DnsIPAddress SearchDomain" id="1">
+      <NetworkAdapter id="1" dyn_lists="NetAddress DnsIPAddress SearchDomain">
          <Name>Wi-Fi</Name>
          <Uuid>en0</Uuid>
          <index>1</index>
          <Type>2</Type>
          <Enabled>1</Enabled>
          <MacAddress>38:F9:D3:AE:39:DF</MacAddress>
-         <NetAddress>fe80::14b9:86c7:ccec:5d80%en0/ffff:ffff:ffff:ffff::</NetAddress>
-         <NetAddress>192.168.2.74/255.255.255.0</NetAddress>
          <ConfigureWithDhcp>0</ConfigureWithDhcp>
          <DefaultGateway></DefaultGateway>
          <ConfigureWithDhcpIPv6>0</ConfigureWithDhcpIPv6>
          <DefaultGatewayIPv6></DefaultGatewayIPv6>
          <VLANTag>65535</VLANTag>
       </NetworkAdapter>
-      <NetworkAdapter dyn_lists="NetAddress DnsIPAddress SearchDomain" id="2">
-         <Name>p2p0</Name>
-         <Uuid>p2p0</Uuid>
-         <index>2</index>
-         <Type>2</Type>
+      <NetworkAdapter id="2" dyn_lists="NetAddress DnsIPAddress SearchDomain">
+         <Name>Belkin USB-C LAN</Name>
+         <Uuid>en8</Uuid>
+         <index>7</index>
+         <Type>0</Type>
          <Enabled>1</Enabled>
-         <MacAddress>0A:F9:D3:AE:39:DF</MacAddress>
+         <MacAddress>58:EF:68:7D:7E:9B</MacAddress>
+         <NetAddress>fe80::1842:d369:9aea:72ac%en8/ffff:ffff:ffff:ffff::</NetAddress>
+         <NetAddress>192.168.1.235/255.255.255.0</NetAddress>
          <ConfigureWithDhcp>0</ConfigureWithDhcp>
          <DefaultGateway></DefaultGateway>
          <ConfigureWithDhcpIPv6>0</ConfigureWithDhcpIPv6>
          <DefaultGatewayIPv6></DefaultGatewayIPv6>
          <VLANTag>65535</VLANTag>
       </NetworkAdapter>
-      <NetworkAdapter dyn_lists="NetAddress DnsIPAddress SearchDomain" id="3">
-         <Name>awdl0</Name>
-         <Uuid>awdl0</Uuid>
-         <index>3</index>
-         <Type>2</Type>
+      <NetworkAdapter id="3" dyn_lists="NetAddress DnsIPAddress SearchDomain">
+         <Name>vmnet1</Name>
+         <Uuid>vmnet1</Uuid>
+         <index>8</index>
+         <Type>0</Type>
          <Enabled>1</Enabled>
-         <MacAddress>E6:15:B7:55:38:64</MacAddress>
-         <NetAddress>fe80::e415:b7ff:fe55:3864%awdl0/ffff:ffff:ffff:ffff::</NetAddress>
+         <MacAddress>00:50:56:C0:00:01</MacAddress>
+         <NetAddress>172.16.26.1/255.255.255.0</NetAddress>
          <ConfigureWithDhcp>0</ConfigureWithDhcp>
          <DefaultGateway></DefaultGateway>
          <ConfigureWithDhcpIPv6>0</ConfigureWithDhcpIPv6>
          <DefaultGatewayIPv6></DefaultGatewayIPv6>
          <VLANTag>65535</VLANTag>
       </NetworkAdapter>
-      <NetworkAdapter dyn_lists="NetAddress DnsIPAddress SearchDomain" id="4">
+      <NetworkAdapter id="4" dyn_lists="NetAddress DnsIPAddress SearchDomain">
+         <Name>vmnet8</Name>
+         <Uuid>vmnet8</Uuid>
+         <index>9</index>
+         <Type>0</Type>
+         <Enabled>1</Enabled>
+         <MacAddress>00:50:56:C0:00:08</MacAddress>
+         <NetAddress>192.168.174.1/255.255.255.0</NetAddress>
+         <ConfigureWithDhcp>0</ConfigureWithDhcp>
+         <DefaultGateway></DefaultGateway>
+         <ConfigureWithDhcpIPv6>0</ConfigureWithDhcpIPv6>
+         <DefaultGatewayIPv6></DefaultGatewayIPv6>
+         <VLANTag>65535</VLANTag>
+      </NetworkAdapter>
+      <NetworkAdapter id="5" dyn_lists="NetAddress DnsIPAddress SearchDomain">
          <Name>vnic0</Name>
          <Uuid>vnic0</Uuid>
          <index>268435456</index>
@@ -487,7 +301,7 @@
          <DefaultGatewayIPv6></DefaultGatewayIPv6>
          <VLANTag>65535</VLANTag>
       </NetworkAdapter>
-      <NetworkAdapter dyn_lists="NetAddress DnsIPAddress SearchDomain" id="5">
+      <NetworkAdapter id="6" dyn_lists="NetAddress DnsIPAddress SearchDomain">
          <Name>vnic1</Name>
          <Uuid>vnic1</Uuid>
          <index>268435457</index>
@@ -503,16 +317,24 @@
       </NetworkAdapter>
    </NetworkAdapters>
    <SoundDevices dyn_lists="">
-      <OutputDevices dyn_lists="OutputDevice 3">
+      <OutputDevices dyn_lists="OutputDevice 5">
          <OutputDevice id="0">
             <Name>Default</Name>
             <Uuid>1|1|dda47b44f2614b04cbaa649ea54213d4e451709e</Uuid>
          </OutputDevice>
          <OutputDevice id="1">
+            <Name>DisplayPort</Name>
+            <Uuid>AppleGFXHDAEngineOutputDP:0:{2D4C-0BFD-00000000}_out</Uuid>
+         </OutputDevice>
+         <OutputDevice id="2">
+            <Name>DisplayPort</Name>
+            <Uuid>AppleGFXHDAEngineOutputDP:1:{AC10-D067-30544D53}_out</Uuid>
+         </OutputDevice>
+         <OutputDevice id="3">
             <Name>MacBook Pro Speakers</Name>
             <Uuid>BuiltInSpeakerDevice_out</Uuid>
          </OutputDevice>
-         <OutputDevice id="2">
+         <OutputDevice id="4">
             <Name>Mute</Name>
             <Uuid>Null_out</Uuid>
          </OutputDevice>
@@ -532,34 +354,90 @@
          </MixerDevice>
       </MixerDevices>
    </SoundDevices>
-   <UsbDevices dyn_lists="UsbDevice 0"/>
-   <Printers dyn_lists="Printer 3">
-      <Printer dyn_lists="" id="0">
+   <UsbDevices dyn_lists="UsbDevice 4">
+      <UsbDevice id="0" dyn_lists="VmUuid">
+         <Name>Belkin USB-C LAN</Name>
+         <Uuid>200000|0bda|8153|super|--|7D7E9B000000</Uuid>
+         <DeviceState>0</DeviceState>
+         <UsbType>9</UsbType>
+      </UsbDevice>
+      <UsbDevice id="1" dyn_lists="VmUuid">
+         <Name>USB Keyboard</Name>
+         <Uuid>14110000|04d9|a096|full|KM|Empty</Uuid>
+         <DeviceState>0</DeviceState>
+         <UsbType>10</UsbType>
+      </UsbDevice>
+      <UsbDevice id="2" dyn_lists="VmUuid">
+         <Name>Billboard</Name>
+         <Uuid>14200000|0639|7213|full|--|CH7213</Uuid>
+         <DeviceState>0</DeviceState>
+         <UsbType>0</UsbType>
+      </UsbDevice>
+      <UsbDevice id="3" dyn_lists="VmUuid">
+         <Name>BillBoard Device</Name>
+         <Uuid>14400000|0bda|2171|full|--|123456789ABCDEFGH</Uuid>
+         <DeviceState>0</DeviceState>
+         <UsbType>0</UsbType>
+      </UsbDevice>
+   </UsbDevices>
+   <Printers dyn_lists="Printer 4">
+      <Printer id="0" dyn_lists="">
          <Name>Default printer</Name>
          <Uuid>Default printer</Uuid>
          <Default>0</Default>
       </Printer>
-      <Printer dyn_lists="" id="1">
+      <Printer id="1" dyn_lists="">
          <Name>Print to PDF (Mac Desktop)</Name>
          <Uuid>Parallels Virtual PDF Printer</Uuid>
          <Default>0</Default>
       </Printer>
-      <Printer dyn_lists="" id="2">
+      <Printer id="2" dyn_lists="">
+         <Name>Brother MFC-9340CDW [3c2af4057324]</Name>
+         <Uuid>Brother_MFC_9340CDW__3c2af4057324_</Uuid>
+         <Default>0</Default>
+      </Printer>
+      <Printer id="3" dyn_lists="">
          <Name>HP Color LaserJet MFP M680</Name>
          <Uuid>HP_Color_LaserJet_MFP_M680</Uuid>
          <Default>0</Default>
       </Printer>
    </Printers>
    <Cameras dyn_lists="Camera 1">
-      <Camera dyn_lists="" id="0">
+      <Camera id="0" dyn_lists="">
          <Name>FaceTime HD Camera</Name>
          <Uuid>0x8020000005ac8514</Uuid>
          <Resolutions>640x480@30-420V 1280x720@30-420V 640x480@30-YUVS 1280x720@30-YUVS</Resolutions>
       </Camera>
    </Cameras>
    <SmartCardReaders dyn_lists="SmartCardReader 0"/>
-   <HIDDevices dyn_lists="HIDDevice 5">
-      <HIDDevice dyn_lists="" id="0">
+   <HIDDevices dyn_lists="HIDDevice 7">
+      <HIDDevice id="0" dyn_lists="">
+         <Name>USB Keyboard</Name>
+         <Uuid>14110000</Uuid>
+         <AlternateName></AlternateName>
+         <Transport>USB</Transport>
+         <ProductID>41110</ProductID>
+         <VendorID>1241</VendorID>
+         <CountryCode></CountryCode>
+         <UsagePairs>(0x1, 0x6)(0x1, 0x6)(0x1, 0x80)(0xc, 0x1)(0xff00, 0x1)(0xff01, 0x1)(0xff00, 0xff00)</UsagePairs>
+         <IsMouse>0</IsMouse>
+         <IsKeyboard>1</IsKeyboard>
+         <IsGameController>0</IsGameController>
+      </HIDDevice>
+      <HIDDevice id="1" dyn_lists="">
+         <Name>G603</Name>
+         <Uuid>55d0b8e5</Uuid>
+         <AlternateName></AlternateName>
+         <Transport>Bluetooth Low Energy</Transport>
+         <ProductID>45084</ProductID>
+         <VendorID>1133</VendorID>
+         <CountryCode></CountryCode>
+         <UsagePairs>(0x1, 0x6)(0x1, 0x2)(0x1, 0x1)(0xc, 0x1)(0xff43, 0x202)</UsagePairs>
+         <IsMouse>1</IsMouse>
+         <IsKeyboard>1</IsKeyboard>
+         <IsGameController>0</IsGameController>
+      </HIDDevice>
+      <HIDDevice id="2" dyn_lists="">
          <Name>iBridge ALS</Name>
          <Uuid>80300000</Uuid>
          <AlternateName></AlternateName>
@@ -572,7 +450,7 @@
          <IsKeyboard>0</IsKeyboard>
          <IsGameController>0</IsGameController>
       </HIDDevice>
-      <HIDDevice dyn_lists="" id="1">
+      <HIDDevice id="3" dyn_lists="">
          <Name>Headset</Name>
          <Uuid>80400000</Uuid>
          <AlternateName></AlternateName>
@@ -585,7 +463,7 @@
          <IsKeyboard>0</IsKeyboard>
          <IsGameController>0</IsGameController>
       </HIDDevice>
-      <HIDDevice dyn_lists="" id="2">
+      <HIDDevice id="4" dyn_lists="">
          <Name>Apple Internal Keyboard / Trackpad</Name>
          <Uuid>80500000</Uuid>
          <AlternateName></AlternateName>
@@ -598,7 +476,7 @@
          <IsKeyboard>1</IsKeyboard>
          <IsGameController>0</IsGameController>
       </HIDDevice>
-      <HIDDevice dyn_lists="" id="3">
+      <HIDDevice id="5" dyn_lists="">
          <Name>iBridge Display</Name>
          <Uuid>80600000</Uuid>
          <AlternateName></AlternateName>
@@ -611,7 +489,7 @@
          <IsKeyboard>0</IsKeyboard>
          <IsGameController>0</IsGameController>
       </HIDDevice>
-      <HIDDevice dyn_lists="" id="4">
+      <HIDDevice id="6" dyn_lists="">
          <Name>iBridge DFR brightness</Name>
          <Uuid>80700000</Uuid>
          <AlternateName></AlternateName>
@@ -659,14 +537,14 @@
       <Type>0</Type>
       <Major>10</Major>
       <Minor>14</Minor>
-      <SubMinor>3</SubMinor>
-      <StringPresentation>Mac OS X 10.14.3(18D42)</StringPresentation>
+      <SubMinor>5</SubMinor>
+      <StringPresentation>Mac OS X 10.14.5(18F132)</StringPresentation>
       <OsArchitecture>64</OsArchitecture>
       <KernelArchitecture>64</KernelArchitecture>
    </OsVersion>
    <PrivacyRestrictions dyn_lists="">
-      <Camera>-1</Camera>
-      <Microphone>-1</Microphone>
+      <Camera>0</Camera>
+      <Microphone>0</Microphone>
    </PrivacyRestrictions>
    <GenericPciDevices dyn_lists="GenericPciDevice 0"/>
    <GenericScsiDevices dyn_lists="GenericScsiDevice 0"/>
