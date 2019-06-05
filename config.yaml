@@ -48,6 +48,3 @@
   - description: restore & app system preferences
     command: bash -c "cd mac && ./defaults-restore.sh"
     stdout: true
-  - description: restore macprefs
-    command: bash -c "cd mac && ./macprefs-restore.sh"
-    stdout: true
