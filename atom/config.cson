@@ -3,6 +3,8 @@
   "atom-ide-ui":
     use:
       "atom-ide-diagnostics-ui": "never"
+  "autocomplete-paths":
+    ignoreSubmodules: true
   "autocomplete-plus":
     confirmCompletion: "tab"
   "autocomplete-python":

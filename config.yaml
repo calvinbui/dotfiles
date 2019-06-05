@@ -24,27 +24,40 @@
   - description: oh-my-zsh
     command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     stdout: true
+    stdin: true
   - description: install homebrew
     command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     stdout: true
+    stdin: true
   - description: install homebrew formulas
     command: bash -c "cd mac && brew bundle"
     stdout: true
-  - description: install pip modules
-    command: bash -c "pip install -r pip/requirements.txt"
+    stdin: true
+  - description: install pip2 modules
+    command: bash -c "pip2 install -r pip/pip2-requirements.txt"
     stdout: true
+    stdin: true
+  - description: install pip3 modules
+    command: bash -c "pip3 install -r pip/pip3-requirements.txt"
+    stdout: true
+    stdin: true
   - description: install npm packages
     command: bash -c "< npm/packages.txt xargs npm install -g"
     stdout: true
+    stdin: true
   - description: install nano themes
     command: git-clone-idempotent git@github.com:scopatz/nanorc.git ~/.nano
     stdout: true
+    stdin: true
   - description: restore mackup backup
     command: bash -c "cd mac && ./mackup-restore.sh"
     stdout: true
+    stdin: true
   - description: install atom packages
     command: apm install --packages-file ~/.atom/package-list.txt
     stdout: true
-  - description: restore & app system preferences
+    stdin: true
+  - description: restore app system preferences
     command: bash -c "cd mac && ./defaults-restore.sh"
     stdout: true
+    stdin: true
