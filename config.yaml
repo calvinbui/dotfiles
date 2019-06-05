@@ -26,7 +26,7 @@
     stdout: true
     stdin: true
   - description: install homebrew
-    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install) --unattended"
     stdout: true
     stdin: true
   - description: install homebrew formulas
