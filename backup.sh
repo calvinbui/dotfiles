@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 atom/generate-package-list.sh
 mac/mackup-backup.sh --force

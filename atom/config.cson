@@ -35,7 +35,7 @@
     ]
   "linter-pylint": {}
   "linter-ui-default":
-    panelHeight: 237
+    panelHeight: 300
   "markdown-preview-plus":
     saveConfig:
       saveToPDFOptions: {}

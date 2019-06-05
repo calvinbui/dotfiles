@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-apm list --installed --bare > package-list.txt
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+apm list --installed --bare > $DIR/package-list.txt
