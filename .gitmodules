@@ -3,31 +3,31 @@
 	url = https://github.com/anishathalye/dotbot
 [submodule "zsh/custom/plugins/alias-tips"]
 	path = zsh/custom/plugins/alias-tips
-	url = git@github.com:djui/alias-tips.git
+	url = https://github.com/djui/alias-tips.git
 [submodule "zsh/custom/plugins/history-search-multi-word"]
 	path = zsh/custom/plugins/history-search-multi-word
-	url = git@github.com:zdharma/history-search-multi-word.git
+	url = https://github.com/zdharma/history-search-multi-word.git
 [submodule "zsh/custom/plugins/zsh-autosuggestions"]
 	path = zsh/custom/plugins/zsh-autosuggestions
-	url = git@github.com:zsh-users/zsh-autosuggestions.git
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "zsh/custom/plugins/zsh-history-substring-search"]
 	path = zsh/custom/plugins/zsh-history-substring-search
-	url = git@github.com:zsh-users/zsh-history-substring-search.git
+	url = https://github.com/zsh-users/zsh-history-substring-search.git
 [submodule "zsh/custom/plugins/zsh-syntax-highlighting"]
 	path = zsh/custom/plugins/zsh-syntax-highlighting
-	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "zsh/custom/plugins/you-should-use"]
 	path = zsh/custom/plugins/you-should-use
-	url = git@github.com:MichaelAquilina/zsh-you-should-use.git
+	url = https://github.com/MichaelAquilina/zsh-you-should-use.git
 [submodule "zsh/custom/plugins/autoupdate"]
 	path = zsh/custom/plugins/autoupdate
-	url = git@github.com:TamCore/autoupdate-oh-my-zsh-plugins.git
+	url = https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git
 [submodule "zsh/custom/themes/powerlevel9k"]
 	path = zsh/custom/themes/powerlevel9k
-	url = git@github.com:bhilburn/powerlevel9k.git
+	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
-	url = git@github.com:VundleVim/Vundle.vim.git
+	url = https://github.com/VundleVim/Vundle.vim.git
 [submodule "vim/bundle/vim-colorschemes"]
 	path = vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
@@ -49,7 +49,7 @@
 	url = https://github.com/tpope/vim-fugitive.git
 [submodule "vim/bundle/command-t"]
 	path = vim/bundle/command-t
-	url = git://git.wincent.com/command-t.git
+	url = https://github.com/wincent/command-t.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
