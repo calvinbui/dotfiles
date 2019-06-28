@@ -72,12 +72,10 @@ plugins=(
   terraform
   z
   alias-tips
-  autoupdate
   fast-syntax-highlighting
   history-search-multi-word
   zsh-autosuggestions
   zsh-completions
-  zsh-history-substring-search
 )
 
 source $ZSH/oh-my-zsh.sh

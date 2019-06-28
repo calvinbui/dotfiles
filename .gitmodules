@@ -10,12 +10,6 @@
 [submodule "zsh/custom/plugins/zsh-autosuggestions"]
 	path = zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "zsh/custom/plugins/zsh-history-substring-search"]
-	path = zsh/custom/plugins/zsh-history-substring-search
-	url = https://github.com/zsh-users/zsh-history-substring-search.git
-[submodule "zsh/custom/plugins/autoupdate"]
-	path = zsh/custom/plugins/autoupdate
-	url = https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
