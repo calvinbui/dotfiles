@@ -7,9 +7,9 @@ Host ap2manager
   StrictHostKeyChecking no
   User manager
   Hostname ap2manager.bislr.net
-  ControlPath ~/.ssh/cm-%r@%h:%p
-  ControlMaster auto
-  ControlPersist 1h
+  #ControlPath ~/.ssh/cm-%r@%h:%p
+  #ControlMaster auto
+  #ControlPersist 1h
 
 Host mgmt
   User ec2-user
