@@ -16,9 +16,6 @@
 [submodule "zsh/custom/plugins/autoupdate"]
 	path = zsh/custom/plugins/autoupdate
 	url = https://github.com/TamCore/autoupdate-oh-my-zsh-plugins.git
-[submodule "zsh/custom/themes/powerlevel9k"]
-	path = zsh/custom/themes/powerlevel9k
-	url = https://github.com/bhilburn/powerlevel9k.git
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
@@ -56,3 +53,6 @@
 [submodule "zsh/custom/plugins/fast-syntax-highlighting"]
 	path = zsh/custom/plugins/fast-syntax-highlighting
 	url = https://github.com/zdharma/fast-syntax-highlighting.git
+[submodule "zsh/custom/themes/powerlevel10k"]
+	path = zsh/custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
