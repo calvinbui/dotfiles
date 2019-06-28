@@ -16,17 +16,19 @@
     ~/.ssh/config: ssh/config
     ~/.vimrc: vim/vimrc
     ~/.vim/bundle: vim/bundle
-    ~/.zshrc: zsh/zshrc
-    ~/.oh-my-zsh/custom: zsh/custom
     ~/.mackup.cfg: mac/mackup.cfg
 
 - shell:
   - description: oh-my-zsh
-    command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    command: '[ -z "$ZSH_VERSION" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended" || :'
+    stdout: true
+    stdin: true
+  - description: change shells
+    command: chsh -s /bin/zsh
     stdout: true
     stdin: true
   - description: install homebrew
-    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install) --unattended"
+    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     stdout: true
     stdin: true
   - description: install homebrew formulas
@@ -46,7 +48,7 @@
     stdout: true
     stdin: true
   - description: install nano themes
-    command: git-clone-idempotent git@github.com:scopatz/nanorc.git ~/.nano
+    command: git-clone-idempotent https://github.com/scopatz/nanorc.git ~/.nano
     stdout: true
     stdin: true
   - description: restore mackup backup
@@ -54,10 +56,15 @@
     stdout: true
     stdin: true
   - description: install atom packages
-    command: apm install --packages-file ~/.atom/package-list.txt
+    command: apm install --production --packages-file atom/package-list.txt
     stdout: true
     stdin: true
   - description: restore app system preferences
     command: bash -c "cd mac && ./defaults-restore.sh"
     stdout: true
     stdin: true
+
+# can't clone repo if already exists
+- link:
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom: zsh/custom
