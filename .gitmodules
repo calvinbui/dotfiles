@@ -56,3 +56,6 @@
 [submodule "zsh/custom/plugins/zsh-syntax-highlighting-filetypes"]
 	path = zsh/custom/plugins/zsh-syntax-highlighting-filetypes
 	url = https://github.com/trapd00r/zsh-syntax-highlighting-filetypes
+[submodule "zsh/custom/plugins/fast-syntax-highlighting"]
+	path = zsh/custom/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting.git
