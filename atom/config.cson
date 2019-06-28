@@ -10,9 +10,6 @@
   "autocomplete-python":
     useKite: false
   core:
-    disabledPackages: [
-      "markdown-preview"
-    ]
     packagesWithKeymapsDisabled: [
       "platformio-ide-terminal"
     ]
@@ -24,6 +21,8 @@
     softWrap: true
   "exception-reporting":
     userId: "273f03c4-e9b6-4518-87a9-1fcc417436ba"
+  "fuzzy-finder":
+    scoringSystem: "fast"
   "git-blame":
     columnWidth: 299
   "git-diff": {}

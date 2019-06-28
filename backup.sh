@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-atom/generate-package-list.sh
+atom/backup.sh
 mac/mackup-backup.sh --force
 mac/generate-brewfile.sh
 mac/defaults-backup.sh
