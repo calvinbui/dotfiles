@@ -24,7 +24,7 @@
     stdout: true
     stdin: true
   - description: change shells
-    command: chsh -s /bin/zsh
+    command: sudo chsh -s /usr/local/bin/zsh calvin
     stdout: true
     stdin: true
   - description: install homebrew
