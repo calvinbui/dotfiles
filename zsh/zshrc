@@ -69,15 +69,15 @@ plugins=(
   docker
   docker-compose
   npm
-  autojump
-  history-search-multi-word
+  terraform
+  z
   alias-tips
+  autoupdate
+  fast-syntax-highlighting
+  history-search-multi-word
+  zsh-autosuggestions
   zsh-completions
   zsh-history-substring-search
-  zsh-autosuggestions
-  fast-syntax-highlighting
-  autoupdate
-  terraform
 )
 
 source $ZSH/oh-my-zsh.sh
