@@ -1,2 +1,2 @@
 export THEFUCK_REQUIRE_CONFIRMATION='false'
-eval $(thefuck --alias f)
+eval $(thefuck --alias)

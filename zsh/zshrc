@@ -66,9 +66,9 @@ plugins=(
   aws
   docker
   docker-compose
+  fasd
   git
   terraform
-  z
   alias-tips
   fast-syntax-highlighting
   history-search-multi-word
