@@ -73,7 +73,6 @@ plugins=(
   fast-syntax-highlighting
   history-search-multi-word
   zsh-autosuggestions
-  zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
