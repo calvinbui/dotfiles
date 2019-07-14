@@ -1,15 +1,15 @@
 Host *.prv.bislr.net
   StrictHostKeyChecking no
   User root
-  ProxyCommand ssh -o 'ForwardAgent yes' ap2manager 'ssh-add -t 10 && nc %h %p'
+  IdentityFile ~/.ssh/ap2manager
+  ProxyCommand ssh manager@ap2manager -W %h:%p
 
 Host ap2manager
   StrictHostKeyChecking no
-  User manager
   Hostname ap2manager.bislr.net
-  #ControlPath ~/.ssh/cm-%r@%h:%p
-  #ControlMaster auto
-  #ControlPersist 1h
+  User manager
+  IdentityFile ~/.ssh/id_rsa
+  ForwardAgent yes
 
 Host mgmt
   User ec2-user
