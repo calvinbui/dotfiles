@@ -4,5 +4,6 @@ function _kube_completions() {
   source $COMPLETION_FILE
 }
 
-_kube_completions "kubectl"
-_kube_completions "minikube"
+# remove comment to enable
+# _kube_completions "kubectl"
+# _kube_completions "minikube"
