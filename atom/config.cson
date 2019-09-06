@@ -10,12 +10,13 @@
   "autocomplete-python":
     useKite: false
   core:
+    excludeVcsIgnoredPaths: true
     packagesWithKeymapsDisabled: [
       "platformio-ide-terminal"
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 19
+    fontSize: 16
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -35,6 +36,7 @@
   "linter-pylint": {}
   "linter-ui-default":
     panelHeight: 300
+    showPanel: true
   "markdown-preview-plus":
     saveConfig:
       saveToPDFOptions: {}
