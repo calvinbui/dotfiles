@@ -7,12 +7,18 @@ plugins=(
   autojump
   docker
   docker-compose
+  gcloud
   git
+  gitfast
   terraform
+  ssh-agent
   alias-tips
   fast-syntax-highlighting
   history-search-multi-word
   zsh-autosuggestions
 )
+
+# ssh-agent
+zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
