@@ -88,7 +88,7 @@ paramiko==2.4.2
 parso==0.3.1
 pathlib2==2.3.3
 pathspec==0.5.9
-pbr==5.2.1
+pbr==1.10.0
 pexpect==4.6.0
 pluggy==0.8.0
 poyo==0.4.2
@@ -111,7 +111,7 @@ python-gilt==1.2.1
 python-jsonrpc-server==0.1.2
 python-keystoneclient==3.19.0
 python-language-server==0.26.1
-python-novaclient==14.1.0
+python-novaclient==2.27.0
 pytz==2019.1
 PyYAML==3.13
 rackspace-auth-openstack==1.3

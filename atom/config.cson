@@ -9,6 +9,7 @@
     confirmCompletion: "tab"
   "autocomplete-python":
     useKite: false
+  "autohide-tree-view": {}
   core:
     excludeVcsIgnoredPaths: true
     packagesWithKeymapsDisabled: [
@@ -16,7 +17,7 @@
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 16
+    fontSize: 17
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -34,6 +35,8 @@
       "!vault"
     ]
   "linter-pylint": {}
+  "linter-shellcheck":
+    enableNotice: true
   "linter-ui-default":
     panelHeight: 300
     showPanel: true

@@ -51,3 +51,8 @@ map Q gq
 " so that you can undo CTRL-U after inserting a line break.
 " Revert with ":iunmap <C-U>".
 inoremap <C-U> <C-G>u<C-U>
+" set indent
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
