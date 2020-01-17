@@ -19,6 +19,7 @@ blessings==1.7
 boto==2.49.0
 boto3==1.9.62
 botocore==1.12.62
+cachetools==3.1.1
 Cerberus==1.2
 certifi==2018.10.15
 cffi==1.11.5
@@ -31,6 +32,7 @@ colorama==0.3.9
 configparser==3.5.0
 cookiecutter==1.6.0
 cryptography==2.4.2
+datadog==0.33.0
 debtcollector==1.21.0
 decorator==4.3.0
 docker-py==1.10.6
@@ -49,6 +51,7 @@ futures==3.2.0
 git-url-parse==1.2.1
 gitdb2==2.0.5
 GitPython==2.1.11
+google-resumable-media==0.5.0
 idna==2.6
 inquirer==2.5.1
 invoke==1.2.0
@@ -97,7 +100,6 @@ protobuf==3.9.1
 psutil==5.4.6
 ptyprocess==0.6.0
 py==1.8.0
-pyasn1==0.4.4
 pycodestyle==2.3.1
 pycparser==2.19
 pydocstyle==3.0.0
@@ -108,6 +110,7 @@ pyrax==1.9.8
 pytest==4.3.1
 python-dateutil==2.7.5
 python-gilt==1.2.1
+python-http-client==3.2.1
 python-jsonrpc-server==0.1.2
 python-keystoneclient==3.19.0
 python-language-server==0.26.1
@@ -128,6 +131,7 @@ ruamel.yaml==0.15.80
 s3transfer==0.1.13
 scandir==1.9.0
 schematics==2.0.1
+sendgrid==6.1.0
 sh==1.12.14
 simplejson==3.16.0
 singledispatch==3.4.0.3

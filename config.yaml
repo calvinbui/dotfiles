@@ -59,10 +59,6 @@
     command: apm install --production --packages-file atom/package-list.txt
     stdout: true
     stdin: true
-  - description: restore app system preferences
-    command: bash -c "cd mac && ./defaults-restore.sh"
-    stdout: true
-    stdin: true
 
 # can't clone repo if already exists
 - link:

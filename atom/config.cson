@@ -1,6 +1,8 @@
 "*":
   "ansible-vault": {}
   "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
     use:
       "atom-ide-diagnostics-ui": "never"
   "autocomplete-paths":
@@ -11,6 +13,27 @@
     useKite: false
   "autohide-tree-view": {}
   core:
+    disabledPackages: [
+      "language-xml"
+      "language-typescript"
+      "language-sql"
+      "language-sass"
+      "language-rust-bundled"
+      "language-ruby-on-rails"
+      "language-ruby"
+      "language-property-list"
+      "language-php"
+      "language-perl"
+      "language-objective-c"
+      "language-mustache"
+      "language-make"
+      "language-less"
+      "language-java"
+      "language-css"
+      "language-csharp"
+      "language-clojure"
+      "language-c"
+    ]
     excludeVcsIgnoredPaths: true
     packagesWithKeymapsDisabled: [
       "platformio-ide-terminal"
@@ -28,6 +51,17 @@
   "git-blame":
     columnWidth: 299
   "git-diff": {}
+  "ide-go":
+    completionEnabled: false
+  "ide-python":
+    pylsPlugins:
+      autopep8:
+        enabled: false
+      pycodestyle:
+        enabled: false
+      pyflakes:
+        enabled: false
+    python: "/usr/local/bin/python3"
   linter:
     lintOnChange: false
   "linter-js-yaml":
@@ -38,7 +72,7 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 300
+    panelHeight: 206
     showPanel: true
   "markdown-preview-plus":
     saveConfig:
@@ -73,3 +107,6 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+".python.source":
+  editor:
+    showIndentGuide: true
