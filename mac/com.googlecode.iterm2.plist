@@ -48141,7 +48141,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 56 1433 971 0 0 1680 1027 </string>
+	<string>0 530 970 497 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -48750,7 +48750,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>HackNerdFontComplete-Regular 18</string>
+			<string>MesloLGSForPowerlin-Bold-Italic 11</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -48917,6 +48917,7 @@
 	</array>
 	<key>NoSyncBFPRecents</key>
 	<array>
+		<string>Menlo</string>
 		<string>MesloLGS NF</string>
 		<string>Hack Nerd Font</string>
 	</array>
@@ -48925,9 +48926,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{0, 0}, {3440, 1440}}</string>
+		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{1230, 954}</string>
+		<string>{334, 780}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -48938,7 +48939,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>570564150.27806103</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>53</integer>
+	<integer>66</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -49654,16 +49655,16 @@
 	</array>
 	<key>NoSyncSearchHistory2</key>
 	<array>
-		<string>167.89.103.104</string>
-		<string>subusers</string>
-		<string>reputation of 15</string>
-		<string>of 15</string>
-		<string>calvinbui-01</string>
-		<string>tags</string>
-		<string>logs</string>
-		<string>libcurl</string>
-		<string>frozen</string>
-		<string>ap3-components-ui@https://github.com/autopilot3  ap3-components-ui#trigger-ui-projs</string>
+		<string>higuinn-postgres-postgresql.higunn.svc.cluster.local</string>
+		<string>helm </string>
+		<string>issuer</string>
+		<string>issus</string>
+		<string>spamass</string>
+		<string>init</string>
+		<string>senti</string>
+		<string>location-api</string>
+		<string>location-a-p</string>
+		<string>ap3-stg-master-crm</string>
 	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>564322412.38501406</real>
