@@ -12,6 +12,8 @@
   "autocomplete-python":
     useKite: false
   "autohide-tree-view": {}
+  autosave:
+    enabled: true
   core:
     disabledPackages: [
       "language-xml"
@@ -33,6 +35,15 @@
       "language-csharp"
       "language-clojure"
       "language-c"
+      "autocomplete-css"
+      "bookmarks"
+      "deprecation-cop"
+      "grammar-selector"
+      "language-coffee-script"
+      "language-html"
+      "metrics"
+      "timecop"
+      "welcome"
     ]
     excludeVcsIgnoredPaths: true
     packagesWithKeymapsDisabled: [
@@ -61,7 +72,14 @@
         enabled: false
       pyflakes:
         enabled: false
+      pylint:
+        enabled: true
+      rope_completion:
+        enabled: true
+      yapf: {}
     python: "/usr/local/bin/python3"
+    rope:
+      ropeFolder: "null"
   linter:
     lintOnChange: false
   "linter-js-yaml":
@@ -73,7 +91,6 @@
     enableNotice: true
   "linter-ui-default":
     panelHeight: 206
-    showPanel: true
   "markdown-preview-plus":
     saveConfig:
       saveToPDFOptions: {}

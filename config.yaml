@@ -16,6 +16,7 @@
     ~/.ssh/config: ssh/config
     ~/.vimrc: vim/vimrc
     ~/.vim/bundle: vim/bundle
+    ~/.vim/autoload: vim/autoload
     ~/.mackup.cfg: mac/mackup.cfg
 
 - shell:

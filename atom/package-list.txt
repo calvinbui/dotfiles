@@ -1,12 +1,9 @@
 atom-beautify@0.33.4
-atom-ide-debugger-python@0.7.3
 atom-ide-ui@0.13.0
 atom-jinja2@0.6.0
 autocomplete-paths@2.12.2
 busy-signal@2.0.1
-file-icons@2.1.38
-git-blame@1.8.0
-git-time-machine@2.1.0
+file-icons@2.1.39
 go-debug@1.7.0
 go-plus@6.1.0
 go-signature-statusbar@1.2.3
@@ -35,8 +32,8 @@ minimap-linter@2.2.1
 minimap-pigments@0.2.2
 minimap-selection@4.5.0
 multi-cursor@3.0.0
+pdf-view@0.72.0
 pigments@0.40.2
-platformio-ide-terminal@2.10.0
 sort-lines@0.19.0
 split-diff@1.6.1
 teletype@0.13.4
