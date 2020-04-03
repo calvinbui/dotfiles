@@ -3,7 +3,7 @@ atom-ide-ui@0.13.0
 atom-jinja2@0.6.0
 autocomplete-paths@2.12.2
 busy-signal@2.0.1
-file-icons@2.1.39
+file-icons@2.1.40
 go-debug@1.7.0
 go-plus@6.1.0
 go-signature-statusbar@1.2.3
@@ -15,6 +15,7 @@ indent-guide-improved@1.4.13
 intentions@1.1.5
 language-ansible@0.2.2
 language-docker@1.1.8
+language-nginx@0.8.0
 language-terraform@0.8.1
 linter@2.3.1
 linter-hadolint@1.0.0

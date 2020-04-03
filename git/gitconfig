@@ -6,6 +6,7 @@
 [user]
 	name = Calvin Bui
 	email = 3604363+calvinbui@users.noreply.github.com
+	signingkey = 7CE1A3592DA0F6FB
 [core]
 	excludesfile = /Users/calvin/.gitignore_global
 [difftool "sourcetree"]
@@ -16,3 +17,7 @@
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2

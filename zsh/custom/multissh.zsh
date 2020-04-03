@@ -7,7 +7,27 @@ osascript -e '
     create window with default profile
   end tell
 '
-servers=(ap2bms5-notifications6 ap2bms5-redirect-lb chris-server pavilion staging-mongo1 tempsights3 tempsights4 tempsights5 tempsights6 tempsights7 tempsights8)
+servers=(
+ap2salamander61
+ap2salamander62
+ap2salamander63
+ap2salamander64
+ap2salamander65
+ap2salamander66
+ap2salamander67
+ap2salamander68
+ap2salamander69
+ap2salamander70
+ap2salamander71
+ap2salamander72
+ap2salamander73
+ap2salamander74
+ap2salamander75
+ap2salamander76
+ap2salamander77
+ap2salamander78
+ap2salamander79
+)
 
 for num in $servers; do
   server="${num}.prv.bislr.net"

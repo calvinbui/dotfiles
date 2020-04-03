@@ -38,7 +38,6 @@
       "autocomplete-css"
       "bookmarks"
       "deprecation-cop"
-      "grammar-selector"
       "language-coffee-script"
       "language-html"
       "metrics"
@@ -51,7 +50,7 @@
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 17
+    fontSize: 15
     invisibles: {}
     showInvisibles: true
     softWrap: true
@@ -90,7 +89,7 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 206
+    panelHeight: 300
   "markdown-preview-plus":
     saveConfig:
       saveToPDFOptions: {}
