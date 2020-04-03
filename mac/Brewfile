@@ -153,4 +153,5 @@ cask "vnc-viewer"
 cask "xquartz"
 mas "HyperDock", id: 449830122
 mas "Pages", id: 409201541
+mas "Paste", id: 967805235
 mas "Xcode", id: 497799835
