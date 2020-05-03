@@ -19,7 +19,6 @@
       "language-xml"
       "language-typescript"
       "language-sql"
-      "language-sass"
       "language-rust-bundled"
       "language-ruby-on-rails"
       "language-ruby"
@@ -56,6 +55,8 @@
     softWrap: true
   "exception-reporting":
     userId: "273f03c4-e9b6-4518-87a9-1fcc417436ba"
+  "find-and-replace":
+    useRipgrep: true
   "fuzzy-finder":
     scoringSystem: "fast"
   "git-blame":
