@@ -6,7 +6,7 @@
 [user]
 	name = Calvin Bui
 	email = 3604363+calvinbui@users.noreply.github.com
-	signingkey = 7CE1A3592DA0F6FB
+	signingkey = DFC7D72A0A409667827A021E7CE1A3592DA0F6FB
 [core]
 	excludesfile = /Users/calvin/.gitignore_global
 [difftool "sourcetree"]
@@ -20,4 +20,4 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg2
+	program = /usr/local/MacGPG2/bin/gpg2

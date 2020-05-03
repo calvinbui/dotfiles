@@ -1,0 +1,4 @@
+# change default browser to chrome each morning
+0 9 * * 1-5 /Users/calvin/repos/dotfiles/mac/defaultbrowser/change-browser.sh chrome
+# change default browser to chromium in the afternoon
+0 17 * * 1-5 /Users/calvin/repos/dotfiles/mac/defaultbrowser/change-browser.sh chromium

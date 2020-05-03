@@ -16,7 +16,7 @@ intentions@1.1.5
 language-ansible@0.2.2
 language-docker@1.1.8
 language-nginx@0.8.0
-language-terraform@0.8.1
+language-terraform@0.9.3
 linter@2.3.1
 linter-hadolint@1.0.0
 linter-js-yaml@1.4.6
@@ -35,6 +35,7 @@ minimap-selection@4.5.0
 multi-cursor@3.0.0
 pdf-view@0.72.0
 pigments@0.40.2
+react@0.18.0
 sort-lines@0.19.0
 split-diff@1.6.1
 teletype@0.13.4
