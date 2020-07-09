@@ -43,14 +43,15 @@
       "timecop"
       "welcome"
     ]
-    excludeVcsIgnoredPaths: true
     packagesWithKeymapsDisabled: [
       "platformio-ide-terminal"
     ]
     telemetryConsent: "no"
   editor:
-    fontSize: 15
+    autoIndentOnPaste: false
+    fontSize: 17
     invisibles: {}
+    normalizeIndentOnPaste: false
     showInvisibles: true
     softWrap: true
   "exception-reporting":
@@ -86,7 +87,8 @@
     customTags: [
       "!vault"
     ]
-  "linter-pylint": {}
+  "linter-pylint":
+    rcFile: "~/.pylintrc"
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
@@ -114,10 +116,23 @@
       selection: true
       selectionDecorationsZIndex: 0
   "platformio-ide-terminal":
+    core:
+      workingDirectory: "Active File"
     style:
-      fontFamily: "Hack Nerd Font"
+      fontFamily: "MesloLGS NF"
+      fontSize: "18"
+      theme: "homebrew"
+    toggles:
+      autoClose: true
+  "spell-check": {}
   teletype:
     askBeforeJoiningPortalViaExternalApp: false
+  "terminal-plus":
+    core:
+      mapTerminalsTo: "Folder"
+    style:
+      fontFamily: "MesloLGS NF"
+      fontSize: "18"
   "tree-view":
     alwaysOpenExisting: true
   welcome:

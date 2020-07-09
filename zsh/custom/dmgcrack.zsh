@@ -12,7 +12,8 @@ dmgcrack(){
   password=$(john --show "${dmg}".hash | sed '1q;d' | cut -d':' -f2)
   echo "The password for $dmg is $password"
   echo "Setting empty password"
-  printf '%s\0' "$password" '' | hdiutil chpass "${dmg}" -oldstdinpass -newstdinpass 
+  printf '%s\0' "$password" '' | hdiutil chpass "${dmg}" -oldstdinpass -newstdinpass
+  rm "${dmg}".hash
 }
 
 rar2john_cmd(){
@@ -26,4 +27,5 @@ rarcrack(){
   john --format=RAR5-opencl --mask="mac-torrent-download.net_[0-9a-z][0-9a-z][0-9a-z]" "${rar}".hash
   password=$(john --show "${rar}".hash | sed '1q;d' | cut -d':' -f2)
   echo "The password for $rar is $password"
+  rm "${rar}".hash
 }

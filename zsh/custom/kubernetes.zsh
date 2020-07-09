@@ -18,3 +18,7 @@ function _kube_completions() {
 _kube_completions "kubectl"
 _kube_completions "helm"
 # _kube_completions "minikube"
+
+export EDITOR="atom -w"
+export K9S_EDITOR="$EDITOR"
+export KUBE_EDITOR="$EDITOR"
