@@ -14,5 +14,5 @@ Host ap2manager
 Host mgmt
   User ec2-user
   IdentityFile ~/.ssh/mgmt0-root
-  HostName ec2-13-58-36-150.us-east-2.compute.amazonaws.com
+  HostName 10.0.9.93
   ForwardAgent yes

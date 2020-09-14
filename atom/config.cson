@@ -42,14 +42,12 @@
       "metrics"
       "timecop"
       "welcome"
-    ]
-    packagesWithKeymapsDisabled: [
-      "platformio-ide-terminal"
+      "linter-languagetool"
     ]
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 17
+    fontSize: 20
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -87,12 +85,18 @@
     customTags: [
       "!vault"
     ]
+  "linter-languagetool":
+    languagetoolServerPath: "https://languagetool.bui.services/v2"
   "linter-pylint":
+    disableTimeout: true
     rcFile: "~/.pylintrc"
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 300
+    panelHeight: 206
+    showPanel: true
+  "markdown-preview":
+    useGitHubStyle: true
   "markdown-preview-plus":
     saveConfig:
       saveToPDFOptions: {}
