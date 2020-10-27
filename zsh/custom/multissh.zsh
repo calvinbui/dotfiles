@@ -8,17 +8,26 @@ osascript -e '
   end tell
 '
 servers=(
-  ap2bms5-notifications1
-  ap2bms5-notifications2
-  ap2bms5-notifications3
-  ap2bms5-notifications4
-  ap2bms5-notifications5
-  ap2bms5-notifications6
-  ap2bms5-notifications7
-  ap2bms5-notifications8
-  ap2bms5-notifications9
-  ap2bms5-notifications10
-  ap2bms5-notifications11
+seadrift11
+seadrift12
+seadrift13
+seadrift14
+seadrift15
+seadrift16
+seadrift17
+seadrift18
+seadrift19
+seadrift20
+seadrift21
+seadrift22
+seadrift23
+seadrift24
+seadrift25
+seadrift26
+seadrift27
+seadrift28
+seadrift29
+seadrift30
 )
 
 for num in $servers; do

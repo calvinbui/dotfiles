@@ -1,2 +1,2 @@
-export GO111MODULE="on"
+export GOPATH="$HOME/go"
 export GOPRIVATE=github.com/autopilot3,github.com/autopilothq

@@ -29,7 +29,6 @@
       "language-mustache"
       "language-make"
       "language-less"
-      "language-java"
       "language-css"
       "language-csharp"
       "language-clojure"
@@ -47,7 +46,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 20
+    fontSize: 18
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -93,8 +92,7 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 206
-    showPanel: true
+    panelHeight: 102
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":

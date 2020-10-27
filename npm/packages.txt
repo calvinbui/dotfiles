@@ -1,7 +1,7 @@
 atom-ide-debugger-python@0.7.2
 auditjs@4.0.18
 aws-sdk@2.541.0
-bash-language-server@1.7.0
+bash-language-server@1.17.0
 coffeescript@2.4.1
 dockerfile-language-server-nodejs@0.0.20
 git-clone-idempotent@1.0.0

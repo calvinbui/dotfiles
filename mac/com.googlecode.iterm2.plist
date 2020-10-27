@@ -48149,7 +48149,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 443 592 584 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 57 1719 1360 0 0 3440 1417 </string>
+	<string>453 204 905 617 0 0 3440 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -48752,7 +48752,7 @@
 				<real>0.0</real>
 			</dict>
 			<key>Mouse Reporting</key>
-			<true/>
+			<false/>
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
@@ -49013,7 +49013,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>570564150.27806103</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>281</integer>
+	<integer>282</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
