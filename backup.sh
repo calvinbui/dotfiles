@@ -2,7 +2,6 @@
 set -e
 
 atom/backup.sh
-mac/mackup-backup.sh --force
 mac/generate-brewfile.sh
 pip/backup.sh
 npm/backup.sh
