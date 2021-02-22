@@ -26,7 +26,6 @@
       "language-php"
       "language-perl"
       "language-objective-c"
-      "language-mustache"
       "language-make"
       "language-less"
       "language-css"
@@ -41,12 +40,11 @@
       "metrics"
       "timecop"
       "welcome"
-      "linter-languagetool"
     ]
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 18
+    fontSize: 17
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -92,7 +90,7 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 102
+    panelHeight: 300
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
@@ -100,6 +98,7 @@
       saveToPDFOptions: {}
     useGitHubStyle: true
   minimap:
+    displayCodeHighlights: false
     plugins:
       cursorline: true
       cursorlineDecorationsZIndex: 0
@@ -141,6 +140,11 @@
     showOnStartup: false
   whitespace:
     ensureSingleTrailingNewline: false
+".html.mustache.text":
+  editor:
+    autoIndent: true
+    autoIndentOnPaste: true
+    showIndentGuide: true
 ".python.source":
   editor:
     showIndentGuide: true

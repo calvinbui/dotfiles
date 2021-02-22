@@ -4,6 +4,7 @@
 	signingkey = DFC7D72A0A409667827A021E7CE1A3592DA0F6FB
 [core]
 	excludesfile = /Users/calvin/.gitignore_global
+	ignorecase = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
