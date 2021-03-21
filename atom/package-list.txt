@@ -1,8 +1,8 @@
 atom-beautify@0.33.4
 atom-jinja2@0.6.0
-autocomplete-paths@2.12.18
+autocomplete-paths@2.13.0
 busy-signal@2.0.1
-file-icons@2.1.46
+file-icons@2.1.47
 highlight-line@0.12.0
 highlight-selected@0.17.0
 indent-guide-improved@1.4.13
@@ -19,8 +19,8 @@ linter-js-yaml@1.4.6
 linter-jsonlint@1.4.0
 linter-pylint@2.1.1
 linter-shellcheck@1.6.0
-linter-ui-default@3.2.5
-minimap@4.39.9
+linter-ui-default@3.3.0
+minimap@4.39.10
 minimap-cursorline@1.0.2
 minimap-find-and-replace@5.0.8
 minimap-git-diff@4.3.6
