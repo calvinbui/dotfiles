@@ -1,9 +1,9 @@
 atom-ide-debugger-python@0.7.2
-auditjs@4.0.18
 aws-sdk@2.541.0
 bash-language-server@1.17.0
 coffeescript@2.4.1
 dockerfile-language-server-nodejs@0.0.20
+eslint@7.24.0
 gatsby-cli@2.12.113
 git-clone-idempotent@1.0.0
 gulp-cli@2.2.0
@@ -11,7 +11,7 @@ htmlhint@0.10.1
 husky@4.2.5
 jsonlint@1.6.3
 markdownlint-cli@0.23.1
-npm@7.0.14
+npm@7.7.6
 remark-lint@7.0.0
 serverless@1.38.0
 stylelint@13.3.3

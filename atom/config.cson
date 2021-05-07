@@ -40,11 +40,20 @@
       "metrics"
       "timecop"
       "welcome"
+      "autocomplete-paths"
+      "language-ansible"
+      "language-nginx"
+      "language-yaml-gotpl"
+      "linter-ansible-linting"
+      "linter-ansible-syntax"
+      "pigments"
+      "prettier-atom"
+      "split-diff"
     ]
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 17
+    fontSize: 15
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -52,6 +61,7 @@
   "exception-reporting":
     userId: "273f03c4-e9b6-4518-87a9-1fcc417436ba"
   "find-and-replace":
+    enablePCRE2: true
     useRipgrep: true
   "fuzzy-finder":
     scoringSystem: "fast"
@@ -78,6 +88,8 @@
       ropeFolder: "null"
   linter:
     lintOnChange: false
+  "linter-ansible-linting":
+    fiveBeta: true
   "linter-js-yaml":
     customTags: [
       "!vault"
@@ -90,7 +102,7 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 300
+    panelHeight: 206
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
@@ -125,6 +137,7 @@
       theme: "homebrew"
     toggles:
       autoClose: true
+      cursorBlink: false
   "spell-check": {}
   teletype:
     askBeforeJoiningPortalViaExternalApp: false
