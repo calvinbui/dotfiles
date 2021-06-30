@@ -39,3 +39,9 @@
 	path = vim/bundle/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
 	branch = release
+[submodule "vim/bundle/vim-autoformat"]
+	path = vim/bundle/vim-autoformat
+	url = https://github.com/vim-autoformat/vim-autoformat.git
+[submodule "vim/bundle/vim-visual-multi"]
+	path = vim/bundle/vim-visual-multi
+	url = https://github.com/mg979/vim-visual-multi.git
