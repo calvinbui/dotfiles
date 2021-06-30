@@ -5,7 +5,6 @@
 - clean: ['~']
 
 # dotfiles
-# indent 4 spaces for a valid dict in list
 - link:
     ~/.atom/:
       path: atom/*
@@ -16,16 +15,11 @@
     ~/.ssh/config: ssh/config
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.vim/bundle: vim/bundle
-    ~/.mackup.cfg: mac/mackup.cfg
     ~/.local/share/nvim/site/autoload: vim/autoload
 
 - shell:
   - description: oh-my-zsh
     command: '[ -z "$ZSH_VERSION" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended" || :'
-    stdout: true
-    stdin: true
-  - description: change shells
-    command: sudo chsh -s /usr/local/bin/zsh calvin
     stdout: true
     stdin: true
   - description: install homebrew
@@ -34,10 +28,6 @@
     stdin: true
   - description: install homebrew formulas
     command: bash -c "cd mac && brew bundle"
-    stdout: true
-    stdin: true
-  - description: install pip2 modules
-    command: bash -c "pip2 install -r pip/pip2-requirements.txt"
     stdout: true
     stdin: true
   - description: install pip3 modules
@@ -50,10 +40,6 @@
     stdin: true
   - description: install nano themes
     command: git-clone-idempotent https://github.com/scopatz/nanorc.git ~/.nano
-    stdout: true
-    stdin: true
-  - description: restore mackup backup
-    command: bash -c "cd mac && ./mackup-restore.sh"
     stdout: true
     stdin: true
   - description: install atom packages

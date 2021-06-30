@@ -26,7 +26,6 @@
       "language-php"
       "language-perl"
       "language-objective-c"
-      "language-make"
       "language-less"
       "language-css"
       "language-csharp"
@@ -40,20 +39,11 @@
       "metrics"
       "timecop"
       "welcome"
-      "autocomplete-paths"
-      "language-ansible"
-      "language-nginx"
-      "language-yaml-gotpl"
-      "linter-ansible-linting"
-      "linter-ansible-syntax"
-      "pigments"
-      "prettier-atom"
-      "split-diff"
     ]
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 15
+    fontSize: 18
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
