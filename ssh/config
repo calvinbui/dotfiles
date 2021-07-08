@@ -1,18 +1,6 @@
-Host *.prv.bislr.net
-  StrictHostKeyChecking no
-  User root
-  IdentityFile ~/.ssh/ap2manager
-  ProxyCommand ssh manager@ap2manager -W %h:%p
-
-Host ap2manager
-  StrictHostKeyChecking no
-  Hostname ap2manager.bislr.net
-  User manager
-  IdentityFile ~/.ssh/id_rsa
-  ForwardAgent yes
-
-Host mgmt
-  User ec2-user
-  IdentityFile ~/.ssh/mgmt0-root
-  HostName 10.0.9.93
-  ForwardAgent yes
+Host github.com
+  ControlMaster auto
+  ControlPersist yes
+  Hostname ssh.github.com
+  Port 443
+  User git
