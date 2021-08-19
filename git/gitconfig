@@ -1,7 +1,7 @@
 [user]
 	name = Calvin Bui
 	email = 3604363+calvinbui@users.noreply.github.com
-	signingkey = DFC7D72A0A409667827A021E7CE1A3592DA0F6FB
+	signingkey = 7EA56454618F5535
 [core]
 	excludesfile = /Users/calvin/.gitignore_global
 	ignorecase = false

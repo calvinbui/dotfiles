@@ -19,7 +19,14 @@
 
 - shell:
   - description: oh-my-zsh
-    command: '[ -z "$ZSH_VERSION" ] && sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh) --unattended" || :'
+    command: |
+      if [ -d ~/.oh-my-zsh ]; then
+        if [ ! -d ~/.oh-my-zsh/.git ]; then
+          rm -rf ~/.oh-my-zsh
+        fi
+      fi
+
+      sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || :
     stdout: true
     stdin: true
   - description: install homebrew
@@ -44,6 +51,10 @@
     stdin: true
   - description: install atom packages
     command: apm install --production --packages-file atom/package-list.txt
+    stdout: true
+    stdin: true
+  - description: disable last login on new terminal session
+    command: touch ~/.hushlogin
     stdout: true
     stdin: true
 

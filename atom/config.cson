@@ -40,6 +40,7 @@
       "timecop"
       "welcome"
     ]
+    packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
@@ -120,14 +121,16 @@
       selectionDecorationsZIndex: 0
   "platformio-ide-terminal":
     core:
+      mapTerminalsTo: "Folder"
       workingDirectory: "Active File"
     style:
-      fontFamily: "MesloLGS NF"
+      fontFamily: "MesloLGS Nerd Font"
       fontSize: "18"
       theme: "homebrew"
     toggles:
       autoClose: true
       cursorBlink: false
+      selectToCopy: false
   "spell-check": {}
   teletype:
     askBeforeJoiningPortalViaExternalApp: false
