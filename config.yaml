@@ -58,9 +58,20 @@
     command: git-clone-idempotent https://github.com/scopatz/nanorc.git ~/.nano
     stdout: true
     stdin: true
-    command: apm install --production --packages-file atom/package-list.txt
   -
     description: install atom packages
+    command: |
+      echo "Getting installed Atom packages"
+      installed=$(apm list -i -b -no-color)
+
+      echo "Installing missing Atom packages"
+      while read -r p; do
+        echo "Checking if $p is installed..."
+        if ! echo "$installed" | grep --silent "$p"; then
+          echo "Installing ${p}..."
+          apm install --production "$p"
+        fi
+      done < package-list.txt
     stdout: true
     stdin: true
   -
