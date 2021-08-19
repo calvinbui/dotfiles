@@ -65,7 +65,7 @@
           echo "Installing ${p}..."
           apm install --production "$p"
         fi
-      done < package-list.txt
+      done < atom/package-list.txt
     stdout: true
     stdin: true
   -
