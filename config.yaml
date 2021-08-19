@@ -30,14 +30,17 @@
       sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || :
     stdout: true
     stdin: true
-    command: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   -
     description: install homebrew
+    command: |
+      if ! command -v brew &> /dev/null; then
+        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      fi
     stdout: true
     stdin: true
   -
     description: install homebrew formulas
-    command: bash -c "cd mac && brew bundle"
+    command: bash -c "cd mac && brew bundle --no-upgrade --no-lock"
     stdout: true
     stdin: true
   -
