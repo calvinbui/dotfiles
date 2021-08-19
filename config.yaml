@@ -11,7 +11,6 @@
       glob: true
     ~/.gitconfig: git/gitconfig
     ~/.gitignore_global: git/gitignore_global
-    ~/.nanorc: nano/nanorc
     ~/.ssh/config: ssh/config
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.vim/bundle: vim/bundle
@@ -51,11 +50,6 @@
   -
     description: install npm packages
     command: bash -c "< npm/packages.txt xargs npm install -g"
-    stdout: true
-    stdin: true
-  -
-    description: install nano themes
-    command: git-clone-idempotent https://github.com/scopatz/nanorc.git ~/.nano
     stdout: true
     stdin: true
   -
