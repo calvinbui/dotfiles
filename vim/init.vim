@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/bundle')
-Plug 'flazz/vim-colorschemes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -13,7 +12,6 @@ call plug#end()
 " Put your non-Plugin stuff after this line
 :set nu
 :set termguicolors
-:colorscheme monokai-chris
 
 " Allow backspacing over everything in insert mode.
 set backspace=indent,eol,start

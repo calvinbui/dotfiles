@@ -10,10 +10,6 @@
 [submodule "zsh/custom/plugins/zsh-autosuggestions"]
 	path = zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "vim/bundle/vim-colorschemes"]
-	path = vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
-	ignore = dirty
 [submodule "vim/bundle/vim-airline-themes"]
 	path = vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
