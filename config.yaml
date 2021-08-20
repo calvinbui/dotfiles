@@ -73,6 +73,11 @@
     command: touch ~/.hushlogin
     stdout: true
     stdin: true
+  -
+    description: stop .DS_Store files on network drives
+    command: defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+    stdout: true
+    stdin: true
 
 # can't clone repo if already exists
 - link:
