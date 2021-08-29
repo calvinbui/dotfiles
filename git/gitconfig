@@ -1,23 +1,19 @@
 [user]
 	name = Calvin Bui
 	email = 3604363+calvinbui@users.noreply.github.com
-	signingkey = 7EA56454618F5535
+
 [core]
-	excludesfile = /Users/calvin/.gitignore_global
+	excludesfile = .gitignore_global
 	ignorecase = false
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[credential]
-	helper = osxkeychain
+
 [commit]
 	gpgsign = true
-[gpg]
-	program = /usr/local/MacGPG2/bin/gpg2
+
 [pull]
 	rebase = false
+
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+
+[include]
+	path = .gitlocal

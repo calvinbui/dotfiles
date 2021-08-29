@@ -1,0 +1,5 @@
+software-properties-common
+python3-pip
+htop
+zsh
+autojump
