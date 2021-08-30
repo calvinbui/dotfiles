@@ -19,6 +19,8 @@
 
     ~/.pylintrc: python/pylintrc
 
+    ~/.terraformrc: terraform/terraformrc
+
 # linux
 - link:
     ~/.gitlocal:
