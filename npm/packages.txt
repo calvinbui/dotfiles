@@ -1,1 +1,2 @@
+@antora/cli@2.3.4
 eslint@7.24.0

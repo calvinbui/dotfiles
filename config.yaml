@@ -19,7 +19,7 @@
 
 # linux
 - link:
-    ~/.gitlocal: 
+    ~/.gitlocal:
       path: git/linux
       if: '[ "$(uname -s)" = "Linux" ]'
 # mac
@@ -28,8 +28,11 @@
       path: atom/*
       glob: true
       if: '[ "$(uname -s)" = "Darwin" ]'
-    ~/.gitlocal: 
+    ~/.gitlocal:
       path: git/mac
+      if: '[ "$(uname -s)" = "Darwin" ]'
+    ~/Library/KeyBindings/DefaultKeyBinding.dict:
+      path: mac/DefaultKeyBindings.dict
       if: '[ "$(uname -s)" = "Darwin" ]'
 
 - shell:

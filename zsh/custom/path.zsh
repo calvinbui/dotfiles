@@ -25,4 +25,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
     export PATH="/usr/local/sbin:$PATH"
     # kubectl krew
     export PATH="${PATH}:${HOME}/.krew/bin"
+    # python
+    export PATH="/Library/Frameworks/Python.framework/Versions/Current/bin/:${PATH}"
 fi

@@ -89,6 +89,7 @@
     languagetoolServerPath: "https://languagetool.bui.services/v2"
   "linter-pylint":
     disableTimeout: true
+    pythonPath: "/usr/local/bin/python3"
     rcFile: "~/.pylintrc"
   "linter-shellcheck":
     enableNotice: true
