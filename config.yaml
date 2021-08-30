@@ -15,6 +15,7 @@
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.vim/bundle: vim/bundle
     ~/.local/share/nvim/site/autoload: vim/autoload
+    ~/Library/KeyBindings/DefaultKeyBinding.dict: mac/DefaultKeyBinding.dict
 
 - shell:
   -
