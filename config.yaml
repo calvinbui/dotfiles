@@ -1,23 +1,58 @@
+---
+
 - defaults:
     link:
       create: true
       force: true
 - clean: ['~']
 
-# dotfiles
+# both
+- link:
+    ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore_global
+
+    ~/.ssh/config: ssh/config
+
+    ~/.config/nvim/init.vim: vim/init.vim
+    ~/.vim/bundle: vim/bundle
+    ~/.local/share/nvim/site/autoload: vim/autoload
+
+    ~/.pylintrc: python/pylintrc
+
+    ~/.terraformrc: terraform/terraformrc
+
+# linux
+- link:
+    ~/.gitlocal:
+      path: git/linux
+      if: '[ "$(uname -s)" = "Linux" ]'
+# mac
 - link:
     ~/.atom/:
       path: atom/*
       glob: true
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore_global
-    ~/.ssh/config: ssh/config
-    ~/.config/nvim/init.vim: vim/init.vim
-    ~/.vim/bundle: vim/bundle
-    ~/.local/share/nvim/site/autoload: vim/autoload
-    ~/Library/KeyBindings/DefaultKeyBinding.dict: mac/DefaultKeyBinding.dict
+      if: '[ "$(uname -s)" = "Darwin" ]'
+    ~/.gitlocal:
+      path: git/mac
+      if: '[ "$(uname -s)" = "Darwin" ]'
+    ~/Library/KeyBindings/DefaultKeyBinding.dict:
+      path: mac/DefaultKeyBindings.dict
+      if: '[ "$(uname -s)" = "Darwin" ]'
 
 - shell:
+  -
+    description: apt-get install
+    command: |
+      if [ "$(uname -s)" = "Linux" ]; then
+        sudo apt-get update
+        sudo apt-get install -y $(cat apt/packages.txt)
+
+        . apt/neovim.sh
+        . apt/nodejs.sh
+
+      fi
+    stdout: true
+    stdin: true
   -
     description: oh-my-zsh
     command: |
@@ -33,56 +68,75 @@
   -
     description: install homebrew
     command: |
-      if ! command -v brew &> /dev/null; then
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      if [ "$(uname -s)" = "Darwin" ]; then
+        if ! command -v brew &> /dev/null; then
+          /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+        fi
       fi
     stdout: true
     stdin: true
   -
     description: install homebrew formulas
-    command: bash -c "cd mac && brew bundle --no-upgrade --no-lock"
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        bash -c "cd mac && brew bundle --no-upgrade --no-lock"
+      fi
     stdout: true
     stdin: true
   -
     description: install pip3 modules
-    command: bash -c "pip3 install -r pip/pip3-requirements.txt"
+    command: bash -c "pip3 install -r python/pip3-requirements.txt"
     stdout: true
     stdin: true
   -
     description: install npm packages
-    command: bash -c "< npm/packages.txt xargs npm install -g"
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        bash -c "< npm/packages.txt xargs npm install -g"
+      elif [ "$(uname -s)" = "Linux" ]; then
+        bash -c "< npm/packages.txt xargs sudo npm install -g"
+      fi
     stdout: true
     stdin: true
   -
     description: install atom packages
     command: |
-      echo "Getting installed Atom packages"
-      installed=$(apm list -i -b -no-color)
+      if [ "$(uname -s)" = "Darwin" ]; then
+        echo "Getting installed Atom packages"
+        installed=$(apm list -i -b -no-color)
 
-      echo "Installing missing Atom packages"
-      while read -r p; do
-        echo "Checking if $p is installed..."
-        if ! echo "$installed" | grep --silent "$p"; then
-          echo "Installing ${p}..."
-          apm install --production "$p"
-        fi
-      done < atom/package-list.txt
+        echo "Installing missing Atom packages"
+        while read -r p; do
+          echo "Checking if $p is installed..."
+          if ! echo "$installed" | grep --silent "$p"; then
+            echo "Installing ${p}..."
+            apm install --production "$p"
+          fi
+        done < atom/package-list.txt
+      fi
     stdout: true
     stdin: true
   -
     description: disable last login on new terminal session
-    command: touch ~/.hushlogin
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        touch ~/.hushlogin
+      fi
     stdout: true
     stdin: true
   -
     description: stop .DS_Store files on network drives
-    command: defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+      fi
     stdout: true
     stdin: true
 
 # can't clone repo if already exists
 - link:
     ~/.zshrc: zsh/zshrc
+    ~/.p10k: zsh/p10k.zsh
     ~/.oh-my-zsh/custom/:
       glob: true
       path: zsh/custom/*.zsh
