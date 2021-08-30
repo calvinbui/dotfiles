@@ -83,7 +83,7 @@
     stdin: true
   -
     description: install pip3 modules
-    command: bash -c "pip3 install -r pip/pip3-requirements.txt"
+    command: bash -c "pip3 install -r python/pip3-requirements.txt"
     stdout: true
     stdin: true
   -
