@@ -17,6 +17,8 @@
     ~/.vim/bundle: vim/bundle
     ~/.local/share/nvim/site/autoload: vim/autoload
 
+    ~/.pylintrc: python/pylintrc
+
 # linux
 - link:
     ~/.gitlocal:
