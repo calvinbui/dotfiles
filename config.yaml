@@ -134,6 +134,7 @@
 # can't clone repo if already exists
 - link:
     ~/.zshrc: zsh/zshrc
+    ~/.p10k: zsh/p10k
     ~/.oh-my-zsh/custom/:
       glob: true
       path: zsh/custom/*.zsh
