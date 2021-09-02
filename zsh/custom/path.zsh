@@ -1,30 +1,37 @@
 if [ "$(uname -s)" = "Darwin" ]; then
     # grep
-    export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/grep/libexec/gnubin"
+
     # curl
-    export PATH="/usr/local/opt/curl/bin:$PATH"
-    # coreutils https://www.gnu.org/software/coreutils/
-    export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/curl/bin"
+
     # ruby
-    export PATH="/usr/local/opt/ruby/bin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/ruby/bin"
+
     # gnu-tar
-    export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/gnu-tar/libexec/gnubin"
+
     # sed
-    export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/gnu-sed/libexec/gnubin"
+
     # mysql
-    export PATH="/usr/local/opt/mysql-client/bin:$PATH"
-    # ls colors
-    alias ls="gls --color=always"
-    ## go
-    #PATH="/Users/calvin/go/bin/:$PATH"
+    export PATH="${PATH}:/usr/local/opt/mysql-client/bin"
+
+    # # go
+    # export PATH="${PATH}:${HOME}/go/bin/"
+
+    # coreutils https://www.gnu.org/software/coreutils/
+    export PATH="${PATH}:/usr/local/opt/coreutils/libexec/gnubin"
+
     # findutils
-    export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/findutils/libexec/gnubin"
+
     # openssl
-    export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+    export PATH="${PATH}:/usr/local/opt/openssl@1.1/bin"
+
     # homebrew
-    export PATH="/usr/local/sbin:$PATH"
+    export PATH="${PATH}:/usr/local/sbin"
+
     # kubectl krew
     export PATH="${PATH}:${HOME}/.krew/bin"
-    # python
-    export PATH="/Library/Frameworks/Python.framework/Versions/Current/bin/:${PATH}"
 fi
