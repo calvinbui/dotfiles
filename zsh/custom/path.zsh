@@ -27,4 +27,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     export PATH="${PATH}:${HOME}/.krew/bin"
     # python
     export PATH="/Library/Frameworks/Python.framework/Versions/Current/bin/:${PATH}"
+elif [ "$(uname -s)" = "Linux" ]; then
+    # python
+    export PATH="${HOME}/.local/bin:${PATH}"
 fi
