@@ -1,17 +1,6 @@
 "*":
-  "ansible-vault": {}
-  "atom-ide-ui":
-    "atom-ide-code-format":
-      formatOnSave: true
-    use:
-      "atom-ide-diagnostics-ui": "never"
-  "autocomplete-paths":
-    ignoreSubmodules: true
   "autocomplete-plus":
     confirmCompletion: "tab"
-  "autocomplete-python":
-    useKite: false
-  "autohide-tree-view": {}
   autosave:
     enabled: true
   core:
@@ -39,6 +28,8 @@
       "metrics"
       "timecop"
       "welcome"
+      "exception-reporting"
+      "markdown-preview"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
@@ -49,44 +40,18 @@
     normalizeIndentOnPaste: false
     showInvisibles: true
     softWrap: true
-  "exception-reporting":
-    userId: "273f03c4-e9b6-4518-87a9-1fcc417436ba"
   "find-and-replace":
     enablePCRE2: true
     useRipgrep: true
   "fuzzy-finder":
     scoringSystem: "fast"
-  "git-blame":
-    columnWidth: 299
-  "git-diff": {}
-  "ide-go":
-    completionEnabled: false
-  "ide-python":
-    pylsPlugins:
-      autopep8:
-        enabled: false
-      pycodestyle:
-        enabled: false
-      pyflakes:
-        enabled: false
-      pylint:
-        enabled: true
-      rope_completion:
-        enabled: true
-      yapf: {}
-    python: "/usr/local/bin/python3"
-    rope:
-      ropeFolder: "null"
-  linter:
-    lintOnChange: false
-  "linter-ansible-linting":
-    fiveBeta: true
+  "git-diff":
+    showIconsInEditorGutter: true
+  linter: {}
   "linter-js-yaml":
     customTags: [
       "!vault"
     ]
-  "linter-languagetool":
-    languagetoolServerPath: "https://languagetool.bui.services/v2"
   "linter-pylint":
     disableTimeout: true
     pythonPath: "/usr/local/bin/python3"
@@ -100,7 +65,11 @@
   "markdown-preview-plus":
     saveConfig:
       saveToPDFOptions: {}
-    useGitHubStyle: true
+    style: "github"
+    syncConfig:
+      syncEditorOnPreviewScroll: true
+      syncPreviewOnChange: true
+      syncPreviewOnEditorScroll: true
   minimap:
     displayCodeHighlights: false
     plugins:
@@ -120,33 +89,19 @@
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
-  "platformio-ide-terminal":
-    core:
-      mapTerminalsTo: "Folder"
-      workingDirectory: "Active File"
-    style:
-      fontFamily: "MesloLGS Nerd Font"
-      fontSize: "18"
-      theme: "homebrew"
-    toggles:
-      autoClose: true
-      cursorBlink: false
-      selectToCopy: false
   "spell-check": {}
-  teletype:
-    askBeforeJoiningPortalViaExternalApp: false
-  "terminal-plus":
+  terminus:
     core:
-      mapTerminalsTo: "Folder"
-    style:
-      fontFamily: "MesloLGS NF"
-      fontSize: "18"
+      workingDirectory: "Active File"
+    toggles:
+      loginShell: false
+      runInsertedText: false
   "tree-view":
     alwaysOpenExisting: true
   welcome:
     showOnStartup: false
   whitespace:
-    ensureSingleTrailingNewline: false
+    ignoreWhitespaceOnCurrentLine: false
 ".html.mustache.text":
   editor:
     autoIndent: true
