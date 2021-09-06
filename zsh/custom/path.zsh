@@ -34,4 +34,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
 
     # kubectl krew
     export PATH="${HOME}/.krew/bin:${PATH}"
+elif [ "$(uname -s)" = "Linux" ]; then
+    # python
+    export PATH="${HOME}/.local/bin:${PATH}"
 fi
