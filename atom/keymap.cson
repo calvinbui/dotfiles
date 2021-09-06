@@ -10,3 +10,6 @@
   'alt-shift-right': 'editor:select-to-next-word-boundary'
   'alt-backspace': 'editor:delete-to-previous-word-boundary'
   'alt-delete': 'editor:delete-to-next-word-boundary'
+'.platform-darwin atom-workspace':
+  'cmd-alt-t': 'terminus:new'
+  'shift-cmd-T': '!unset'

@@ -1,2 +1,4 @@
 @antora/cli@2.3.4
+@antora/site-generator-default@2.3.4
 eslint@7.24.0
+yaml-js@0.2.3

@@ -47,6 +47,8 @@
     scoringSystem: "fast"
   "git-diff":
     showIconsInEditorGutter: true
+  hyperclick:
+    darwinTriggerKeys: "ctrlKey"
   linter: {}
   "linter-js-yaml":
     customTags: [
