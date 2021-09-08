@@ -140,6 +140,14 @@
       fi
     stdout: true
     stdin: true
+  -
+    description: Install MesloLGS NF fonts
+    command:
+      if [ "$(uname -s)" = "Darwin" ]; then
+        cp fonts/* ~/Library/Fonts
+      fi
+    stdout: true
+    stdin: true
 
 # can't clone repo if already exists
 - link:
