@@ -22,22 +22,25 @@
     ~/.terraformrc: terraform/terraformrc
 
 # linux
+- defaults:
+    link:
+      if: '[ "$(uname -s)" = "Linux" ]'
 - link:
     ~/.gitlocal:
       path: git/linux
-      if: '[ "$(uname -s)" = "Linux" ]'
+
 # mac
+- defaults:
+    link:
+      if: '[ "$(uname -s)" = "Darwin" ]'
 - link:
     ~/.atom/:
       path: atom/*
       glob: true
-      if: '[ "$(uname -s)" = "Darwin" ]'
     ~/.gitlocal:
       path: git/mac
-      if: '[ "$(uname -s)" = "Darwin" ]'
     ~/Library/KeyBindings/DefaultKeyBinding.dict:
       path: mac/DefaultKeyBindings.dict
-      if: '[ "$(uname -s)" = "Darwin" ]'
 
 - shell:
   -
