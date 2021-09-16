@@ -109,6 +109,10 @@
     autoIndent: true
     autoIndentOnPaste: true
     showIndentGuide: true
+".python.regexp.source":
+  editor:
+    tabLength: 42
 ".python.source":
   editor:
     showIndentGuide: true
+    tabLength: 2
