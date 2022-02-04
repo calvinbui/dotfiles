@@ -6,7 +6,7 @@
 	url = https://github.com/djui/alias-tips.git
 [submodule "zsh/custom/plugins/history-search-multi-word"]
 	path = zsh/custom/plugins/history-search-multi-word
-	url = https://github.com/zdharma/history-search-multi-word.git
+	url = https://github.com/zdharma-continuum/history-search-multi-word.git
 [submodule "zsh/custom/plugins/zsh-autosuggestions"]
 	path = zsh/custom/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
@@ -27,7 +27,7 @@
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "zsh/custom/plugins/fast-syntax-highlighting"]
 	path = zsh/custom/plugins/fast-syntax-highlighting
-	url = https://github.com/zdharma/fast-syntax-highlighting.git
+	url = https://github.com/zdharma-continuum/fast-syntax-highlighting.git
 [submodule "zsh/custom/themes/powerlevel10k"]
 	path = zsh/custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
