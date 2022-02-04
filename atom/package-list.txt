@@ -9,9 +9,9 @@ indent-guide-improved@1.4.13
 intentions@2.1.1
 language-docker@1.1.8
 language-ini@1.25.0
-language-terraform@0.9.6
+language-terraform@0.9.7
 linter@3.4.0
-linter-eslint@8.6.6
+linter-eslint@9.0.0
 linter-hadolint@1.0.0
 linter-js-yaml@1.4.6
 linter-jsonlint@1.4.0
@@ -31,6 +31,7 @@ minimap-selection@4.5.5
 multi-cursor@3.0.0
 open-project-in-tower@1.4.0
 sort-lines@0.19.0
-terminus@4.1.5
+terminus@4.1.6
 terraform-fmt@0.3.0
 trailing-spaces@0.4.0
+yaml-path-copy@2.1.6

@@ -47,9 +47,11 @@
     scoringSystem: "fast"
   "git-diff":
     showIconsInEditorGutter: true
+  "highlight-line": {}
   hyperclick:
     darwinTriggerKeys: "ctrlKey"
   linter: {}
+  "linter-hadolint": {}
   "linter-js-yaml":
     customTags: [
       "!vault"
@@ -115,4 +117,3 @@
 ".python.source":
   editor:
     showIndentGuide: true
-    tabLength: 2

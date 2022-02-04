@@ -48042,7 +48042,7 @@
 		<key>0x19-0x60000-0x0</key>
 		<dict>
 			<key>Action</key>
-			<integer>32</integer>
+			<integer>2</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
@@ -48053,7 +48053,7 @@
 		<key>0x9-0x40000-0x30</key>
 		<dict>
 			<key>Action</key>
-			<integer>39</integer>
+			<integer>0</integer>
 			<key>Label</key>
 			<string></string>
 			<key>Text</key>
@@ -48818,13 +48818,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[24;2~</string>
-				</dict>
-				<key>0xf728-0x0-0x0</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x4</string>
 				</dict>
 				<key>0xf728-0x80000-0x0</key>
 				<dict>
