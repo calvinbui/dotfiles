@@ -11,7 +11,7 @@ language-docker@1.1.8
 language-ini@1.25.0
 language-terraform@0.9.7
 linter@3.4.0
-linter-eslint@9.0.0
+linter-eslint@9.0.1
 linter-hadolint@1.0.0
 linter-js-yaml@1.4.6
 linter-jsonlint@1.4.0
@@ -20,7 +20,7 @@ linter-shellcheck@1.6.0
 linter-ui-default@3.4.1
 markdown-preview-plus@4.11.1
 markdown-table-formatter@2.9.2
-minimap@4.40.0
+minimap@4.40.1
 minimap-cursorline@1.0.5
 minimap-find-and-replace@5.0.9
 minimap-git-diff@4.3.6
@@ -31,7 +31,8 @@ minimap-selection@4.5.5
 multi-cursor@3.0.0
 open-project-in-tower@1.4.0
 sort-lines@0.19.0
-terminus@4.1.6
+terminus@4.1.8
 terraform-fmt@0.3.0
 trailing-spaces@0.4.0
+x-terminal@13.1.0
 yaml-path-copy@2.1.6

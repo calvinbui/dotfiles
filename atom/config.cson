@@ -30,12 +30,13 @@
       "welcome"
       "exception-reporting"
       "markdown-preview"
+      "x-terminal"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 18
+    fontSize: 15
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -106,6 +107,12 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+  "x-terminal":
+    spawnPtySettings:
+      projectCwd: true
+    terminalSettings:
+      defaultOpenPosition: "Bottom Dock"
+      leaveOpenAfterExit: false
 ".html.mustache.text":
   editor:
     autoIndent: true

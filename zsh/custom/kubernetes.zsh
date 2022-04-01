@@ -11,6 +11,6 @@ _kube_completions "kubectl"
 _kube_completions "helm"
 # _kube_completions "minikube"
 
-export EDITOR="atom -w"
+export EDITOR="vim"
 export K9S_EDITOR="$EDITOR"
 export KUBE_EDITOR="$EDITOR"
