@@ -1,5 +1,0 @@
-@antora/cli@3.0.1
-@antora/site-generator-default@2.3.4
-@antora/site-generator@3.0.1
-eslint@7.24.0
-yaml-js@0.2.3

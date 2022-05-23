@@ -11,6 +11,12 @@ _kube_completions "kubectl"
 _kube_completions "helm"
 # _kube_completions "minikube"
 
-export EDITOR="vim"
+export EDITOR="atom -w"
 export K9S_EDITOR="$EDITOR"
 export KUBE_EDITOR="$EDITOR"
+
+alias kprod="k9s --context ap3-prod-eks"
+alias kstg="k9s --context ap3-stg-eks"
+alias kauprod="k9s --context ap3-auprod-eks"
+alias kshared="k9s --context ops-shared-eks"
+alias kcommon="k9s --context ap3-common-eks"
