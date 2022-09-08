@@ -18,5 +18,6 @@ export KUBE_EDITOR="$EDITOR"
 alias kprod="k9s --context ap3-prod-eks"
 alias kstg="k9s --context ap3-stg-eks"
 alias kauprod="k9s --context ap3-auprod-eks"
+alias keuprod="k9s --context ap3-euprod-eks"
 alias kshared="k9s --context ops-shared-eks"
-alias kcommon="k9s --context ap3-common-eks"
+

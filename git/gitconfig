@@ -3,7 +3,7 @@
 	email = 3604363+calvinbui@users.noreply.github.com
 
 [core]
-	excludesfile = .gitignore_global
+	excludesfile = ~/.gitignore_global
 	ignorecase = false
 
 [commit]

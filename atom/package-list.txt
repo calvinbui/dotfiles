@@ -1,4 +1,5 @@
 atom-beautify@0.33.4
+atom-jinja2@0.6.0
 busy-signal@2.0.1
 file-icons@2.1.47
 highlight-line@0.12.0
@@ -12,13 +13,14 @@ language-ini@1.25.0
 language-terraform@0.9.7
 linter@3.4.0
 linter-eslint@9.0.1
+linter-eslint-node@1.0.6
 linter-hadolint@1.0.0
 linter-js-yaml@1.4.6
 linter-jsonlint@1.4.0
 linter-pylint@2.1.1
 linter-shellcheck@1.6.0
 linter-ui-default@3.4.1
-markdown-preview-plus@4.11.1
+markdown-preview-plus@4.11.3
 markdown-table-formatter@2.9.2
 minimap@4.40.1
 minimap-cursorline@1.0.5
@@ -34,5 +36,6 @@ sort-lines@0.19.0
 terminus@4.1.8
 terraform-fmt@0.3.0
 trailing-spaces@0.4.0
-x-terminal@13.1.0
+wordcount@3.3.0
+x-terminal@13.1.5
 yaml-path-copy@2.1.6

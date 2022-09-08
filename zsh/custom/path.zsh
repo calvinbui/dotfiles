@@ -18,7 +18,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     export PATH="/usr/local/opt/mysql-client/bin:${PATH}"
 
     # # go
-    # export PATH="${HOME}/go/bin/:${PATH}"
+    export PATH="${HOME}/go/bin/:${PATH}"
 
     # coreutils https://www.gnu.org/software/coreutils/
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
