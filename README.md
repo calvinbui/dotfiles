@@ -1,6 +1,6 @@
 # Dotfiles
 
-⚠️⚠️⚠️ **Read these instructions before continuing** ⚠️⚠️⚠️
+⚠️⚠️⚠️  **Read these instructions before continuing** ⚠️⚠️⚠️
 
 ## Mac
 
@@ -19,7 +19,7 @@ cd ~/repos
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 git clone --recurse-submodules git@github.com:calvinbui/dotfiles.git
 cd dotfiles
-./install
+./install -x
 ```
 
 ## Linux

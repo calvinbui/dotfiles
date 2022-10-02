@@ -34,7 +34,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 18
+    fontSize: 17
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -65,7 +65,6 @@
     enableNotice: true
   "linter-ui-default":
     panelHeight: 206
-    showPanel: true
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
@@ -103,7 +102,7 @@
       loginShell: false
       runInsertedText: false
   "terraform-fmt":
-    binPath: "/usr/local/bin/terraform"
+    binPath: "/opt/homebrew/bin/terraform"
   "tree-view":
     alwaysOpenExisting: true
   welcome:

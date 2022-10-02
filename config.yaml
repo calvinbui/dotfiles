@@ -37,10 +37,18 @@
     ~/.atom/:
       path: atom/*
       glob: true
+      create: true
+      force: true
     ~/.gitlocal:
       path: git/mac
+      force: true
     ~/Library/KeyBindings/DefaultKeyBinding.dict:
       path: mac/DefaultKeyBindings.dict
+      create: true
+      force: true
+    ~/Library/Application Support/k9s/config.yml:
+      path: k8s/k9s.yaml
+      force: true
 
 - shell:
   -
@@ -57,7 +65,13 @@
     stdout: true
     stdin: true
   -
-    description: oh-my-zsh
+    description: Disable Gatekeeper
+    command: |
+      if [ "$(uname -s)" = "Darwin" ]; then
+        sudo spctl --master-disable
+      fi
+  -
+    description: Install oh-my-zsh
     command: |
       if [ -d ~/.oh-my-zsh ]; then
         if [ ! -d ~/.oh-my-zsh/.git ]; then
@@ -69,30 +83,36 @@
     stdout: true
     stdin: true
   -
-    description: install homebrew
+    description: Install homebrew
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
-        if ! command -v brew &> /dev/null; then
+        if ! command -v /opt/homebrew/bin/brew &> /dev/null; then
           /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
         fi
       fi
     stdout: true
     stdin: true
   -
-    description: install homebrew formulas
+    description: Install rosetta
+    command: |
+      if ! /usr/bin/pgrep oahd >/dev/null 2>&1; then
+        sudo softwareupdate --install-rosetta --agree-to-license
+      fi
+  -
+    description: Install homebrew formulas
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
-        bash -c "cd mac && brew bundle --no-upgrade --no-lock"
+        bash -c "cd mac && /opt/homebrew/bin/brew bundle --no-upgrade --no-lock"
       fi
     stdout: true
     stdin: true
   -
-    description: install pip3 modules
+    description: Install pip3 modules
     command: bash -c "pip3 install -r python/pip3-requirements.txt"
     stdout: true
     stdin: true
   -
-    description: install npm packages
+    description: Install npm packages
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
         bash -c "< npm/packages.txt xargs npm install -g"
@@ -102,7 +122,7 @@
     stdout: true
     stdin: true
   -
-    description: install atom packages
+    description: Install atom packages
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
         echo "Getting installed Atom packages"
@@ -120,7 +140,7 @@
     stdout: true
     stdin: true
   -
-    description: disable last login on new terminal session
+    description: Disable last login on new terminal session
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
         touch ~/.hushlogin
@@ -128,7 +148,7 @@
     stdout: true
     stdin: true
   -
-    description: stop .DS_Store files on network drives
+    description: Stop .DS_Store files on network drives
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
         defaults write com.apple.desktopservices DSDontWriteNetworkStores true
@@ -145,26 +165,36 @@
     stdin: true
   -
     description: Install MesloLGS NF fonts
-    command:
+    command: |
       if [ "$(uname -s)" = "Darwin" ]; then
         cp fonts/* ~/Library/Fonts
       fi
     stdout: true
     stdin: true
+    glob: true
+  -
+    description: Create terraform plugin-cache folder
+    command: mkdir -p "$HOME/.terraform.d/plugin-cache"
+
 
 # can't clone repo if already exists
-- link:
+- defaults:
+    link:
+      create: true
+      force: true
+  link:
     ~/.zshrc: zsh/zshrc
-    ~/.p10k: zsh/p10k.zsh
+    ~/.p10k.zsh: zsh/p10k.zsh
     ~/.oh-my-zsh/custom/:
       glob: true
       path: zsh/custom/*.zsh
     ~/.oh-my-zsh/custom/plugins/:
       glob: true
       path: zsh/custom/plugins/*
-    ~/.oh-my-zsh/custom/themes/:
+  # globs dont work with dotbot when there's only 1 folder
+    ~/.oh-my-zsh/custom/themes/powerlevel10k:
       glob: true
-      path: zsh/custom/themes/*
+      path: zsh/custom/themes/powerlevel10k
 
 # remove dead symlinks
 - clean:

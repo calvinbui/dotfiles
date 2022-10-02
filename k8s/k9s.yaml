@@ -1,0 +1,168 @@
+k9s:
+  refreshRate: 2
+  maxConnRetry: 5
+  enableMouse: false
+  headless: false
+  logoless: true
+  crumbsless: false
+  readOnly: false
+  noExitOnCtrlC: false
+  noIcons: false
+  logger:
+    tail: 100
+    buffer: 5000
+    sinceSeconds: 60
+    fullScreenLogs: false
+    textWrap: false
+    showTime: false
+  currentContext: ap3-stg-eks
+  currentCluster: arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks
+  clusters:
+    "":
+      namespace:
+        active: default
+        lockFavorites: false
+        favorites:
+        - default
+      view:
+        active: po
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:409414527402:cluster/ap3-auprod-eks:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - ap3-auprod-master
+        - all
+        - buildkite-agent
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks:
+      namespace:
+        active: mysqld-exporter
+        lockFavorites: false
+        favorites:
+        - mysqld-exporter
+        - ap3-stg-master
+        - litmus
+        - prometheus-operator
+        - kube-system
+        - prestashop
+        - all
+        - buildkite-agent
+        - default
+      view:
+        active: po
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - all
+        - ap3-euprod-master
+        - prometheus-operator
+        - buildkite-agent
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks:
+      namespace:
+        active: kubed
+        lockFavorites: false
+        favorites:
+        - kubed
+        - renovate
+        - buildkite-agent
+        - kube-system
+        - prometheus-operator
+        - all
+        - linkerd
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks:
+      namespace:
+        active: ap3-prod-master
+        lockFavorites: false
+        favorites:
+        - kube-system
+        - s3-backups-checker
+        - ap3-prod-master
+        - all
+        - default
+      view:
+        active: pod
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+  thresholds:
+    cpu:
+      critical: 90
+      warn: 70
+    memory:
+      critical: 90
+      warn: 70
+  screenDumpDir: /var/folders/_t/fxhbmswn7yj755h6t61x7p4h0000gn/T/k9s-screens-calvin

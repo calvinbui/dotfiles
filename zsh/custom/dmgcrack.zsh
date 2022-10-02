@@ -2,7 +2,7 @@
 
 dmg2john_cmd(){
   echo "Generating hash file"
-  "$(dirname $(readlink -f /usr/local/bin/john))/dmg2john" "$1"
+  "$(dirname $(readlink -f /opt/homebrew/bin/john))/dmg2john" "$1"
 }
 
 dmgcrack(){
@@ -18,7 +18,7 @@ dmgcrack(){
 
 rar2john_cmd(){
   echo "Generating hash file"
-  "$(dirname $(readlink -f /usr/local/bin/john))/rar2john" "$1"
+  "$(dirname $(readlink -f /opt/homebrew/bin/john))/rar2john" "$1"
 }
 
 rarcrack(){
