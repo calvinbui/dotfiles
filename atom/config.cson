@@ -34,7 +34,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 17
+    fontSize: 16
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true

@@ -15,8 +15,8 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ap3-stg-eks
-  currentCluster: arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks
+  currentContext: ops-shared-eks
+  currentCluster: arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks
   clusters:
     "":
       namespace:
@@ -39,15 +39,20 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:ap-southeast-2:409414527402:cluster/ap3-auprod-eks:
       namespace:
-        active: all
+        active: ap3-auprod-master
         lockFavorites: false
         favorites:
+        - external-dns
+        - elasticsearch-exporter
+        - ap3-auprod-preprod
+        - mongodb-exporter
+        - mongo-backups
+        - litmus
+        - prometheus-operator
+        - prometheus-adapter
         - ap3-auprod-master
-        - all
-        - buildkite-agent
-        - default
       view:
-        active: pod
+        active: ing
       featureGates:
         nodeShell: false
       shellPod:
@@ -61,20 +66,20 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks:
       namespace:
-        active: mysqld-exporter
+        active: all
         lockFavorites: false
         favorites:
-        - mysqld-exporter
-        - ap3-stg-master
-        - litmus
-        - prometheus-operator
-        - kube-system
-        - prestashop
-        - all
+        - filebeat
+        - ap2-stg-master
+        - ap3-stg-ortto-website-ui-preview
+        - ortto-website-ui-2
         - buildkite-agent
-        - default
+        - all
+        - ap3-stg-master
+        - loki
+        - mongodb-exporter
       view:
-        active: po
+        active: prometheusrule
       featureGates:
         nodeShell: false
       shellPod:
@@ -88,9 +93,10 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
       namespace:
-        active: all
+        active: ap3-euprod-master
         lockFavorites: false
         favorites:
+        - cert-manager
         - all
         - ap3-euprod-master
         - prometheus-operator
@@ -111,19 +117,20 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks:
       namespace:
-        active: kubed
+        active: kube-system
         lockFavorites: false
         favorites:
-        - kubed
-        - renovate
-        - buildkite-agent
         - kube-system
         - prometheus-operator
+        - es-watcher-exporter
+        - antora
+        - external-dns
+        - ingress-nginx
+        - anchore-engine
+        - loki
         - all
-        - linkerd
-        - default
       view:
-        active: pod
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:
@@ -140,17 +147,41 @@ k9s:
         active: ap3-prod-master
         lockFavorites: false
         favorites:
-        - kube-system
-        - s3-backups-checker
         - ap3-prod-master
+        - ortto-website-ui-preprod
         - all
+        - ap3-prod-preprod
+        - mongo-backups
+        - cert-manager
+        - mongodb-exporter
+        - ap3-prod-capture-api-cname-proxy
+        - ap2-prod-master
+      view:
+        active: dp
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.31
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+      portForwardAddress: localhost
+    gke_ap3-prod_us-central1_ap3-cluster-prod:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - github-backup
         - default
       view:
         active: pod
       featureGates:
         nodeShell: false
       shellPod:
-        image: busybox:1.31
+        image: busybox:1.35.0
         command: []
         args: []
         namespace: default

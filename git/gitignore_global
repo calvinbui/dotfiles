@@ -34,7 +34,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+# build/
 develop-eggs/
 dist/
 downloads/
@@ -69,7 +69,7 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
-.cache
+# .cache
 nosetests.xml
 coverage.xml
 *.cover
