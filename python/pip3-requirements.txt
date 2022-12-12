@@ -1,6 +1,6 @@
-ansible==6.6.0
+ansible==7.1.0
 ansible-compat==2.2.4
-ansible-core==2.13.6
+ansible-core==2.14.1
 ansible-lint==6.8.6
 astroid==2.11.5
 attrs==22.1.0
