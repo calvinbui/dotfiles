@@ -72,7 +72,7 @@ PlexAPI==4.13.0
 pluggy==1.0.0
 positional==1.2.1
 prettytable==0.7.2
-protobuf==4.21.2
+protobuf==4.21.12
 py==1.11.0
 pycparser==2.21
 PyGithub==1.55
