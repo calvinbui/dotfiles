@@ -34,7 +34,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 12
+    fontSize: 16
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -48,7 +48,8 @@
     showIconsInEditorGutter: true
   github:
     gitDiagnostics: true
-  "highlight-line": {}
+  "highlight-line":
+    enableBackgroundColor: false
   hyperclick:
     darwinTriggerKeys: "ctrlKey"
   linter: {}

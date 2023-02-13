@@ -3,7 +3,7 @@ k9s:
   maxConnRetry: 5
   enableMouse: false
   headless: false
-  logoless: true
+  logoless: false
   crumbsless: false
   readOnly: false
   noExitOnCtrlC: false
@@ -15,48 +15,22 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ap3-prod-eks
-  currentCluster: arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks
+  currentContext: ap3-stg-eks
+  currentCluster: arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks
   clusters:
-    "":
-      namespace:
-        active: default
-        lockFavorites: false
-        favorites:
-        - default
-      view:
-        active: po
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.31
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-      portForwardAddress: localhost
     arn:aws:eks:ap-southeast-2:409414527402:cluster/ap3-auprod-eks:
       namespace:
         active: ap3-auprod-master
         lockFavorites: false
         favorites:
-        - external-dns
-        - elasticsearch-exporter
-        - ap3-auprod-preprod
-        - mongodb-exporter
-        - mongo-backups
-        - litmus
-        - prometheus-operator
-        - prometheus-adapter
         - ap3-auprod-master
+        - default
       view:
-        active: ing
+        active: pod
       featureGates:
         nodeShell: false
       shellPod:
-        image: busybox:1.31
+        image: busybox:1.35.0
         command: []
         args: []
         namespace: default
@@ -69,21 +43,21 @@ k9s:
         active: ap3-stg-master
         lockFavorites: false
         favorites:
-        - linkerd-viz
-        - filebeat
         - ap2-stg-master
-        - ap3-stg-ortto-website-ui-preview
-        - ortto-website-ui-2
-        - buildkite-agent
-        - all
+        - linkerd-viz
+        - linkerd-smi
+        - linkerd
         - ap3-stg-master
-        - loki
+        - blackbox-exporter
+        - prometheus-operator
+        - ingress-nginx
+        - nats-exporter
       view:
         active: pods
       featureGates:
         nodeShell: false
       shellPod:
-        image: busybox:1.31
+        image: busybox:1.35.0
         command: []
         args: []
         namespace: default
@@ -93,21 +67,18 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
       namespace:
-        active: ap3-euprod-master
+        active: ap3-euprod-preprod
         lockFavorites: false
         favorites:
-        - cert-manager
-        - all
+        - ap3-euprod-preprod
         - ap3-euprod-master
-        - prometheus-operator
-        - buildkite-agent
         - default
       view:
         active: pod
       featureGates:
         nodeShell: false
       shellPod:
-        image: busybox:1.31
+        image: busybox:1.35.0
         command: []
         args: []
         namespace: default
@@ -120,21 +91,21 @@ k9s:
         active: antora
         lockFavorites: false
         favorites:
-        - grafana
-        - ap3-application-logs
-        - linkerd-viz
-        - kube-system
-        - prometheus-operator
-        - es-watcher-exporter
-        - antora
         - external-dns
-        - ingress-nginx
+        - buildkite-artifacts-s3-proxy
+        - elasticsearch-exporter
+        - kube-system
+        - falco
+        - all
+        - athens-proxy
+        - loki
+        - antora
       view:
-        active: sec
+        active: pod
       featureGates:
         nodeShell: false
       shellPod:
-        image: busybox:1.31
+        image: busybox:1.35.0
         command: []
         args: []
         namespace: default
@@ -144,24 +115,20 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks:
       namespace:
-        active: all
+        active: ap3-prod-master
         lockFavorites: false
         favorites:
-        - ap3-prod-master
-        - ortto-website-ui-preprod
+        - s3-backups-checker
         - all
         - ap3-prod-preprod
-        - mongo-backups
-        - cert-manager
-        - mongodb-exporter
-        - ap3-prod-capture-api-cname-proxy
-        - ap2-prod-master
+        - ap3-prod-master
+        - default
       view:
         active: job
       featureGates:
         nodeShell: false
       shellPod:
-        image: busybox:1.31
+        image: busybox:1.35.0
         command: []
         args: []
         namespace: default
@@ -171,13 +138,17 @@ k9s:
       portForwardAddress: localhost
     gke_ap3-prod_us-central1_ap3-cluster-prod:
       namespace:
-        active: all
+        active: gtoken-webhook
         lockFavorites: false
         favorites:
-        - github-backup
+        - gtoken-webhook
+        - ap3-prod-master
+        - prometheus-operator
+        - all
+        - filebeat
         - default
       view:
-        active: pod
+        active: mutatingwebhookconfiguration
       featureGates:
         nodeShell: false
       shellPod:
