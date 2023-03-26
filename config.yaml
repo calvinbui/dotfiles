@@ -95,8 +95,10 @@
   -
     description: Install rosetta
     command: |
-      if ! /usr/bin/pgrep oahd >/dev/null 2>&1; then
-        sudo softwareupdate --install-rosetta --agree-to-license
+      if [ "$(uname -s)" = "Darwin" ]; then
+        if ! /usr/bin/pgrep oahd >/dev/null 2>&1; then
+          sudo softwareupdate --install-rosetta --agree-to-license
+        fi
       fi
   -
     description: Install homebrew formulas
