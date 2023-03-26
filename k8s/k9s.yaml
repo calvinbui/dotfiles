@@ -8,6 +8,7 @@ k9s:
   readOnly: false
   noExitOnCtrlC: false
   noIcons: false
+  skipLatestRevCheck: false
   logger:
     tail: 100
     buffer: 5000
@@ -15,18 +16,23 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ap3-stg-eks
-  currentCluster: arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks
+  currentContext: ap3-prod-eks
+  currentCluster: arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks
   clusters:
     arn:aws:eks:ap-southeast-2:409414527402:cluster/ap3-auprod-eks:
       namespace:
-        active: ap3-auprod-master
+        active: all
         lockFavorites: false
         favorites:
+        - karpenter
+        - buildkite-agent
+        - prometheus-operator
+        - filebeat
+        - all
         - ap3-auprod-master
         - default
       view:
-        active: pod
+        active: "no"
       featureGates:
         nodeShell: false
       shellPod:
@@ -37,23 +43,24 @@ k9s:
         limits:
           cpu: 100m
           memory: 100Mi
+        labels: {}
       portForwardAddress: localhost
     arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks:
       namespace:
         active: ap3-stg-master
         lockFavorites: false
         favorites:
-        - ap2-stg-master
-        - linkerd-viz
-        - linkerd-smi
-        - linkerd
-        - ap3-stg-master
-        - blackbox-exporter
-        - prometheus-operator
-        - ingress-nginx
+        - karpenter
+        - buildkite-agent
+        - kube-system
         - nats-exporter
+        - ap3-stg-master
+        - cluster-overprovisioner
+        - prometheus-operator
+        - ap3-stg-capture-api-cname-proxy
+        - all
       view:
-        active: pods
+        active: pod
       featureGates:
         nodeShell: false
       shellPod:
@@ -64,17 +71,22 @@ k9s:
         limits:
           cpu: 100m
           memory: 100Mi
+        labels: {}
       portForwardAddress: localhost
     arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
       namespace:
-        active: ap3-euprod-preprod
+        active: ap3-euprod-master
         lockFavorites: false
         favorites:
+        - kube-system
+        - s3-backups-checker
+        - anchore-scanner
+        - all
         - ap3-euprod-preprod
         - ap3-euprod-master
         - default
       view:
-        active: pod
+        active: "no"
       featureGates:
         nodeShell: false
       shellPod:
@@ -85,44 +97,22 @@ k9s:
         limits:
           cpu: 100m
           memory: 100Mi
+        labels: {}
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks:
       namespace:
-        active: antora
+        active: trivy-system
         lockFavorites: false
         favorites:
-        - external-dns
-        - buildkite-artifacts-s3-proxy
-        - elasticsearch-exporter
-        - kube-system
-        - falco
-        - all
-        - athens-proxy
-        - loki
         - antora
-      view:
-        active: pod
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.35.0
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-      portForwardAddress: localhost
-    arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks:
-      namespace:
-        active: ap3-prod-master
-        lockFavorites: false
-        favorites:
-        - s3-backups-checker
+        - cert-manager
+        - es-watcher-exporter
+        - trivy-system
         - all
-        - ap3-prod-preprod
-        - ap3-prod-master
-        - default
+        - buildkite-agent
+        - s3-backups-checker
+        - postgres-exporter
+        - anchore-scanner
       view:
         active: job
       featureGates:
@@ -135,20 +125,24 @@ k9s:
         limits:
           cpu: 100m
           memory: 100Mi
+        labels: {}
       portForwardAddress: localhost
-    gke_ap3-prod_us-central1_ap3-cluster-prod:
+    arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks:
       namespace:
-        active: gtoken-webhook
+        active: all
         lockFavorites: false
         favorites:
-        - gtoken-webhook
-        - ap3-prod-master
-        - prometheus-operator
-        - all
+        - cluster-overprovisioner
+        - elasticsearch-exporter
+        - ap3-prod-capture-api-cname-proxy
         - filebeat
+        - s3-backups-checker
+        - all
+        - ap3-prod-preprod
+        - ap3-prod-master
         - default
       view:
-        active: mutatingwebhookconfiguration
+        active: pdb
       featureGates:
         nodeShell: false
       shellPod:
@@ -159,6 +153,33 @@ k9s:
         limits:
           cpu: 100m
           memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    gke_ap3-prod_us-central1_ap3-cluster-prod:
+      namespace:
+        active: prometheus-operator
+        lockFavorites: false
+        favorites:
+        - external-dns
+        - gtoken-webhook
+        - ap3-prod-master
+        - prometheus-operator
+        - all
+        - filebeat
+        - default
+      view:
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
       portForwardAddress: localhost
   thresholds:
     cpu:

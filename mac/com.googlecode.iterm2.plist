@@ -10,10 +10,139 @@
 	<false/>
 	<key>Default Bookmark Guid</key>
 	<string>B900B6D9-FDD5-4C4E-8521-B1E01FF14841</string>
+	<key>DimBackgroundWindows</key>
+	<false/>
 	<key>DimInactiveSplitPanes</key>
+	<true/>
+	<key>DimOnlyText</key>
 	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
 	<true/>
+	<key>GlobalKeyMap</key>
+	<dict>
+		<key>0x19-0x60000-0x0</key>
+		<dict>
+			<key>Action</key>
+			<integer>2</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
+		</dict>
+		<key>0x9-0x40000-0x0</key>
+		<dict>
+			<key>Action</key>
+			<integer>0</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
+		</dict>
+		<key>0xf700-0x300000-0x0</key>
+		<dict>
+			<key>Action</key>
+			<integer>20</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
+		</dict>
+		<key>0xf701-0x300000-0x0</key>
+		<dict>
+			<key>Action</key>
+			<integer>21</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
+		</dict>
+		<key>0xf702-0x300000-0x0</key>
+		<dict>
+			<key>Action</key>
+			<integer>18</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
+		</dict>
+		<key>0xf702-0x320000</key>
+		<dict>
+			<key>Action</key>
+			<integer>33</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf703-0x300000-0x0</key>
+		<dict>
+			<key>Action</key>
+			<integer>19</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>0</integer>
+		</dict>
+		<key>0xf703-0x320000</key>
+		<dict>
+			<key>Action</key>
+			<integer>34</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf729-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>5</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72b-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>4</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72c-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>9</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72c-0x20000</key>
+		<dict>
+			<key>Action</key>
+			<integer>9</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72d-0x100000</key>
+		<dict>
+			<key>Action</key>
+			<integer>8</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf72d-0x20000</key>
+		<dict>
+			<key>Action</key>
+			<integer>8</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+	</dict>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideTab</key>
@@ -289,7 +418,7 @@
 			<key>Guid</key>
 			<string>B900B6D9-FDD5-4C4E-8521-B1E01FF14841</string>
 			<key>Horizontal Spacing</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>Icon</key>
 			<integer>1</integer>
 			<key>Idle Code</key>
@@ -557,13 +686,6 @@
 					<key>Text</key>
 					<string>b</string>
 				</dict>
-				<key>0xf702-0x300000-0x0</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x1</string>
-				</dict>
 				<key>0xf703-0x220000-0x0</key>
 				<dict>
 					<key>Action</key>
@@ -591,13 +713,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>f</string>
-				</dict>
-				<key>0xf703-0x300000-0x0</key>
-				<dict>
-					<key>Action</key>
-					<integer>11</integer>
-					<key>Text</key>
-					<string>0x5</string>
 				</dict>
 				<key>0xf704-0x20000-0x0</key>
 				<dict>
@@ -950,7 +1065,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<integer>1</integer>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
@@ -1003,9 +1118,11 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.10000000000000001</real>
+	<real>0.19599135315533983</real>
 	<key>StretchTabsToFillBar</key>
 	<false/>
+	<key>SwitchPaneModifier</key>
+	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>VisualIndicatorForEsc</key>
