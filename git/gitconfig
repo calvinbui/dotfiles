@@ -17,3 +17,7 @@
 
 [include]
 	path = .gitlocal
+[credential]
+	helper = store
+[safe]
+	directory = *

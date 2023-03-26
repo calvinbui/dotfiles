@@ -38,4 +38,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
 elif [ "$(uname -s)" = "Linux" ]; then
     # python
     export PATH="${HOME}/.local/bin:${PATH}"
+
+    # go
+    export PATH="${PATH}:/usr/local/go/bin"
 fi
