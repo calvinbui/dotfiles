@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    bash:
+      beautify_on_save: true
   "autocomplete-plus":
     confirmCompletion: "tab"
   autosave:
@@ -34,7 +37,7 @@
     telemetryConsent: "no"
   editor:
     autoIndentOnPaste: false
-    fontSize: 16
+    fontSize: 15
     invisibles: {}
     normalizeIndentOnPaste: false
     showInvisibles: true
@@ -48,8 +51,7 @@
     showIconsInEditorGutter: true
   github:
     gitDiagnostics: true
-  "highlight-line":
-    enableBackgroundColor: false
+  "highlight-line": {}
   hyperclick:
     darwinTriggerKeys: "ctrlKey"
   linter: {}
@@ -106,6 +108,7 @@
     binPath: "/opt/homebrew/bin/terraform"
   "tree-view":
     alwaysOpenExisting: true
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:

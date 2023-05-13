@@ -3,7 +3,7 @@ k9s:
   maxConnRetry: 5
   enableMouse: false
   headless: false
-  logoless: false
+  logoless: true
   crumbsless: false
   readOnly: false
   noExitOnCtrlC: false
@@ -12,7 +12,7 @@ k9s:
   logger:
     tail: 100
     buffer: 5000
-    sinceSeconds: 60
+    sinceSeconds: 300
     fullScreenLogs: false
     textWrap: false
     showTime: false
@@ -24,15 +24,17 @@ k9s:
         active: all
         lockFavorites: false
         favorites:
-        - karpenter
-        - buildkite-agent
-        - prometheus-operator
-        - filebeat
-        - all
+        - ap3-prod-master
+        - mongodb-exporter
+        - linkerd-multicluster
         - ap3-auprod-master
-        - default
+        - cluster-overprovisioner
+        - buildkite-agent
+        - all
+        - ap3-auprod-preprod
+        - prometheus-operator
       view:
-        active: "no"
+        active: po
       featureGates:
         nodeShell: false
       shellPod:
@@ -50,15 +52,15 @@ k9s:
         active: ap3-stg-master
         lockFavorites: false
         favorites:
-        - karpenter
-        - buildkite-agent
-        - kube-system
-        - nats-exporter
+        - frp
+        - ap3-stg-qa
         - ap3-stg-master
-        - cluster-overprovisioner
-        - prometheus-operator
-        - ap3-stg-capture-api-cname-proxy
-        - all
+        - velero
+        - mysql-proxy
+        - talk-ai
+        - ap2-stg-master
+        - linkerd
+        - linkerd-multicluster
       view:
         active: pod
       featureGates:
@@ -75,18 +77,16 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
       namespace:
-        active: ap3-euprod-master
+        active: ap3-euprod-preprod
         lockFavorites: false
         favorites:
-        - kube-system
-        - s3-backups-checker
-        - anchore-scanner
-        - all
+        - linkerd-multicluster
+        - linkerd-viz
+        - mongo-backups
         - ap3-euprod-preprod
-        - ap3-euprod-master
         - default
       view:
-        active: "no"
+        active: po
       featureGates:
         nodeShell: false
       shellPod:
@@ -101,20 +101,20 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks:
       namespace:
-        active: trivy-system
+        active: ap3-stg-master
         lockFavorites: false
         favorites:
-        - antora
-        - cert-manager
-        - es-watcher-exporter
-        - trivy-system
+        - linkerd
         - all
-        - buildkite-agent
-        - s3-backups-checker
-        - postgres-exporter
-        - anchore-scanner
+        - ap3-stg-master
+        - falco
+        - default
+        - karpenter
+        - athens-proxy
+        - ap3-application-logs
+        - aws-fsx-csi-driver
       view:
-        active: job
+        active: svc
       featureGates:
         nodeShell: false
       shellPod:
@@ -132,43 +132,17 @@ k9s:
         active: all
         lockFavorites: false
         favorites:
-        - cluster-overprovisioner
         - elasticsearch-exporter
-        - ap3-prod-capture-api-cname-proxy
-        - filebeat
-        - s3-backups-checker
-        - all
+        - kube-system
+        - mongodb-exporter
+        - linkerd-viz
         - ap3-prod-preprod
+        - buildkite-agent
+        - s3-backups-checker
+        - mongo-backups
         - ap3-prod-master
-        - default
       view:
-        active: pdb
-      featureGates:
-        nodeShell: false
-      shellPod:
-        image: busybox:1.35.0
-        command: []
-        args: []
-        namespace: default
-        limits:
-          cpu: 100m
-          memory: 100Mi
-        labels: {}
-      portForwardAddress: localhost
-    gke_ap3-prod_us-central1_ap3-cluster-prod:
-      namespace:
-        active: prometheus-operator
-        lockFavorites: false
-        favorites:
-        - external-dns
-        - gtoken-webhook
-        - ap3-prod-master
-        - prometheus-operator
-        - all
-        - filebeat
-        - default
-      view:
-        active: pods
+        active: "no"
       featureGates:
         nodeShell: false
       shellPod:
