@@ -3,7 +3,7 @@ k9s:
   maxConnRetry: 5
   enableMouse: false
   headless: false
-  logoless: true
+  logoless: false
   crumbsless: false
   readOnly: false
   noExitOnCtrlC: false
@@ -16,25 +16,19 @@ k9s:
     fullScreenLogs: false
     textWrap: false
     showTime: false
-  currentContext: ap3-prod-eks
-  currentCluster: arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks
+  currentContext: ap2-stg-eks
+  currentCluster: arn:aws:eks:us-east-2:808259360302:cluster/ap2-stg-eks
   clusters:
     arn:aws:eks:ap-southeast-2:409414527402:cluster/ap3-auprod-eks:
       namespace:
-        active: all
+        active: ap3-prod-master
         lockFavorites: false
         favorites:
+        - external-dns
         - ap3-prod-master
-        - mongodb-exporter
-        - linkerd-multicluster
-        - ap3-auprod-master
-        - cluster-overprovisioner
-        - buildkite-agent
-        - all
-        - ap3-auprod-preprod
-        - prometheus-operator
+        - default
       view:
-        active: po
+        active: "no"
       featureGates:
         nodeShell: false
       shellPod:
@@ -49,20 +43,19 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:ap-southeast-2:601446024623:cluster/ap3-stg-eks:
       namespace:
-        active: ap3-stg-master
+        active: all
         lockFavorites: false
         favorites:
-        - frp
         - ap3-stg-qa
-        - ap3-stg-master
-        - velero
-        - mysql-proxy
-        - talk-ai
-        - ap2-stg-master
-        - linkerd
+        - prometheus-operator
+        - buildkite-agent
+        - kube-system
         - linkerd-multicluster
+        - all
+        - ap3-stg-master
+        - default
       view:
-        active: pod
+        active: ds
       featureGates:
         nodeShell: false
       shellPod:
@@ -77,16 +70,16 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
       namespace:
-        active: ap3-euprod-preprod
+        active: all
         lockFavorites: false
         favorites:
-        - linkerd-multicluster
-        - linkerd-viz
-        - mongo-backups
+        - prometheus-operator
+        - all
+        - kube-system
         - ap3-euprod-preprod
         - default
       view:
-        active: po
+        active: sts
       featureGates:
         nodeShell: false
       shellPod:
@@ -101,20 +94,20 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks:
       namespace:
-        active: ap3-stg-master
+        active: prometheus-operator
         lockFavorites: false
         favorites:
-        - linkerd
-        - all
-        - ap3-stg-master
-        - falco
+        - prometheus-operator
+        - terraform-cloud-operator
+        - oncall
         - default
         - karpenter
-        - athens-proxy
-        - ap3-application-logs
-        - aws-fsx-csi-driver
+        - grafana
+        - cluster-proportional-autoscaler
+        - all
+        - buildkite-agent
       view:
-        active: svc
+        active: pods
       featureGates:
         nodeShell: false
       shellPod:
@@ -129,20 +122,40 @@ k9s:
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks:
       namespace:
-        active: all
+        active: prometheus-operator
         lockFavorites: false
         favorites:
-        - elasticsearch-exporter
-        - kube-system
-        - mongodb-exporter
-        - linkerd-viz
-        - ap3-prod-preprod
-        - buildkite-agent
-        - s3-backups-checker
-        - mongo-backups
+        - prometheus-operator
+        - cluster-overprovisioner
+        - all
+        - linkerd-multicluster
         - ap3-prod-master
+        - default
       view:
-        active: "no"
+        active: pods
+      featureGates:
+        nodeShell: false
+      shellPod:
+        image: busybox:1.35.0
+        command: []
+        args: []
+        namespace: default
+        limits:
+          cpu: 100m
+          memory: 100Mi
+        labels: {}
+      portForwardAddress: localhost
+    arn:aws:eks:us-east-2:808259360302:cluster/ap2-stg-eks:
+      namespace:
+        active: ap2-stg-master
+        lockFavorites: false
+        favorites:
+        - ap2-stg-master
+        - all
+        - kube-system
+        - default
+      view:
+        active: pod
       featureGates:
         nodeShell: false
       shellPod:

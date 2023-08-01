@@ -51,7 +51,8 @@
     showIconsInEditorGutter: true
   github:
     gitDiagnostics: true
-  "highlight-line": {}
+  "highlight-line":
+    enableBackgroundColor: false
   hyperclick:
     darwinTriggerKeys: "ctrlKey"
   linter: {}
