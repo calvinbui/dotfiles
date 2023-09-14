@@ -41,4 +41,7 @@ elif [ "$(uname -s)" = "Linux" ]; then
 
     # go
     export PATH="${PATH}:/usr/local/go/bin"
+
+    # latex
+    export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
 fi
