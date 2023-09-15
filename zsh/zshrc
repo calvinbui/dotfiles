@@ -1,7 +1,9 @@
 #!/usr/bin/env zsh
 
-# load before instant prompt
-source ~/repos/ap3-ops/ap3-ops-tools/load.sh
+if [ "$(uname -s)" = "Darwin" ]; then
+  # load before instant prompt
+  source ~/repos/ap3-ops/ap3-ops-tools/load.sh
+fi
 
 # instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -36,4 +38,3 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-
