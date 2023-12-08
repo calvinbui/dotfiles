@@ -1,0 +1,139 @@
+#!/usr/bin/env bash
+#
+# EDITOR=vim ./git_date -c 1 -S
+
+is_git_repo() {
+    git rev-parse --show-toplevel > /dev/null 2>&1
+    result=$?
+    if test $result != 0; then
+        >&2 echo 'Not a git repo!'
+        exit $result
+  fi
+}
+
+is_git_repo
+
+make_editor_choice() {
+
+    echo "Which editor do you want to use for this repo?\n";
+    echo "1. VI\n";
+    echo "2. NANO\n";
+    echo "3. Your own\n"
+    echo "You Choose: ";
+
+    read -d'' -s -n1 CHOOSE_EDITOR
+}
+
+get_editor_executable() {
+
+    echo "What is the path to your prefered test editor?\n";
+    read EDITOR_PATH
+}
+
+
+is_has_editor() {
+    SETTINGS_FILE="~/.redate-settings";
+    if [ -f "$SETTINGS_FILE" ]
+    then
+        OUR_EDITOR=$(cat ${SETTINGS_FILE});
+    elif [ ! -z "$EDITOR" ]
+    then
+	OUR_EDITOR="$EDITOR";
+    else
+        make_editor_choice;
+        if [ ${CHOOSE_EDITOR} == 3 ] || [ ${CHOOSE_EDITOR} == "3" ]; then
+            get_editor_executable
+            OUR_EDITOR=${EDITOR_PATH}
+        elif [ ${CHOOSE_EDITOR} == 1 ] || [ ${CHOOSE_EDITOR} == "1" ]; then
+            OUR_EDITOR="vi";
+        else
+            OUR_EDITOR="nano";
+        fi
+        echo ${OUR_EDITOR} > ${SETTINGS_FILE}
+    fi
+}
+
+is_has_editor
+
+
+ALL=0
+DEBUG=0
+LOG_FILTER=""
+REBASE_REF="--root"
+COMMIT_ARGS=""
+LOG_OUT_PATTERN="error"
+
+while [[ $# -ge 1 ]]; do
+    key="$1"
+
+    case $key in
+        -c| --commits)
+        COMMITS="${2:-5}"
+        shift
+        ;;
+        -u| --user)
+        LOG_FILTER="${LOG_FILTER} --author=$(git config --get user.email)"
+        shift
+        ;;
+        -d| --debug)
+        DEBUG=1
+        LOG_OUT_PATTERN=""
+        ;;
+        -a| --all)
+        ALL=1
+        ;;
+        *)
+        COMMIT_ARGS="${COMMIT_ARGS} ${key}"
+        # unknown option
+        ;;
+    esac
+    shift
+done
+
+die () {
+    echo >&2 `basename $0`: $*
+    exit 1
+}
+
+COMMITS_FILE=$(mktemp /tmp/gitblah.XXXX)
+[ -f "$COMMITS_FILE" ] || die "could not get COMMITS_FILE=[$COMMITS_FILE]"
+
+LOG_FILE=$(mktemp ${COMMITS_FILE}.XXXX.log)
+[ -f "$LOG_FILE" ] || die "could not get LOG_FILE=[$LOG_FILE]"
+
+if [ "${DEBUG}" -eq 0 ]; then
+    trap "rm -f $COMMITS_FILE; rm -f $LOG_FILE" EXIT
+fi
+
+
+if [ "${ALL}" -eq 0 ]; then
+    LOG_FILTER="${LOG_FILTER} -n ${COMMITS:-5}"
+    REBASE_REF="HEAD~${COMMITS:-5}"
+fi
+
+git log $LOG_FILTER --date=iso-strict-local --pretty=format:"%cd | %H | %s" > $COMMITS_FILE;
+
+${VISUAL:-${EDITOR:-${OUR_EDITOR}}} $COMMITS_FILE
+
+
+REDATE_EXEC="export GIT_COMMITTER_DATE=\$(tail -1 $COMMITS_FILE | awk '{ print \$1 }'); \
+              echo \"Handling \$(cat .git/rebase-merge/msgnum)/\$(cat .git/rebase-merge/end) with date: \$GIT_COMMITTER_DATE\" >>$LOG_FILE; \
+              grep -vF \"\$GIT_COMMITTER_DATE\" $COMMITS_FILE >$COMMITS_FILE.tmp; \
+              mv $COMMITS_FILE.tmp $COMMITS_FILE; \
+              test -n \"\$GIT_COMMITTER_DATE\" && git commit --date=\${GIT_COMMITTER_DATE} --amend --no-edit -n ${COMMIT_ARGS}"
+
+
+echo "Rebase ref: ${REBASE_REF}" >>$LOG_FILE
+git rebase --exec "${REDATE_EXEC}" ${REBASE_REF} >>${LOG_FILE} 2>&1
+
+RESULT=$?
+
+cat ${LOG_FILE} | grep -F "${LOG_OUT_PATTERN}"
+
+if [ $RESULT -eq 0 ] ; then
+    echo "Git commit dates updated. Run 'git push -f BRANCH_NAME' to push your changes."
+else
+    echo "Git redate failed. Please make sure you run this on a clean working directory."
+fi
+
+exit $RESULT
