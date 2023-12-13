@@ -1,44 +1,44 @@
 if [ "$(uname -s)" = "Darwin" ]; then
   # curl
-  export PATH="${PATH}:/opt/homebrew/opt/curl/bin"
+  export PATH="/opt/homebrew/opt/curl/bin:${PATH}"
 
   # ruby
-  export PATH="${PATH}:/opt/homebrew/opt/ruby/bin"
+  export PATH="/opt/homebrew/opt/ruby/bin:${PATH}"
 
   # gnu-tar
-  export PATH="${PATH}:/opt/homebrew/opt/gnu-tar/libexec/gnubin"
+  export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:${PATH}"
 
   # sed
-  export PATH="${PATH}:/opt/homebrew/opt/gnu-sed/libexec/gnubin"
+  export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:${PATH}"
 
   # mysql
-  export PATH="${PATH}:/opt/homebrew/opt/mysql-client/bin"
+  export PATH="/opt/homebrew/opt/mysql-client/bin:${PATH}"
 
   # go
-  export PATH="${PATH}:${HOME}/go/bin/"
+  export PATH="${HOME}/go/bin/:${PATH}"
 
   # coreutils https://www.gnu.org/software/coreutils/
-  export PATH="${PATH}:/opt/homebrew/opt/coreutils/libexec/gnubin"
+  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}"
 
   # findutils
-  export PATH="${PATH}:/opt/homebrew/opt/findutils/libexec/gnubin"
+  export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}"
 
   # openssl
-  export PATH="${PATH}:/opt/homebrew/opt/openssl@1.1/bin"
+  export PATH="/opt/homebrew/opt/openssl@1.1/bin:${PATH}"
 
   # homebrew
   eval "$(/opt/homebrew/bin/brew shellenv)"
 
   # kubectl krew
-  export PATH="${PATH}:${HOME}/.krew/bin"
+  export PATH="${HOME}/.krew/bin:${PATH}"
 
 elif [ "$(uname -s)" = "Linux" ]; then
   # python
-  export PATH="${PATH}:${HOME}/.local/bin"
+  export PATH="${HOME}/.local/bin:${PATH}"
 
   # go
-  export PATH="${PATH}:/usr/local/go/bin"
+  export PATH="/usr/local/go/bin:${PATH}"
 
   # latex
-  export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
+  export PATH="/usr/local/texlive/2023/bin/x86_64-linux:${PATH}"
 fi
