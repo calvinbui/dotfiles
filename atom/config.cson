@@ -26,7 +26,6 @@
       "bookmarks"
       "deprecation-cop"
       "language-coffee-script"
-      "language-html"
       "metrics"
       "timecop"
       "welcome"
@@ -98,6 +97,8 @@
       pigmentsDecorationsZIndex: 0
       selection: true
       selectionDecorationsZIndex: 0
+  "python-autopep8":
+    formatOnSave: true
   "spell-check": {}
   terminus:
     core:

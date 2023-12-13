@@ -1,47 +1,44 @@
 if [ "$(uname -s)" = "Darwin" ]; then
-    # grep
-    alias grep="/opt/homebrew/opt/grep/libexec/gnubin/grep"
+  # curl
+  export PATH="${PATH}:/opt/homebrew/opt/curl/bin"
 
-    # curl
-    export PATH="/opt/homebrew/opt/curl/bin:${PATH}"
+  # ruby
+  export PATH="${PATH}:/opt/homebrew/opt/ruby/bin"
 
-    # ruby
-    export PATH="/opt/homebrew/opt/ruby/bin:${PATH}"
+  # gnu-tar
+  export PATH="${PATH}:/opt/homebrew/opt/gnu-tar/libexec/gnubin"
 
-    # gnu-tar
-    export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:${PATH}"
+  # sed
+  export PATH="${PATH}:/opt/homebrew/opt/gnu-sed/libexec/gnubin"
 
-    # sed
-    export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:${PATH}"
+  # mysql
+  export PATH="${PATH}:/opt/homebrew/opt/mysql-client/bin"
 
-    # mysql
-    export PATH="/opt/homebrew/opt/mysql-client/bin:${PATH}"
+  # go
+  export PATH="${PATH}:${HOME}/go/bin/"
 
-    # go
-    export PATH="${HOME}/go/bin/:${PATH}"
+  # coreutils https://www.gnu.org/software/coreutils/
+  export PATH="${PATH}:/opt/homebrew/opt/coreutils/libexec/gnubin"
 
-    # coreutils https://www.gnu.org/software/coreutils/
-    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}"
+  # findutils
+  export PATH="${PATH}:/opt/homebrew/opt/findutils/libexec/gnubin"
 
-    # findutils
-    export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}"
+  # openssl
+  export PATH="${PATH}:/opt/homebrew/opt/openssl@1.1/bin"
 
-    # openssl
-    export PATH="/opt/homebrew/opt/openssl@1.1/bin:${PATH}"
+  # homebrew
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 
-    # homebrew
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-
-    # kubectl krew
-    export PATH="${HOME}/.krew/bin:${PATH}"
+  # kubectl krew
+  export PATH="${PATH}:${HOME}/.krew/bin"
 
 elif [ "$(uname -s)" = "Linux" ]; then
-    # python
-    export PATH="${HOME}/.local/bin:${PATH}"
+  # python
+  export PATH="${PATH}:${HOME}/.local/bin"
 
-    # go
-    export PATH="${PATH}:/usr/local/go/bin"
+  # go
+  export PATH="${PATH}:/usr/local/go/bin"
 
-    # latex
-    export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
+  # latex
+  export PATH="${PATH}:/usr/local/texlive/2023/bin/x86_64-linux"
 fi

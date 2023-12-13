@@ -1131,5 +1131,7 @@
 	<false/>
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
+	<key>kTurnOffSlowTriggersOfferUserDefaultsKey</key>
+	<false/>
 </dict>
 </plist>
