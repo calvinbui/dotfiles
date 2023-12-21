@@ -18,6 +18,7 @@
     ~/.local/share/nvim/site/autoload: vim/autoload
 
     ~/.pylintrc: python/pylintrc
+    ~/.config/pycodestyle: python/pycodestyle
 
     ~/.terraformrc: terraform/terraformrc
 
