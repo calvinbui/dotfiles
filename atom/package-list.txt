@@ -39,3 +39,4 @@ trailing-spaces@0.4.0
 wordcount@3.3.0
 x-terminal@13.1.5
 yaml-path-copy@2.1.6
+python-autopep8@0.1.4

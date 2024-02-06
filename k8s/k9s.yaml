@@ -30,13 +30,20 @@ k9s:
   clusters:
     arn:aws:eks:ap-southeast-2:409414527402:cluster/ap3-auprod-eks:
       namespace:
-        active: prometheus-operator
+        active: ap3-auprod-preprod
         lockFavorites: false
         favorites:
+        - ap3-auprod-preprod
+        - ap3-auprod-master
+        - ingress-nginx
+        - falco
+        - all
+        - kube-system
+        - buildkite-agent
         - prometheus-operator
         - default
       view:
-        active: "no"
+        active: po
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
@@ -45,39 +52,45 @@ k9s:
         active: ap3-stg-master
         lockFavorites: false
         favorites:
-        - mysql-proxy
-        - prometheus-operator
-        - athens-proxy
-        - buildkite-agent
-        - clamav
-        - linkerd-multicluster
+        - talk-ai
+        - knowledge-base-cname-proxy
+        - ap3-stg-capture-api-cname-proxy
+        - cluster-overprovisioner
+        - ingress-nginx
         - all
         - ap3-stg-master
-        - default
+        - aws-load-balancer-controller
+        - kube-system
       view:
-        active: pods
+        active: ing
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
     arn:aws:eks:eu-central-1:409414527402:cluster/ap3-euprod-eks:
       namespace:
-        active: all
+        active: ap3-euprod-master
         lockFavorites: false
         favorites:
+        - ap3-euprod-master
+        - aws-load-balancer-controller
+        - ingress-nginx
+        - buildkite-agent
         - all
         - mongodb-exporter
         - prometheus-operator
         - default
       view:
-        active: servicemonitor
+        active: pod
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:022761819571:cluster/ops-shared-eks:
       namespace:
-        active: mysql-proxy
+        active: all
         lockFavorites: false
         favorites:
+        - buildkite-agent
+        - kube-system
         - mysql-proxy
         - mysqld-exporter
         - linkerd
@@ -85,23 +98,23 @@ k9s:
         - prometheus-operator
         - oncall
         - athens-proxy
-        - default
       view:
-        active: pods
+        active: pod
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
     arn:aws:eks:us-east-2:409414527402:cluster/ap3-prod-eks:
       namespace:
-        active: all
+        active: ap3-prod-master
         lockFavorites: false
         favorites:
+        - ingress-nginx
+        - kube-system
         - mongo-backups
-        - karpenter
         - ap3-prod-master
         - default
       view:
-        active: cj
+        active: pod
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
@@ -110,9 +123,30 @@ k9s:
         active: all
         lockFavorites: false
         favorites:
+        - aws-load-balancer-controller
+        - ingress-nginx
+        - all
         - default
       view:
-        active: po
+        active: dp
+      featureGates:
+        nodeShell: false
+      portForwardAddress: localhost
+    arn:aws:eks:us-east-2:914129350720:cluster/ap2-prod-eks:
+      namespace:
+        active: all
+        lockFavorites: false
+        favorites:
+        - kube-system
+        - external-dns
+        - aws-load-balancer-controller
+        - ap2-prod-master
+        - buildkite-agent
+        - loki
+        - all
+        - prometheus-operator
+      view:
+        active: ns
       featureGates:
         nodeShell: false
       portForwardAddress: localhost
