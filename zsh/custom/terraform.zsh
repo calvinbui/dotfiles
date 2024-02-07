@@ -5,3 +5,14 @@ if [ "$(uname -s)" = "Darwin" ]; then
 fi
 
 alias tfiu="terraform init --upgrade"
+
+function tfl() {
+  SEARCHPATH="$(pwd)"
+
+  tfmodules=("${(f)$(find "$SEARCHPATH" -name ".terraform.lock.hcl" -not -path "*/_common/*" | sed 's/.terraform.lock.hcl//')}")
+
+  for m in $tfmodules; do
+    echo "Checking: ${m}"
+    tflint --config "$TFLINT_CONFIG_FILE" --chdir "${m}"
+  done
+}
