@@ -32,6 +32,10 @@ if [ "$(uname -s)" = "Darwin" ]; then
   # kubectl krew
   export PATH="${HOME}/.krew/bin:${PATH}"
 
+  # google-cloud-sdk
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
 elif [ "$(uname -s)" = "Linux" ]; then
   # python
   export PATH="${HOME}/.local/bin:${PATH}"
