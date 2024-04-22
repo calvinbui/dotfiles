@@ -1,4 +1,4 @@
-aiohttp==3.9.3
+aiohttp==3.9.4
 aiosignal==1.3.1
 ansible==9.1.0
 ansible-compat==4.1.11
@@ -23,7 +23,7 @@ colorama==0.4.6
 cryptography==42.0.5
 filelock==3.13.1
 frozenlist==1.4.1
-idna==3.6
+idna==3.7
 Jinja2==3.1.3
 jmespath==1.0.1
 jsonschema==4.20.0
