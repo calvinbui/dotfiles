@@ -1,5 +1,2 @@
 [pycodestyle]
 ignore = E501
-in-place = true
-recursive = true
-aggressive = 3
