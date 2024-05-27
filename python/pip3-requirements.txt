@@ -59,7 +59,7 @@ pytest==8.0.2
 python-gitlab==4.2.0
 PyYAML==6.0.1
 referencing==0.32.0
-requests==2.31.0
+requests==2.32.0
 requests-toolbelt==1.0.0
 resolvelib==1.0.1
 rich==13.7.0
