@@ -2,9 +2,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
   # curl
   export PATH="/opt/homebrew/opt/curl/bin:${PATH}"
 
-  # ruby
-  export PATH="/opt/homebrew/opt/ruby/bin:${PATH}"
-
   # gnu-tar
   export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:${PATH}"
 
