@@ -48,6 +48,7 @@ cd dotfiles
 
 
 ### Notes:
+
   - Not all packages will create Desktop icons
   - `wsl2` requires a restart before installing any Linux distros
   - `wsl-ubuntu-2004` is installed but needs to ran to be installed as a distro

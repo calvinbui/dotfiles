@@ -17,14 +17,18 @@ plugins=(
   autojump
   docker
   docker-compose
+  fast-syntax-highlighting
   git
   gitfast
-  terraform
-  alias-tips
-  fast-syntax-highlighting
   history-search-multi-word
+  iterm2
+  terraform
   zsh-autosuggestions
+  zsh-fast-alias-tips
 )
+
+zstyle :plugin:history-search-multi-word reset-prompt-protect 1
+zstyle :omz:plugins:iterm2               shell-integration    yes
 
 source $ZSH/oh-my-zsh.sh
 
