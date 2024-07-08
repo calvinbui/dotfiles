@@ -68,7 +68,7 @@
   "linter-shellcheck":
     enableNotice: true
   "linter-ui-default":
-    panelHeight: 206
+    panelHeight: 300
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
