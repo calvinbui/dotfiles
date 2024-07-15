@@ -69,6 +69,7 @@
     enableNotice: true
   "linter-ui-default":
     panelHeight: 300
+    showPanel: true
   "markdown-preview":
     useGitHubStyle: true
   "markdown-preview-plus":
