@@ -50,6 +50,8 @@
     ~/Library/Application Support/k9s/config.yml:
       path: k8s/k9s.yaml
       force: true
+    ~/.finicky.js:
+      path: mac/finicky.js
 
 - shell:
   -
