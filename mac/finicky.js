@@ -1,5 +1,5 @@
 module.exports = {
-  defaultBrowser: "Chromium",
+  defaultBrowser: "Browserosaurus",
   options: {
     hideIcon: true,
     checkForUpdate: false
@@ -24,6 +24,10 @@ module.exports = {
     {
       match: ({ url }) => url.host === "meet.google.com",
       browser: "Google Chrome"
+    },
+    {
+      match: ({opener}) => ["Mattermost", "Signal"].includes(opener.name),
+      browser: "Chromium"
     }
   ]
 }
