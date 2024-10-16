@@ -8,6 +8,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'vim-autoformat/vim-autoformat'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " Put your non-Plugin stuff after this line
@@ -89,3 +90,11 @@ endif
 
 " enable mouse
 set mouse=a
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+}
+EOF
