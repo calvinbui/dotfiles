@@ -258,6 +258,7 @@ cask "whatsapp"
 cask "windows-app"
 cask "wireshark"
 cask "zoom"
+mas "Paste", id: 967805235
 mas "Xcode", id: 497799835
 vscode "golang.go"
 vscode "ms-vscode-remote.remote-containers"

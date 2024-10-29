@@ -32,6 +32,8 @@
       "welcome"
       "exception-reporting"
       "markdown-preview"
+      "x-terminal"
+      "wordcount"
     ]
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
@@ -51,6 +53,7 @@
     showIconsInEditorGutter: true
   github:
     gitDiagnostics: true
+    remoteFetchProtocol: "ssh"
   "highlight-line":
     enableBackgroundColor: false
   hyperclick:
