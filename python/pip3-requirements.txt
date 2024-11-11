@@ -1,6 +1,6 @@
-ansible==10.4.0
+ansible==10.6.0
 ansible-compat==24.9.1
-ansible-core==2.17.5
+ansible-core==2.17.6
 ansible-lint==24.9.2
 ansible-pylibssh==1.2.2
 anyio==4.4.0
@@ -64,7 +64,7 @@ resolvelib==1.0.1
 rich==13.8.1
 rpds-py==0.20.0
 ruamel.yaml==0.18.6
-ruamel.yaml.clib==0.2.8
+ruamel.yaml.clib==0.2.12
 s3transfer==0.10.2
 Send2Trash==1.8.3
 setuptools==75.0.0
