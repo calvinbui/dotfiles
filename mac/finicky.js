@@ -10,7 +10,7 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
-      match: ({ url }) => url.host === "slack.com",
+      match: finicky.matchHostnames(["slack.com", "meet.google.com", "buildkite.com"]),
       browser: "Google Chrome"
     },
     {
@@ -19,10 +19,6 @@ module.exports = {
     },
     {
       match: "github.com/autopilot3/*",
-      browser: "Google Chrome"
-    },
-    {
-      match: ({ url }) => url.host === "meet.google.com",
       browser: "Google Chrome"
     },
     {
