@@ -1,8 +1,10 @@
 @release-it/bumper@6.0.1
 @sindresorhus/is@7.0.0
-corepack@0.29.4
+corepack@0.31.0
 dequal@2.0.3
 fs-extra@11.2.0
+jsonata-cli@2.0.3
+jsonata@2.0.6
 prettier-plugin-yaml-frontmatter@
 prettier@3.3.2
 release-it@17.1.1
