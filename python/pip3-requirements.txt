@@ -43,7 +43,7 @@ importlib_metadata==8.5.0
 iniconfig==2.0.0
 isort==5.13.2
 itsdangerous==2.2.0
-Jinja2==3.1.5
+Jinja2==3.1.6
 jmespath==1.0.1
 jsonschema==4.23.0
 jsonschema-specifications==2023.12.1
