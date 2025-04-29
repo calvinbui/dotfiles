@@ -22,7 +22,6 @@ plugins=(
   gitfast
   history-search-multi-word
   iterm2
-  terraform
   zsh-autosuggestions
   zsh-fast-alias-tips
 )

@@ -14,3 +14,8 @@ alias htop="sudo htop"
 alias vim="nvim"
 alias ap="ansible-playbook"
 alias aves="ansible-vault encrypt_string"
+
+alias tf="tofu"
+alias tfi="tofu init"
+alias tfa="tofu apply"
+alias tfp="tofu plan"
