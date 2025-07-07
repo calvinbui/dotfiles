@@ -1,6 +1,6 @@
 @release-it/bumper@6.0.1
 @sindresorhus/is@7.0.0
-corepack@0.31.0
+corepack@0.32.0
 dequal@2.0.3
 fs-extra@11.2.0
 jsonata-cli@2.0.3
