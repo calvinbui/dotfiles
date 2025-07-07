@@ -2,7 +2,7 @@
 
 if [ "$(uname -s)" = "Darwin" ]; then
   # load before instant prompt
-  source ~/repos/ap3-ops/ap3-ops-tools/load.sh
+  source "${HOME}/repos/ap3-ops/ap3-ops-tools/load.sh"
 fi
 
 # instant prompt

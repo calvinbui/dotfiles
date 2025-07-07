@@ -8,6 +8,7 @@
   autosave:
     enabled: true
   core:
+    automaticallyUpdate: false
     disabledPackages: [
       "language-xml"
       "language-typescript"

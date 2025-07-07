@@ -10,7 +10,7 @@ module.exports = {
       browser: "Google Chrome"
     },
     {
-      match: finicky.matchHostnames(["slack.com", "meet.google.com", "buildkite.com", "trello.com", "ortto.awsapps.com"]),
+      match: finicky.matchHostnames(["slack.com", "meet.google.com", "buildkite.com", "trello.com", "ortto.awsapps.com", "ortto.scalr.io"]),
       browser: "Google Chrome"
     },
     {
