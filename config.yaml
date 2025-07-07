@@ -181,6 +181,13 @@
     description: Create terraform plugin-cache folder
     command: mkdir -p "$HOME/.terraform.d/plugin-cache"
 
+- decrypt:
+    - src_path: secrets/otf.zsh
+      dst_path: zsh/custom/otf.zsh
+
+- encrypt:
+    - src_path: zsh/custom/otf.zsh
+      dst_path: secrets/otf.zsh
 
 # can't clone repo if already exists
 - defaults:

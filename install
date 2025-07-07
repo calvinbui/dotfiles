@@ -8,8 +8,23 @@ DOTBOT_DIR="dotbot"
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+PLUGIN_DIR="${BASEDIR}/plugins"
+
+ACTION="$1"
+
+if [[ "${ACTION:-}" == "encrypt" ]]; then
+  SHIFT_ARGS=1
+  MODE_FLAGS=(--only encrypt)
+else
+  MODE_FLAGS=(--except encrypt)
+fi
+
 cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
+  --base-directory "${BASEDIR}" \
+  --config-file "${CONFIG}" \
+  --plugin-dir "${PLUGIN_DIR}/dotbot-secret" "${MODE_FLAGS[@]}" \
+  "${@:SHIFT_ARGS}"
