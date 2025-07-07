@@ -70,8 +70,10 @@
   -
     description: Disable Gatekeeper
     command: |
-      if [ "$(uname -s)" = "Darwin" ]; then
-        sudo spctl --master-disable
+      if [[ "$(uname -s)" == "Darwin" ]]; then
+        if [[ $(spctl --status) != "assessments disabled" ]]; then
+          sudo spctl --master-disable
+        fi
       fi
   -
     description: Install oh-my-zsh
@@ -107,7 +109,7 @@
     description: Install homebrew formulas
     command: |
       if [ "$(uname -s)" = "Darwin" ]; then
-        bash -c "cd mac && /opt/homebrew/bin/brew bundle --no-upgrade --no-lock"
+        bash -c "cd mac && /opt/homebrew/bin/brew bundle --no-upgrade"
       fi
     stdout: true
     stdin: true
@@ -119,9 +121,9 @@
   -
     description: Install npm packages
     command: |
-      if [ "$(uname -s)" = "Darwin" ]; then
+      if [[ "$(uname -s)" == "Darwin" ]]; then
         bash -c "< npm/packages.txt xargs npm install -g"
-      elif [ "$(uname -s)" = "Linux" ]; then
+      elif [[ "$(uname -s)" == "Linux" ]]; then
         bash -c "< npm/packages.txt xargs sudo npm install -g"
       fi
     stdout: true
