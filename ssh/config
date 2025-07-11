@@ -6,8 +6,8 @@ Host github.com
   User git
 
 Host manager
- HostName ap2manager.bislr.net
- User manager
- KeepAlive yes
- ServerAliveInterval 60
+  HostName ap2manager.bislr.net
+  User manager
+  KeepAlive yes
+  ServerAliveInterval 60
 
