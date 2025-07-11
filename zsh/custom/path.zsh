@@ -45,4 +45,7 @@ elif [ "$(uname -s)" = "Linux" ]; then
 
   # latex
   export PATH="/usr/local/texlive/2023/bin/x86_64-linux:${PATH}"
+
+  # tfenv
+  export PATH="${HOME}/.tfenv/bin:${PATH}"
 fi
