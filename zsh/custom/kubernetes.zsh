@@ -1,5 +1,16 @@
 alias k=kubectl
 
+function kustomize() {
+  local build_commands=("build")
+  local cmd="$1"
+
+  if [[ " ${build_commands[@]} " =~ " ${cmd} " ]]; then
+    command kustomize "$cmd" --enable-alpha-plugins --enable-exec "${@:2}"
+  else
+    command kustomize "$@"
+  fi
+}
+
 function _kube_completions() {
   COMPLETION_FILE=${ZSH_CACHE_DIR}/$1_completion
   [[ ! -f $COMPLETION_FILE ]] && $1 completion zsh >! $COMPLETION_FILE
