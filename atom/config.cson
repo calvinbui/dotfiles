@@ -115,7 +115,6 @@
     binPath: "/opt/homebrew/bin/terraform"
   "tree-view":
     alwaysOpenExisting: true
-    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
   whitespace:

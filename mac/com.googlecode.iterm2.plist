@@ -14,10 +14,12 @@
 	<false/>
 	<key>BracketedPasteMode</key>
 	<true/>
+	<key>ClickToSelectCommand</key>
+	<false/>
 	<key>ConvertDosNewlines</key>
 	<true/>
 	<key>CopySelection</key>
-	<false/>
+	<true/>
 	<key>Default Bookmark Guid</key>
 	<string>B900B6D9-FDD5-4C4E-8521-B1E01FF14841</string>
 	<key>DimBackgroundWindows</key>
@@ -28,6 +30,8 @@
 	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
 	<true/>
+	<key>EnterCopyModeAutomatically</key>
+	<false/>
 	<key>EscapeShellCharsWithBackslash</key>
 	<false/>
 	<key>GlobalKeyMap</key>
@@ -156,6 +160,8 @@
 		</dict>
 	</dict>
 	<key>HapticFeedbackForEsc</key>
+	<false/>
+	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
 	<false/>
@@ -2372,6 +2378,8 @@
 	<string></string>
 	<key>PasteSpecialUseRegexSubstitution</key>
 	<false/>
+	<key>PerPaneBackgroundImage</key>
+	<true/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2407,10 +2415,14 @@
 	</dict>
 	<key>Print In Black And White</key>
 	<true/>
+	<key>SavePasteHistory</key>
+	<false/>
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
+	<key>ShowPaneTitles</key>
+	<true/>
 	<key>SmartPlacement</key>
 	<true/>
 	<key>SoundForEsc</key>
