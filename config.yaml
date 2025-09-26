@@ -191,6 +191,14 @@
     - src_path: zsh/custom/otf.zsh
       dst_path: secrets/otf.zsh
 
+- decrypt:
+    - src_path: secrets/sops-age-keys.txt
+      dst_path: sops/age/keys.txt
+
+- encrypt:
+    - src_path: sops/age/keys.txt
+      dst_path: secrets/sops-age-keys.txt
+
 # can't clone repo if already exists
 - defaults:
     link:
@@ -209,6 +217,8 @@
     ~/.oh-my-zsh/custom/themes/powerlevel10k:
       glob: true
       path: zsh/custom/themes/powerlevel10k
+    ~/.config/sops:
+      path: sops
 
 # remove dead symlinks
 - clean:

@@ -70,3 +70,4 @@ $RECYCLE.BIN/
 
 ### Secrets ###
 zsh/custom/otf.zsh
+sops/age/keys.txt
