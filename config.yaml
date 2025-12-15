@@ -52,6 +52,8 @@
       force: true
     ~/.finicky.js:
       path: mac/finicky.js
+    /etc/pam.d/sudo_local:
+      path: mac/sudo_local
 
 - shell:
   -
