@@ -8,15 +8,12 @@ argon2-cffi==25.1.0
 argon2-cffi-bindings==21.2.0
 astroid==3.3.3
 attrs==25.4.0
-autocommand==2.2.2
 bcrypt==4.3.0
 black==25.9.0
 bracex==2.5
 certifi==2025.8.3
 cffi==2.0.0
 charset-normalizer==3.3.2
-cheroot==10.0.1
-CherryPy==18.8.0
 click==8.0.4
 colorclass==2.2.2
 cryptography==45.0.7
@@ -26,7 +23,7 @@ distro==1.9.0
 dnspython==2.8.0
 docopt==0.6.2
 dominate==2.9.1
-filelock==3.20.1
+filelock==3.20.3
 fitbit==0.3.1
 Flask-Bootstrap==3.3.7.1
 Flask-WTF==1.2.2
@@ -40,10 +37,6 @@ iniconfig==2.0.0
 invoke==2.2.1
 isort==5.13.2
 itsdangerous==2.2.0
-jaraco.collections==5.1.0
-jaraco.context==6.0.1
-jaraco.functools==4.1.0
-jaraco.text==4.0.0
 Jinja2==3.1.6
 jmespath==1.0.1
 jsonschema==4.23.0
@@ -69,7 +62,6 @@ pip-autoremove==0.10.0
 pip-upgrader==1.4.15
 platformdirs==4.3.3
 pluggy==1.5.0
-portend==3.2.1
 pycparser==2.22
 pyDes==2.0.1
 PyGithub==2.6.1
@@ -101,7 +93,6 @@ six==1.16.0
 smmap==5.0.1
 subprocess-tee==0.4.2
 tabulate==0.9.0
-tempora==5.8.0
 terminaltables==3.1.10
 terrasnek==0.1.14
 tomlkit==0.13.2
@@ -115,5 +106,3 @@ wrapt==1.17.2
 WTForms==3.2.1
 xmltodict==1.0.2
 yamllint==1.38.0
-yt-dlp==2024.12.13
-zc.lockfile==3.0.post1
