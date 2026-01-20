@@ -41,9 +41,6 @@
 [submodule "vim/bundle/onedark.vim"]
 	path = vim/bundle/onedark.vim
 	url = https://github.com/joshdick/onedark.vim.git
-[submodule "zsh/custom/plugins/zsh-fast-alias-tips"]
-	path = zsh/custom/plugins/zsh-fast-alias-tips
-	url = https://github.com/decayofmind/zsh-fast-alias-tips.git
 [submodule "plugins/dotbot-secret"]
 	path = plugins/dotbot-secret
 	url = https://github.com/er1c-zh/dotbot-secret.git

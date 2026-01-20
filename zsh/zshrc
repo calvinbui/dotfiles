@@ -23,7 +23,6 @@ plugins=(
   history-search-multi-word
   iterm2
   zsh-autosuggestions
-  zsh-fast-alias-tips
 )
 
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
