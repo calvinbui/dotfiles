@@ -1,5 +1,5 @@
 export default {
-  defaultBrowser: "Browserosaurus",
+  defaultBrowser: "Browserino",
   options: {
     hideIcon: true,
     checkForUpdate: false
