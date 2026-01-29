@@ -49,10 +49,6 @@
       path: mac/finicky.js
     /etc/pam.d/sudo_local:
       path: mac/sudo_local
-    ~/Library/Application Support/Code/User/settings.json:
-      path: vscode/settings.json
-      create: true
-      force: true
 
 - shell:
   -
@@ -165,11 +161,6 @@
   -
     description: Create terraform plugin-cache folder
     command: mkdir -p "$HOME/.terraform.d/plugin-cache"
-  -
-    description: Install vscode extensions
-    command: cat vscode/extensions.txt | xargs -L 1 code --install-extension
-    stdout: true
-    stdin: true
 
 - decrypt:
     - src_path: secrets/otf.zsh
