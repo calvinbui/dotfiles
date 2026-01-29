@@ -35,11 +35,6 @@
     link:
       if: '[ "$(uname -s)" = "Darwin" ]'
 - link:
-    ~/.atom/:
-      path: atom/*
-      glob: true
-      create: true
-      force: true
     ~/.gitlocal:
       path: git/mac
       force: true
@@ -131,24 +126,6 @@
         bash -c "< npm/packages.txt xargs npm install -g"
       elif [[ "$(uname -s)" == "Linux" ]]; then
         bash -c "< npm/packages.txt xargs sudo npm install -g"
-      fi
-    stdout: true
-    stdin: true
-  -
-    description: Install atom packages
-    command: |
-      if [ "$(uname -s)" = "Darwin" ]; then
-        echo "Getting installed Atom packages"
-        installed=$(apm list -i -b -no-color)
-
-        echo "Installing missing Atom packages"
-        while read -r p; do
-          echo "Checking if $p is installed..."
-          if ! echo "$installed" | grep --silent "$p"; then
-            echo "Installing ${p}..."
-            apm install --production "$p"
-          fi
-        done < atom/package-list.txt
       fi
     stdout: true
     stdin: true
