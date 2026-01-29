@@ -1,0 +1,78 @@
+{
+    "editor.formatOnSave": true,
+    "telemetry.telemetryLevel": "off",
+    "workbench.startupEditor": "none",
+    "window.zoomLevel": 1,
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "enabled",
+        "disable-linters": [
+            "resource-limits",
+        ],
+    },
+    "editor.acceptSuggestionOnEnter": "off",
+    "security.workspace.trust.untrustedFiles": "open",
+    "opentofu.codelens.referenceCount": true,
+    "[opentofu][opentofu-vars]": {
+        "editor.defaultFormatter": "opentofu.vscode-opentofu",
+        "editor.formatOnSave": false,
+        "editor.codeActionsOnSave": {
+            "source.formatAll.opentofu": "explicit"
+        }
+    },
+    "workbench.iconTheme": "vscode-icons",
+    "git.blame.editorDecoration.enabled": true,
+    "git.allowForcePush": true,
+    "git.allowNoVerifyCommit": true,
+    "git.autoStash": true,
+    "git.fetchOnPull": true,
+    "terminal.integrated.cwd": "${fileDirname}",
+    "yaml.format.enable": false,
+    "editor.tabSize": 2,
+    "git.confirmSync": false,
+    "editor.renderWhitespace": "all",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "ansible.lightspeed.enabled": false,
+    "ansible.lightspeed.suggestions.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.persistentSessionScrollback": 1e+81,
+    "lazygit-vscode.panels": {
+        "sidebar": "hideRestore",
+        "panel": "hideRestore",
+        "secondarySidebar": "hide",
+    },
+    "lazygit-vscode.autoMaximizeWindow": true,
+    "chat.disableAIFeatures": true,
+    "chat.mcp.access": "none",
+    "terminal.integrated.scrollback": 1e+25,
+    "git.blame.statusBarItem.enabled": false,
+    "opentofu.validation.enableEnhancedValidation": false,
+    "git.enableSmartCommit": true,
+    "git.replaceTagsWhenPull": true,
+    "window.openFilesInNewWindow": "on",
+    "window.openFoldersInNewWindow": "on",
+    "search.useIgnoreFiles": false,
+    "search.exclude": {
+        "**/.terraform": true
+    },
+    "kilo-code.allowedCommands": [
+        "git log",
+        "git diff",
+        "git show",
+        "python3",
+        "shellcheck",
+        "python -m",
+        "go test",
+        "git status"
+    ],
+    "kilo-code.deniedCommands": []
+}
