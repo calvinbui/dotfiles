@@ -1,9 +1,12 @@
 darkriszty.markdown-table-prettify
+davidanson.vscode-markdownlint
 eamodio.gitlens
 exiasr.hadolint
+github.vscode-github-actions
 golang.go
 kilocode.kilo-code
 mechatroner.rainbow-csv
+mrmlnc.vscode-json5
 ms-azuretools.vscode-containers
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.debugpy
@@ -12,10 +15,12 @@ ms-python.python
 ms-python.vscode-pylance
 ms-python.vscode-python-envs
 ms-vscode-remote.remote-containers
+ms-vscode-remote.remote-wsl
 opentofu.vscode-opentofu
 redhat.ansible
 redhat.vscode-yaml
 samuelcolvin.jinjahtml
 timonwong.shellcheck
+tsandall.opa
 vscode-icons-team.vscode-icons
 yasendimitrov.lazygit-vscode-v2
