@@ -44,3 +44,6 @@
 [submodule "plugins/dotbot-secret"]
 	path = plugins/dotbot-secret
 	url = https://github.com/er1c-zh/dotbot-secret.git
+[submodule "vim/bundle/nvim-treesitter"]
+	path = vim/bundle/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
