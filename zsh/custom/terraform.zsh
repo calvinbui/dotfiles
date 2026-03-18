@@ -1,4 +1,5 @@
 export TFLINT_CONFIG_FILE=~/repos/ap3-ops/buildkite/scripts/.tflint.hcl
+export GITHUB_TOKEN=$(gh auth token)
 
 export TENV_AUTO_INSTALL=true
 

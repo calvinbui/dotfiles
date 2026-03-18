@@ -19,6 +19,7 @@ ms-vscode-remote.remote-wsl
 opentofu.vscode-opentofu
 redhat.ansible
 redhat.vscode-yaml
+rooveterinaryinc.roo-cline
 samuelcolvin.jinjahtml
 timonwong.shellcheck
 tsandall.opa
