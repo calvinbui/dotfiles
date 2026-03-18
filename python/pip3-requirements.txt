@@ -96,7 +96,7 @@ Pygments==2.18.0
 PyJWT==2.12.1
 pylint==3.3.0
 PyNaCl==1.6.2
-pyOpenSSL==25.3.0
+pyOpenSSL==26.0.0
 pyproject-api==1.10.0
 pytest==9.0.2
 pytest-ansible==26.2.0
