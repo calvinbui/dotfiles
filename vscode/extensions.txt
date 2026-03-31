@@ -1,7 +1,10 @@
+anthropic.claude-code
+charliermarsh.ruff
 darkriszty.markdown-table-prettify
 davidanson.vscode-markdownlint
 eamodio.gitlens
 exiasr.hadolint
+github.copilot-chat
 github.vscode-github-actions
 golang.go
 kilocode.kilo-code
