@@ -28,3 +28,4 @@ timonwong.shellcheck
 tsandall.opa
 vscode-icons-team.vscode-icons
 yasendimitrov.lazygit-vscode-v2
+ziyasal.vscode-open-in-github
