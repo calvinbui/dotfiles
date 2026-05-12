@@ -1,4 +1,3 @@
-anthropic.claude-code
 charliermarsh.ruff
 darkriszty.markdown-table-prettify
 davidanson.vscode-markdownlint

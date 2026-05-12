@@ -29,7 +29,7 @@
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
-	<true/>
+	<false/>
 	<key>EnterCopyModeAutomatically</key>
 	<false/>
 	<key>EscapeShellCharsWithBackslash</key>
@@ -2420,7 +2420,7 @@
 	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
