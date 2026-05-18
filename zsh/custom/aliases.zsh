@@ -1,10 +1,6 @@
 if [ "$(uname -s)" = "Darwin" ]; then
   # grep
   alias grep="/opt/homebrew/opt/grep/libexec/gnubin/grep"
-
-  alias ops="cd ~/repos/ap3-ops"
-  alias api="cd ~/repos/ap3-api"
-  alias ui="cd ~/repos/ap3-ui"
   alias flushdns="sudo killall -HUP mDNSResponder"
 fi
 
