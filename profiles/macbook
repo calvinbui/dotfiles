@@ -1,0 +1,9 @@
+# Shared tools plus macOS-specific additions.
+git
+macos
+nvim
+opencode
+python
+ssh
+terraform
+zsh

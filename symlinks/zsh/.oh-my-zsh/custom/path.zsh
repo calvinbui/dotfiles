@@ -1,51 +1,16 @@
-if [ "$(uname -s)" = "Darwin" ]; then
-  # curl
-  export PATH="/opt/homebrew/opt/curl/bin:${PATH}"
+# Shared user-level tools. Platform-specific paths live in the platform package.
+for bin_dir in "$HOME/go/bin" "$HOME/.krew/bin"; do
+  [[ ! -d "$bin_dir" ]] || path=("$bin_dir" "${path[@]}")
+done
+unset bin_dir
 
-  # gnu-tar
-  export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:${PATH}"
-
-  # sed
-  export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:${PATH}"
-
-  # mysql
-  export PATH="/opt/homebrew/opt/mysql-client/bin:${PATH}"
-
-  # go
-  export PATH="${HOME}/go/bin/:${PATH}"
-
-  # coreutils https://www.gnu.org/software/coreutils/
-  export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}"
-
-  # findutils
-  export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:${PATH}"
-
-  # openssl
-  export PATH="/opt/homebrew/opt/openssl@1.1/bin:${PATH}"
-
-  # kubectl krew
-  export PATH="${HOME}/.krew/bin:${PATH}"
-
-  # # google-cloud-sdk
-  # source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-  # source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-  # local bin
-  export PATH="${HOME}/.local/bin:${PATH}"
-
-  # python.org
-  export PATH="/Library/Frameworks/Python.framework/Versions/Current/bin:${PATH}"
-
-elif [ "$(uname -s)" = "Linux" ]; then
-  # python
-  export PATH="${HOME}/.local/bin:${PATH}"
-
-  # go
-  export PATH="/usr/local/go/bin:${PATH}"
-
-  # latex
-  export PATH="/usr/local/texlive/2023/bin/x86_64-linux:${PATH}"
-
-  # tfenv
-  export PATH="${HOME}/.tfenv/bin:${PATH}"
+# Set a usable default; ~/.zshrc.local can choose a different editor.
+if (( $+commands[code] )); then
+  export EDITOR="code -w"
+elif (( $+commands[nvim] )); then
+  export EDITOR=nvim
+else
+  export EDITOR=vi
 fi
+export K9S_EDITOR="$EDITOR"
+export KUBE_EDITOR="$EDITOR"

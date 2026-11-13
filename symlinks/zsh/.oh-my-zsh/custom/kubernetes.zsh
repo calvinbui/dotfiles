@@ -12,19 +12,21 @@ function kustomize() {
 }
 
 function _kube_completions() {
-  COMPLETION_FILE=${ZSH_CACHE_DIR}/$1_completion
-  [[ ! -f $COMPLETION_FILE ]] && $1 completion zsh >! $COMPLETION_FILE
-  source $COMPLETION_FILE
+  (( $+commands[$1] )) || return 0
+  local completion_file="${ZSH_CACHE_DIR}/$1_completion"
+  if [[ ! -s "$completion_file" ]]; then
+    mkdir -p "$ZSH_CACHE_DIR" || return
+    local generated
+    generated=$("$1" completion zsh) || return
+    print -r -- "$generated" >| "$completion_file"
+  fi
+  source "$completion_file"
 }
 
 # remove comment to enable, slow but
 _kube_completions "kubectl"
 _kube_completions "helm"
 # _kube_completions "minikube"
-
-export EDITOR="code -w"
-export K9S_EDITOR="$EDITOR"
-export KUBE_EDITOR="$EDITOR"
 
 alias kprod="k9s --context ap3-prod-eks"
 alias kstg="k9s --context ap3-stg-eks"

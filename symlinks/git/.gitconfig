@@ -15,9 +15,6 @@
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 
-[include]
-	path = .gitlocal
-
 [credential]
 	helper = store
 
@@ -28,3 +25,8 @@
 	autostash = true
 [push]
 	autoSetupRemote = true
+
+# Platform defaults, then machine-only overrides. Keep these includes last.
+[include]
+	path = ~/.config/git/platform.gitconfig
+	path = ~/.gitlocal

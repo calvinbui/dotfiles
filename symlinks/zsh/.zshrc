@@ -1,9 +1,18 @@
 #!/usr/bin/env zsh
 
-# if [ "$(uname -s)" = "Darwin" ]; then
-#   # load before instant prompt
-#   source "${HOME}/repos/ap3-ops-tools/load.sh"
-# fi
+# Keep user-installed tools available on every machine, without duplicate paths.
+typeset -U path PATH
+path=("$HOME/.local/bin" "$HOME/.opencode/bin" "${path[@]}")
+export PATH
+
+# Selected by the machine's Stow profile. These hooks must not print on startup.
+[[ ! -r "$HOME/.config/dotfiles/platform.zsh" ]] ||
+  source "$HOME/.config/dotfiles/platform.zsh"
+
+# Add Homebrew completions before Oh My Zsh initializes completion.
+if (( $+commands[brew] )); then
+  fpath=("$(brew --prefix)/share/zsh/site-functions" "${fpath[@]}")
+fi
 
 # instant prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -18,22 +27,23 @@ plugins=(
   git
   gitfast
   history-search-multi-word
-  iterm2
   zsh-autosuggestions
 )
 
 zstyle :plugin:history-search-multi-word reset-prompt-protect 1
-zstyle :omz:plugins:iterm2               shell-integration    yes
+if [[ "$OSTYPE" == darwin* ]]; then
+  plugins+=(iterm2)
+  zstyle :omz:plugins:iterm2 shell-integration yes
+fi
 
-source $ZSH/oh-my-zsh.sh
+if [[ -r "$ZSH/oh-my-zsh.sh" ]]; then
+  source "$ZSH/oh-my-zsh.sh"
+else
+  print -u2 "Oh My Zsh is not installed; run scripts/install-oh-my-zsh.sh from the dotfiles repo."
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
-if type brew &>/dev/null; then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
+# Machine-only overrides, deliberately not managed by Stow.
+[[ ! -r "$HOME/.zshrc.local" ]] || source "$HOME/.zshrc.local"
