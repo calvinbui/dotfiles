@@ -1,0 +1,8 @@
+[user]
+  signingkey = 0EC57C6D1392E54F
+
+[credential]
+  helper = osxkeychain
+
+[gpg]
+  program = /opt/homebrew/bin/gpg
