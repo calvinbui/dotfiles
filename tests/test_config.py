@@ -173,8 +173,9 @@ class ConfigTests(unittest.TestCase):
         mac = json.loads(
             (ROOT / "symlinks/macos/.config/opencode/opencode.jsonc").read_text()
         )
-        playwright = mac["mcp"]["servers"]["playwright"]
-        self.assertTrue(playwright["command"][0].startswith("{env:HOME}/"))
+        browse = mac["mcp"]["servers"]["browse"]
+        self.assertTrue(browse["command"][0].startswith("{env:HOME}/"))
+        self.assertNotIn("playwright", mac["mcp"]["servers"])
         self.assertNotIn("/Users/", json.dumps(mac))
         self.assertIn("home_assistant_mcp", mac["mcp"]["servers"])
 
@@ -224,11 +225,11 @@ class ConfigTests(unittest.TestCase):
         self.run_command(*args, "--restow", "opencode", "macos")
         self.assertEqual(
             (target / ".config/opencode/opencode.jsonc").resolve(),
-            mac / "opencode.jsonc",
+            (mac / "opencode.jsonc").resolve(),
         )
         self.assertEqual(
             (target / ".config/opencode/AGENTS.md").resolve(),
-            shared / "AGENTS.md",
+            (shared / "AGENTS.md").resolve(),
         )
 
     @unittest.skipUnless(shutil.which("stow"), "GNU Stow is not installed")

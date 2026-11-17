@@ -48,4 +48,6 @@ cd "$repo/symlinks"
 if [ "$mode" = "--dry-run" ]; then
   set -- --simulate "$@"
 fi
-exec stow --dir="$repo/symlinks" --target="$HOME" --no-folding --restow --verbose "$@"
+# Finder drops .DS_Store files in the package directories; never link them.
+exec stow --dir="$repo/symlinks" --target="$HOME" --no-folding --restow --verbose \
+  --ignore='\.DS_Store$' "$@"

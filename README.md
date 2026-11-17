@@ -34,10 +34,8 @@ Git configs load platform hooks, then optional machine-only overrides:
 OpenCode shares `~/.config/opencode/AGENTS.md` through the `opencode` package.
 Its complete `opencode.jsonc` belongs to the selected platform package instead:
 Linux starts with only the schema; macOS retains its providers, MCP servers,
-plugins, and skills. Linux does not require the Mac's secrets or Chromium/Node
-installation. Add integrations separately when they are wanted on that machine.
-The Mac's Playwright config still pins Node 22.22.0 and Chromium.app; its paths
-now use `{env:HOME}` rather than a username.
+plugins, and skills. Linux does not require the Mac's secrets. Add integrations
+separately when they are wanted on that machine.
 
 After pulling this layout on the Mac, dry-run/restow **both** packages to move
 ownership of the OpenCode config from `opencode` to `macos`:
@@ -164,8 +162,7 @@ need locally, with restrictive permissions (`chmod 600`):
 - `~/.zshrc.local`: shell overrides; loaded last.
 - `~/.ssh/config.local`: private `Host` entries, included by `.ssh/config`.
 - `~/.config/opencode/secrets/domain`: domain used in config URLs, no trailing newline.
-- `~/.config/opencode/secrets/actual-mcp-token`,
-  `~/.config/opencode/secrets/playwright-mcp-extension-token`.
+- `~/.config/opencode/secrets/actual-mcp-token`.
 
 The OpenCode secret files above are for the Mac's integrations, not prerequisites
 for the minimal Linux config.

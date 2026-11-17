@@ -49,23 +49,16 @@
           "auth_server_metadata_url": "https://api.fastmail.com/.well-known/oauth-authorization-server"
         }
       },
-      "playwright": {
+      "browse": {
         "type": "local",
         "command": [
-          "{env:HOME}/.local/share/fnm/node-versions/v22.22.0/installation/bin/node",
-          "{env:HOME}/.local/share/fnm/node-versions/v22.22.0/installation/lib/node_modules/npm/bin/npx-cli.js",
-          "-y",
-          "@playwright/mcp@0.0.84",
-          "--extension",
-          "--executable-path",
-          "/Applications/Chromium.app/Contents/MacOS/Chromium"
+          "{env:HOME}/.local/bin/browse",
+          "mcp"
         ],
+        "cwd": "~",
+        "pool": true,
         "environment": {
-          "PATH": "{env:HOME}/.local/share/fnm/node-versions/v22.22.0/installation/bin:{env:PATH}",
-          "PLAYWRIGHT_MCP_EXTENSION_TOKEN": "{file:~/.config/opencode/secrets/playwright-mcp-extension-token}"
-        },
-        "timeout": {
-          "startup": 60000
+          "OPENCODE_BROWSER_RUNTIME": "auto-update"
         }
       }
     }
