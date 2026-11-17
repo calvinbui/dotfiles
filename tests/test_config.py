@@ -98,15 +98,17 @@ class ConfigTests(unittest.TestCase):
         self.assertIn("does not match this OS", result.stderr)
 
     def test_zsh_startup_without_optional_tools(self):
-        # Minimal OMZ stand-in, loading the real custom files, not installed plugins.
-        omz = self.home / ".oh-my-zsh"
-        omz.mkdir()
-        (omz / "oh-my-zsh.sh").write_text(
-            'ZSH_CACHE_DIR="$HOME/.cache/oh-my-zsh"\n'
-            'for config in "$DOTFILES_ROOT"/symlinks/zsh/.oh-my-zsh/custom/*.zsh; do\n'
-            '  source "$config"\n'
-            'done\n'
-        )
+        # An up-to-date init.zsh stand-in, so zimfw itself is never run.
+        zim = self.home / ".zim"
+        zim.mkdir()
+        (self.home / ".zimrc").symlink_to(ROOT / "symlinks/zsh/.zimrc")
+        init = zim / "init.zsh"
+        init.write_text("typeset -g DOTFILES_ZIM_LOADED=yes\n")
+        newer = (ROOT / "symlinks/zsh/.zimrc").stat().st_mtime + 60
+        os.utime(init, (newer, newer))
+        (self.home / ".config/zsh").mkdir(parents=True)
+        for config in (ROOT / "symlinks/zsh/.config/zsh").glob("*.zsh"):
+            (self.home / ".config/zsh" / config.name).symlink_to(config)
         (self.home / ".zshrc.local").write_text(
             'export DOTFILES_LOCAL_LOADED=yes\nexport EDITOR=local-editor\n'
         )
@@ -125,13 +127,56 @@ class ConfigTests(unittest.TestCase):
             'source "$DOTFILES_ROOT/symlinks/zsh/.zshrc"\n'
             '[[ "$DOTFILES_LOCAL_LOADED" == yes && "$EDITOR" == local-editor ]] || exit 1\n'
             '[[ " ${path[*]} " == *" $HOME/.local/bin "* ]] || exit 1\n'
-            'if [[ "$OSTYPE" != darwin* ]]; then\n'
-            '  [[ " ${plugins[*]} " != *" iterm2 "* ]] || exit 1\n'
-            'fi\n'
+            '[[ "$DOTFILES_ZIM_LOADED" == yes && -n "$GOPATH" ]] || exit 1\n'
+            '[[ "$HISTFILE" == "$HOME/.zsh_history" ]] || exit 1\n'
             'print -r -- startup-ok\n',
         )
         self.assertEqual(result.stdout, "startup-ok\n")
         self.assertEqual(result.stderr, "")
+
+    def test_zsh_startup_rebuilds_zim_init(self):
+        # The platform hook says where zimfw is; a missing init.zsh is rebuilt.
+        stub = self.home / "zimfw.zsh"
+        stub.write_text(
+            '[[ "$1" == init ]] || exit 1\n'
+            "print -r -- 'typeset -g DOTFILES_ZIM_LOADED=yes' >| \"$ZIM_HOME/init.zsh\"\n"
+        )
+        hook = self.home / ".config/dotfiles/platform.zsh"
+        hook.parent.mkdir(parents=True)
+        hook.write_text(f'zimfw_script="{stub}"\n')
+        (self.home / ".zim").mkdir()
+        (self.home / ".zimrc").symlink_to(ROOT / "symlinks/zsh/.zimrc")
+        result = self.run_command(
+            shutil.which("zsh"), "-dfc",
+            'source "$DOTFILES_ROOT/symlinks/zsh/.zshrc"\n'
+            '[[ "$DOTFILES_ZIM_LOADED" == yes && -z "$zimfw_script" ]] || exit 1\n'
+            'print -r -- startup-ok\n',
+        )
+        self.assertEqual(result.stdout, "startup-ok\n")
+        self.assertEqual(result.stderr, "")
+        for name in ("macos", "linux"):
+            hook = (ROOT / "symlinks" / name / ".config/dotfiles/platform.zsh").read_text()
+            self.assertIn("zimfw_script=", hook, name)
+
+    def test_zimrc_modules(self):
+        result = self.run_command(
+            shutil.which("zsh"), "-fc",
+            'zmodule() { print -r -- "$*" }\n'
+            'source "$DOTFILES_ROOT/symlinks/zsh/.zimrc"\n',
+        )
+        modules = result.stdout.splitlines()
+        names = [line.split()[0] for line in modules]
+        # compinit must run before the OMZ git plugin's compdef calls.
+        git = modules.index("ohmyzsh/ohmyzsh --root plugins/git")
+        self.assertLess(names.index("completion"), git)
+        self.assertLess(
+            modules.index(
+                "ohmyzsh/ohmyzsh --root lib --use degit --source functions.zsh --source git.zsh"
+            ),
+            git,
+        )
+        self.assertLess(names.index("zsh-users/zsh-completions"), names.index("completion"))
+        self.assertEqual(names[-1], "zsh-users/zsh-autosuggestions")
 
     def test_git_include_order(self):
         config_dir = self.home / ".config/git"
@@ -252,7 +297,7 @@ class ConfigTests(unittest.TestCase):
                     self.assertTrue(target.is_symlink(), str(target))
                     self.assertEqual(target.resolve(), source)
         self.assertFalse((self.home / ".config").is_symlink())
-        self.assertFalse((self.home / ".oh-my-zsh/custom").is_symlink())
+        self.assertFalse((self.home / ".config/zsh").is_symlink())
         self.assertFalse((self.home / ".gitlocal").exists())
         self.run_command("sh", runner, profile, "--apply")  # idempotent restow
 

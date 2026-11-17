@@ -61,21 +61,26 @@ Install prerequisites for your OS:
 # Debian / Ubuntu / WSL:
 sudo apt update
 sudo apt install stow zsh git curl
+curl -fsSL --create-dirs -o ~/.zim/zimfw.zsh \
+  https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
 
-# macOS (install Homebrew first if needed):
-brew install stow
+# macOS (install Homebrew first if needed; both are in the Brewfile):
+brew install stow zimfw
 ```
 
 From the repository root:
 
 ```sh
-scripts/install-oh-my-zsh.sh       # before stowing zsh on a fresh machine
-scripts/install-zsh-plugins.sh     # p10k + plugins; rerun to update them
-
 scripts/stow-profile.sh wsl-desktop          # dry run (default)
 scripts/stow-profile.sh wsl-desktop --apply  # actually create/restow links
 # On the Mac, use macbook instead of wsl-desktop.
 ```
+
+Zsh plugins are [zimfw](https://zimfw.sh) modules listed in `~/.zimrc`. A new
+shell installs any that are missing, and `zimfw update` updates them. Update
+zimfw itself with `brew upgrade zimfw`, or `zimfw upgrade` without Homebrew. Run
+`zimfw uninstall` after removing a module. Only Oh My Zsh's `git` aliases (and the
+`lib` files they need) are still used, loaded as zimfw modules.
 
 Linking does not install applications or change your login shell. The Mac also
 has `scripts/install-packages-darwin.sh` for its Brewfile; there is no Linux
@@ -114,10 +119,9 @@ dangling and will conflict with Stow.
 1. Review the profile dry run and inspect existing links and real files.
 2. Back up conflicting legacy links before applying the profile. Preserve actual
    local configs and leftover submodule directories; do not bulk-delete them.
-3. Check `~/.oh-my-zsh/custom/` for obsolete Dotbot links as well.
-4. Preserve machine-specific Git settings in a real, untracked `~/.gitlocal`.
+3. Preserve machine-specific Git settings in a real, untracked `~/.gitlocal`.
    This used to be a managed link; it is no longer part of a Stow package.
-5. Apply the selected profile and test a new shell.
+4. Apply the selected profile and test a new shell.
 
 The Mac's signing key also used to live in the tracked `.gitlocal`. Set the
 appropriate key locally on each machine; the platform package only selects its
@@ -129,6 +133,16 @@ git config --file ~/.gitlocal user.signingkey YOUR_KEY_ID
 
 Back up/move a legacy `.gitlocal` link first. Never write through it into the old
 repository path or another platform's config.
+
+## Migrating from Oh My Zsh
+
+The custom files moved from `~/.oh-my-zsh/custom/` to `~/.config/zsh/`, so their
+old links in `~/.oh-my-zsh/custom/` now dangle. History stays in `~/.zsh_history`.
+
+1. Restow `zsh` (or reapply the profile) to link `~/.zimrc` and `~/.config/zsh/`.
+2. Install zimfw (see above), then open a new shell; it installs the modules.
+3. Once it works, move `~/.oh-my-zsh` to a backup and later delete it. Nothing
+   reads it any more; zimfw keeps its own copy of the Oh My Zsh git plugin.
 
 ## Packages
 
@@ -142,7 +156,7 @@ repository path or another platform's config.
 | python | `.pylintrc`, `.config/pycodestyle` |
 | ssh | `.ssh/config` |
 | terraform | `.terraformrc` |
-| zsh | `.zshrc`, `.p10k.zsh`, `.oh-my-zsh/custom/*.zsh` |
+| zsh | `.zshrc`, `.zimrc`, `.p10k.zsh`, `.config/zsh/*.zsh` |
 
 ### Still to check on Linux/WSL
 

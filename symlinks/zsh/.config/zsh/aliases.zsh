@@ -1,4 +1,4 @@
-alias cdcustom="cd ~/.oh-my-zsh/custom"
+alias cdcustom="cd ~/.config/zsh"
 alias cdrepo="cd ~/repos/"
 alias htop="sudo htop"
 if (( $+commands[nvim] )); then

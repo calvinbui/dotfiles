@@ -1,4 +1,4 @@
-# Homebrew on Apple Silicon or Intel Macs. Loaded before Oh My Zsh.
+# Homebrew on Apple Silicon or Intel Macs. Loaded before zimfw.
 if (( $+commands[brew] )); then
   eval "$(brew shellenv zsh)"
 elif [[ -x /opt/homebrew/bin/brew ]]; then
@@ -6,6 +6,10 @@ elif [[ -x /opt/homebrew/bin/brew ]]; then
 elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv zsh)"
 fi
+
+# zimfw comes from Homebrew, which also upgrades it.
+zimfw_script="$HOMEBREW_PREFIX/opt/zimfw/share/zimfw.zsh"
+zstyle ':zim' disable-version-check yes
 
 export HOMEBREW_NO_ANALYTICS=1
 export HOMEBREW_CASK_OPTS="--no-quarantine"

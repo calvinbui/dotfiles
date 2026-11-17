@@ -3,3 +3,6 @@ for bin_dir in /usr/local/go/bin "$HOME/.tfenv/bin"; do
   [[ ! -d "$bin_dir" ]] || path=("$bin_dir" "${path[@]}")
 done
 unset bin_dir
+
+# Downloaded by hand (see the README); `zimfw upgrade` updates it.
+zimfw_script=~/.zim/zimfw.zsh

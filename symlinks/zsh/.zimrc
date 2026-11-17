@@ -1,0 +1,24 @@
+# zimfw modules, initialized in this order. Changes are picked up by the next
+# shell; run `zimfw uninstall` after removing a module, `zimfw update` to update.
+
+# Modules
+zmodule environment
+zmodule git
+zmodule input
+zmodule termtitle
+zmodule utility
+
+# Prompt
+zmodule romkatv/powerlevel10k --use degit
+
+# Completion. `completion` runs compinit, so it must come before anything that
+# calls compdef, such as the Oh My Zsh git plugin. lib/git.zsh provides
+# git_current_branch, which those aliases call.
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+zmodule ohmyzsh/ohmyzsh --root lib --use degit --source functions.zsh --source git.zsh
+zmodule ohmyzsh/ohmyzsh --root plugins/git
+
+# These go last.
+zmodule zdharma-continuum/fast-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
