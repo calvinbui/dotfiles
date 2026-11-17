@@ -151,7 +151,7 @@ old links in `~/.oh-my-zsh/custom/` now dangle. History stays in `~/.zsh_history
 | git | `.gitconfig`, `.gitignore_global` |
 | linux | platform Zsh/Git hooks, minimal `.config/opencode/opencode.jsonc` |
 | macos | platform Zsh/Git hooks, Mac OpenCode config, `Library/KeyBindings/DefaultKeyBinding.dict` |
-| nvim | `.config/nvim/init.lua` |
+| nvim | `.config/nvim/init.lua`, `.config/nvim/nvim-pack-lock.json` |
 | opencode | `.config/opencode/AGENTS.md` |
 | python | `.pylintrc`, `.config/pycodestyle` |
 | ssh | `.ssh/config` |

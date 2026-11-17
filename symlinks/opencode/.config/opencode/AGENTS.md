@@ -1,5 +1,9 @@
 # Personal instructions
 
+## Running commands
+
+- Run commands yourself instead of asking me to run them (for example Stow, `vim.pack`, deploys, reloads). Only hand off what genuinely needs me, such as a login or 2FA.
+
 ## Browser
 
 - When I ask you to use, drive or take over my browser, use the `browse` MCP server (`tools.browse.*`). Do not use the in-app browser (`tools.browser.*`) or load the `browser` skill unless I ask for it by name.

@@ -24,7 +24,10 @@
   delete conflicting files without the user's explicit agreement.
 - Profile application is separate from installation. Dry-run first with
   `scripts/stow-profile.sh <profile>`; `--apply` changes home-directory links.
-  Do not apply profiles, install packages, or change login shells automatically.
+- Run setup commands yourself instead of telling the user to run them: Stow
+  (dry-run, then apply or link), `vim.pack` add/update/del (headless
+  `nvim --headless -c "lua vim.pack.update(nil, { force = true })" -c qa`), and
+  similar. The safety rules above still apply. Do not change login shells.
 - Keep platform setup scripts explicit and opt-in. Native Windows linking is not
   implemented yet; do not assume GNU Stow works on native Windows.
 - Run `scripts/test-config.sh` after changes. Keep the README and profiles in sync.
