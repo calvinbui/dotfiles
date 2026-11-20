@@ -16,6 +16,46 @@
           }
         }
       }
+    },
+    "agentgateway": {
+      "name": "agentgateway",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://agentgateway.{file:~/.config/opencode/secrets/domain}/v1",
+        "apiKey": "{file:~/.config/opencode/secrets/agentgateway-api-key}",
+        // The homeserver runs this model on CPU, so long prompts take minutes before the first token.
+        "headerTimeout": 1800000
+      },
+      "models": {
+        "qwen3.6-35b-a3b-abliterated": {
+          "name": "Qwen3.6 35B Abliterated",
+          "capabilities": {
+            "tools": true,
+            "input": ["text", "image"],
+            "output": ["text"]
+          },
+          "limit": {
+            "context": 65536,
+            "output": 8192
+          }
+        }
+      }
+    }
+  },
+  "agents": {
+    // Keeps title generation off the slow local model.
+    "title": {
+      "model": "anthropic/claude-haiku-5-5"
+    },
+    // A tool-free agent keeps the prompt small enough for CPU-only local models.
+    "chat": {
+      "description": "Plain chat with no tools",
+      "mode": "primary",
+      "model": "agentgateway/qwen3.6-35b-a3b-abliterated",
+      "system": "You are a helpful, direct assistant.",
+      "permissions": [
+        { "action": "*", "resource": "*", "effect": "deny" }
+      ]
     }
   },
   "plugins": [
