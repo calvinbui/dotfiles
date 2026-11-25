@@ -196,8 +196,8 @@ The remaining `scripts/darwin-*.sh` scripts are opt-in (macOS defaults, Touch ID
 sudo, Rosetta, python.org Python, etc.).
 
 `Brewfile` is a snapshot of installed Mac packages.
-`scripts/backup-brewfile.sh` regenerates it, skipping the slow dump unless
-something was installed/uninstalled since.
+`scripts/backup-brewfile.sh` regenerates it, rewriting the file only when the
+contents changed.
 `scripts/install-packages-darwin.sh` installs missing packages without upgrades.
 VS Code extensions are excluded (Settings Sync owns them), as is npm (fnm owns
 Node).
