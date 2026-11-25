@@ -177,6 +177,7 @@ need locally, with restrictive permissions (`chmod 600`):
 - `~/.ssh/config.local`: private `Host` entries, included by `.ssh/config`.
 - `~/.config/opencode/secrets/domain`: domain used in config URLs, no trailing newline.
 - `~/.config/opencode/secrets/actual-mcp-token`.
+- `~/.config/opencode/secrets/agentgateway-api-key`.
 
 The OpenCode secret files above are for the Mac's integrations, not prerequisites
 for the minimal Linux config.
