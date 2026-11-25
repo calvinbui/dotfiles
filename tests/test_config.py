@@ -5,6 +5,7 @@ import json
 import os
 from pathlib import Path
 import platform
+import re
 import shutil
 import subprocess
 import tempfile
@@ -12,6 +13,37 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_jsonc(path):
+    """Parse JSONC: drop comments outside strings, then trailing commas."""
+    text = path.read_text()
+    out = []
+    i, in_string = 0, False
+    while i < len(text):
+        c = text[i]
+        if in_string:
+            out.append(c)
+            if c == "\\":
+                out.append(text[i + 1])
+                i += 1
+            elif c == '"':
+                in_string = False
+        elif c == '"':
+            in_string = True
+            out.append(c)
+        elif text.startswith("//", i):
+            i = text.find("\n", i)
+            if i == -1:
+                break
+            continue
+        elif text.startswith("/*", i):
+            i = text.index("*/", i) + 2
+            continue
+        else:
+            out.append(c)
+        i += 1
+    return json.loads(re.sub(r",(\s*[}\]])", r"\1", "".join(out)))
 
 
 class ConfigTests(unittest.TestCase):
@@ -211,13 +243,9 @@ class ConfigTests(unittest.TestCase):
         self.assertTrue(
             (ROOT / "symlinks/opencode/.config/opencode/AGENTS.md").is_file()
         )
-        linux = json.loads(
-            (ROOT / "symlinks/linux/.config/opencode/opencode.jsonc").read_text()
-        )
+        linux = load_jsonc(ROOT / "symlinks/linux/.config/opencode/opencode.jsonc")
         self.assertEqual(linux, {"$schema": "https://opencode.ai/config.json"})
-        mac = json.loads(
-            (ROOT / "symlinks/macos/.config/opencode/opencode.jsonc").read_text()
-        )
+        mac = load_jsonc(ROOT / "symlinks/macos/.config/opencode/opencode.jsonc")
         browse = mac["mcp"]["servers"]["browse"]
         self.assertTrue(browse["command"][0].startswith("{env:HOME}/"))
         self.assertNotIn("playwright", mac["mcp"]["servers"])

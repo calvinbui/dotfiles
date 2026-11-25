@@ -6,7 +6,7 @@ set -eu
 # free-threaded framework.
 # UPGRADES: bump PY_VERSION here; every machine installs it on its next apply.
 # Choice identifiers per version: installer -pkg python.pkg -showChoicesXML
-PY_VERSION="3.14.6"
+PY_VERSION="3.15.2"
 PY_MINOR="${PY_VERSION%.*}"
 
 INSTALLED="$(/Library/Frameworks/Python.framework/Versions/Current/bin/python3 --version 2>/dev/null | awk '{print $2}' || true)"
