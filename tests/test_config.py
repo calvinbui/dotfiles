@@ -268,11 +268,10 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(browse["command"][0], "{env:USERPROFILE}\\.local\\bin\\browse.exe")
         self.assertEqual(browse["cwd"], "{env:USERPROFILE}")
         self.assertNotRegex(json.dumps(windows), r"[A-Za-z]:\\\\")
-        # Apart from browse's paths, Windows matches Linux, plus servers Linux lacks.
+        # Apart from browse's paths, Windows matches Linux.
         win_servers = windows["mcp"]["servers"]
         linux_servers = linux["mcp"]["servers"]
-        self.assertLessEqual(set(win_servers) - set(linux_servers), {"nextcloud-mcp"})
-        self.assertEqual(set(linux_servers) - set(win_servers), set())
+        self.assertEqual(set(win_servers), set(linux_servers))
         for name in linux_servers:
             win, lin = dict(win_servers[name]), dict(linux_servers[name])
             if name == "browse":

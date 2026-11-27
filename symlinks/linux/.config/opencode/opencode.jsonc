@@ -38,6 +38,14 @@
         },
         "oauth": false
       },
+      "nextcloud-mcp": {
+        "type": "remote",
+        "url": "http://nextcloud-mcp:8000/mcp",
+        "headers": {
+          "Authorization": "Basic {file:~/.config/opencode/secrets/nextcloud-mcp-basic}"
+        },
+        "oauth": false
+      },
       "mattermost": {
         "type": "remote",
         "url": "https://mattermost.{file:~/.config/opencode/secrets/domain}/plugins/mattermost-ai/mcp-server/mcp"
