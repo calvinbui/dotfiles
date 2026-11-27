@@ -283,3 +283,15 @@ contents changed.
 `scripts/install-packages-darwin.sh` installs missing packages without upgrades.
 VS Code extensions are excluded (Settings Sync owns them), as is npm (fnm owns
 Node).
+
+## Windows setup scripts
+
+`scripts/windows-install-tray-icons-task.ps1` is opt-in. It registers a
+scheduled task, "Show all tray icons", that runs
+`scripts/windows-show-tray-icons.ps1` from this checkout every minute. New tray
+icons then show on the taskbar instead of staying hidden behind the `^` menu.
+Rerun it after moving the checkout. To remove it:
+
+```powershell
+Unregister-ScheduledTask -TaskName 'Show all tray icons'
+```
