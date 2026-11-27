@@ -6,6 +6,7 @@
 
 ## Browser
 
+- Always use my browser through the `browse` MCP server (`tools.browse.*`) to read web pages. Do not use `webfetch`.
 - When I ask you to use, drive or take over my browser, use the `browse` MCP server (`tools.browse.*`). Do not use the in-app browser (`tools.browser.*`) or load the `browser` skill unless I ask for it by name.
 
 ## Home Assistant
