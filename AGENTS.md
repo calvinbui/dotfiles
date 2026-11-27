@@ -10,9 +10,10 @@
   `~/.config/git/platform.gitconfig`) and optional local overrides
   (`~/.zshrc.local` and `~/.gitlocal`). Platform packages are mutually exclusive.
 - OpenCode's shared package owns `AGENTS.md`; platform packages own the complete
-  `opencode.jsonc`. Keep Linux minimal unless the user asks to add services.
-  Do not copy Mac providers, MCP servers, browser paths, or secret requirements
-  to Linux automatically. OpenCode reloads configuration after file changes.
+  `opencode.jsonc`. Linux has the same MCP servers as the Mac; `browse` runs
+  `~/.local/bin/browse`, which on WSL links to the Windows `browse.exe`. Do not
+  add other Mac-only providers, browser paths, or secret requirements to Linux
+  without being asked. OpenCode reloads configuration after file changes.
 - Neovim's config (`vim.pack`) needs Neovim 0.12+. Every profile links `nvim`;
   WSL gets a current Neovim from Arch's `neovim` package.
 - Use `$HOME`, not a username, checkout location, or another machine's paths.

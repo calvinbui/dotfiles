@@ -244,7 +244,17 @@ class ConfigTests(unittest.TestCase):
             (ROOT / "symlinks/opencode/.config/opencode/AGENTS.md").is_file()
         )
         linux = load_jsonc(ROOT / "symlinks/linux/.config/opencode/opencode.jsonc")
-        self.assertEqual(linux, {"$schema": "https://opencode.ai/config.json"})
+        self.assertEqual(linux["$schema"], "https://opencode.ai/config.json")
+        self.assertIn("home_assistant_mcp", linux["mcp"]["servers"])
+        self.assertEqual(
+            linux["mcp"]["servers"]["browse"]["command"][0],
+            "{env:HOME}/.local/bin/browse",
+        )
+        self.assertIn(
+            "{file:~/.config/opencode/secrets/domain}",
+            linux["providers"]["anthropic"]["settings"]["baseURL"],
+        )
+        self.assertNotIn("/home/", json.dumps(linux))
         mac = load_jsonc(ROOT / "symlinks/macos/.config/opencode/opencode.jsonc")
         browse = mac["mcp"]["servers"]["browse"]
         self.assertTrue(browse["command"][0].startswith("{env:HOME}/"))

@@ -16,7 +16,7 @@ AGENTS.md   rules for AI-assisted maintenance
 
 - `profiles/macbook`: the existing Mac tools, plus the `macos` package.
 - `profiles/wsl-desktop`: an Arch Linux/WSL baseline, plus the `linux` package.
-  OpenCode uses a minimal Linux config and shared instructions. Neovim uses the
+  OpenCode uses the Linux config (with the MCP servers) and shared instructions. Neovim uses the
   same config as the Mac (Arch's `neovim` is new enough for `vim.pack`).
 
 Profiles are plain text: one package per line, with blank lines and `#` comments
@@ -33,9 +33,10 @@ Git configs load platform hooks, then optional machine-only overrides:
 
 OpenCode shares `~/.config/opencode/AGENTS.md` through the `opencode` package.
 Its complete `opencode.jsonc` belongs to the selected platform package instead:
-Linux starts with only the schema; macOS retains its providers, MCP servers,
-plugins, and skills. Linux does not require the Mac's secrets. Add integrations
-separately when they are wanted on that machine.
+Linux has the default model, the agentgateway Anthropic provider, web search
+and `~/repos/skills`, plus the same MCP servers as macOS. The `browse` server
+runs `~/.local/bin/browse`; on WSL that links to the Windows `browse.exe` (see
+below). Add other integrations separately when they are wanted on that machine.
 
 After pulling this layout on the Mac, dry-run/restow **both** packages to move
 ownership of the OpenCode config from `opencode` to `macos`:
@@ -227,7 +228,7 @@ old links in `~/.oh-my-zsh/custom/` now dangle. History stays in `~/.zsh_history
 | Package | Links |
 |---------|-------|
 | git | `.gitconfig`, `.gitignore_global` |
-| linux | platform Zsh/Git hooks, minimal `.config/opencode/opencode.jsonc`, `.config/pip/pip.conf` (plain `pip install` on Arch) |
+| linux | platform Zsh/Git hooks, Linux `.config/opencode/opencode.jsonc` (with MCP servers), `.config/pip/pip.conf` (plain `pip install` on Arch) |
 | macos | platform Zsh/Git hooks, Mac OpenCode config, `Library/KeyBindings/DefaultKeyBinding.dict` |
 | nvim | `.config/nvim/init.lua`, `.config/nvim/nvim-pack-lock.json` |
 | opencode | `.config/opencode/AGENTS.md` |
@@ -253,11 +254,14 @@ need locally, with restrictive permissions (`chmod 600`):
 - `~/.zshrc.local`: shell overrides; loaded last.
 - `~/.ssh/config.local`: private `Host` entries, included by `.ssh/config`.
 - `~/.config/opencode/secrets/domain`: domain used in config URLs, no trailing newline.
-- `~/.config/opencode/secrets/actual-mcp-token`.
+- `~/.config/opencode/secrets/actual-mcp-token`: the Actual MCP server's bearer
+  token, no trailing newline. It is `mcp_tokens.actual_mcp_server` in the
+  ansible repo's vaulted `group_vars/all/mcp-tokens.yml`.
 - `~/.config/opencode/secrets/agentgateway-api-key`.
 
-The OpenCode secret files above are for the Mac's integrations, not prerequisites
-for the minimal Linux config.
+Both OpenCode configs need `secrets/domain` (for the agentgateway and
+Mattermost URLs), `secrets/actual-mcp-token` (for the Actual MCP server) and a
+clone of the skills repo at `~/repos/skills`.
 
 ## Checks
 
