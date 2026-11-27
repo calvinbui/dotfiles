@@ -1,0 +1,2 @@
+# Linux and WSL read these files directly, even from a Windows checkout.
+* text=auto eol=lf

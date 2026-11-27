@@ -15,9 +15,9 @@ AGENTS.md   rules for AI-assisted maintenance
 ## Choose what each machine shares
 
 - `profiles/macbook`: the existing Mac tools, plus the `macos` package.
-- `profiles/wsl-desktop`: a Debian/WSL baseline, plus the `linux` package.
-  OpenCode uses a minimal Linux config and shared instructions. Neovim is
-  deliberately excluded; leave this machine's existing setup alone.
+- `profiles/wsl-desktop`: an Arch Linux/WSL baseline, plus the `linux` package.
+  OpenCode uses a minimal Linux config and shared instructions. Neovim uses the
+  same config as the Mac (Arch's `neovim` is new enough for `vim.pack`).
 
 Profiles are plain text: one package per line, with blank lines and `#` comments
 allowed. Create another profile when a computer needs a different selection.
@@ -53,12 +53,90 @@ WSL-only files/settings to manage; give it its own hook rather than conflicting
 with Linux files. Native Windows support is not implemented yet: its smaller
 config selection can live in this repo, but may need PowerShell-based linking.
 
+## Set up Arch Linux on WSL
+
+New-computer checklist (replace `NAME`). It assumes Git for Windows is
+installed and this repository is already cloned on Windows.
+
+1. From PowerShell, install Arch. It starts as `root` with no other user:
+
+   ```powershell
+   wsl --install archlinux
+   ```
+
+2. As root, run the opt-in setup script from the Windows checkout:
+
+   ```sh
+   sh /mnt/c/Users/NAME/repos/dotfiles/scripts/wsl-arch-setup.sh NAME
+   ```
+
+   It updates the system, installs the prerequisites below, creates `NAME` in
+   the `wheel` group with passwordless sudo, makes it WSL's default user, sets a
+   UTF-8 locale if none is configured (`LOCALE=...` overrides `en_US.UTF-8`),
+   downloads zimfw, and sets `credential.helper` in `~/.gitlocal` to Git for
+   Windows' Credential Manager (via WSL interop: browser sign-in, credentials
+   shared with Windows, instead of the shared config's plaintext `store`). If
+   Windows has `~/.local/bin/browse.exe`, it links `~/.local/bin/browse` to it
+   so OpenCode's `browse` MCP server drives the Windows browser. It is
+   safe to rerun. It does not link dotfiles or change the login shell.
+
+3. From PowerShell, `wsl --terminate archlinux`, then reopen it as `NAME`.
+
+4. Clone inside WSL (faster than linking from `/mnt/c`). Nothing reads
+   `~/.gitlocal` until `~/.gitconfig` is linked, so pass the helper once;
+   without it Git asks for a username and password:
+
+   ```sh
+   git -c "credential.helper=/mnt/c/Program\ Files/Git/ucrt64/bin/git-credential-manager.exe" \
+     clone https://YOUR-GIT-HOST/NAME/dotfiles.git ~/repos/dotfiles
+   ```
+
+   Do not run `git config --global` before linking: a real `~/.gitconfig`
+   blocks Stow.
+
+5. Check, dry-run, and link (see [Install and link](#install-and-link)):
+
+   ```sh
+   cd ~/repos/dotfiles
+   scripts/test-config.sh
+   scripts/stow-profile.sh wsl-desktop
+   scripts/stow-profile.sh wsl-desktop --apply
+   ```
+
+6. Add your GitHub SSH key. The shared `.gitconfig` fetches GitHub over SSH,
+   so zimfw and `vim.pack` cannot download plugins without it:
+
+   ```sh
+   chmod 600 ~/.ssh/id_ed25519
+   ssh -T git@github.com   # accept the host key once
+   ```
+
+   If the first shell started before this, run `zimfw reinstall`.
+
+7. Import your GPG key (commits are signed), exported on another machine with
+   `gpg --export-secret-keys --armor KEY_ID`, then delete the export:
+
+   ```sh
+   gpg --import key.asc
+   gpg --edit-key KEY_ID   # trust, 5, y, quit
+   git config --file ~/.gitlocal user.signingkey KEY_FINGERPRINT
+   echo test | gpg --clearsign > /dev/null && echo signed-ok
+   ```
+
+8. Optionally switch to Zsh: `chsh -s /usr/bin/zsh`.
+
+`.gitattributes` keeps LF line endings, so the scripts and configs also work
+from a Windows checkout.
+
 ## Install and link
 
 Install prerequisites for your OS:
 
 ```sh
-# Debian / Ubuntu / WSL:
+# Arch Linux / WSL: scripts/wsl-arch-setup.sh (above) installs these, plus
+# less (Git's pager), zoxide, fzf, neovim, gnupg and python-pip.
+
+# Debian / Ubuntu:
 sudo apt update
 sudo apt install stow zsh git curl
 curl -fsSL --create-dirs -o ~/.zim/zimfw.zsh \
@@ -149,7 +227,7 @@ old links in `~/.oh-my-zsh/custom/` now dangle. History stays in `~/.zsh_history
 | Package | Links |
 |---------|-------|
 | git | `.gitconfig`, `.gitignore_global` |
-| linux | platform Zsh/Git hooks, minimal `.config/opencode/opencode.jsonc` |
+| linux | platform Zsh/Git hooks, minimal `.config/opencode/opencode.jsonc`, `.config/pip/pip.conf` (plain `pip install` on Arch) |
 | macos | platform Zsh/Git hooks, Mac OpenCode config, `Library/KeyBindings/DefaultKeyBinding.dict` |
 | nvim | `.config/nvim/init.lua`, `.config/nvim/nvim-pack-lock.json` |
 | opencode | `.config/opencode/AGENTS.md` |
@@ -160,11 +238,10 @@ old links in `~/.oh-my-zsh/custom/` now dangle. History stays in `~/.zsh_history
 
 ### Still to check on Linux/WSL
 
-- Neovim: intentionally left alone and excluded from the WSL profile. The shared
-  config still needs `vim.pack` (Neovim 0.12+); do not migrate it here by default.
 - Git: verify the signing key and credential-storage choice on each machine.
   The existing shared config uses `credential.helper=store` (plaintext on disk);
-  the Mac adds Keychain. Linux credential storage needs a deliberate choice.
+  the Mac adds Keychain. On WSL, `scripts/wsl-arch-setup.sh` switches to Windows'
+  Credential Manager in `~/.gitlocal`; other Linux machines still need a choice.
 - Review work-specific aliases/environment variables separately from OS support.
 
 ## Private settings

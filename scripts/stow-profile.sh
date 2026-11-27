@@ -21,7 +21,7 @@ repo=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
 profile_file="$repo/profiles/$profile"
 [ -f "$profile_file" ] || { echo "Unknown profile: $profile" >&2; exit 1; }
 command -v stow >/dev/null 2>&1 || {
-  echo "GNU Stow is required. Debian/Ubuntu: sudo apt install stow; macOS: brew install stow" >&2
+  echo "GNU Stow is required. Arch: sudo pacman -S stow; Debian/Ubuntu: sudo apt install stow; macOS: brew install stow" >&2
   exit 1
 }
 

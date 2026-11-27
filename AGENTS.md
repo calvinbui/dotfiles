@@ -13,8 +13,8 @@
   `opencode.jsonc`. Keep Linux minimal unless the user asks to add services.
   Do not copy Mac providers, MCP servers, browser paths, or secret requirements
   to Linux automatically. OpenCode reloads configuration after file changes.
-- Neovim is intentionally excluded from the WSL profile. Leave its installed
-  version, config, and existing links alone unless the user asks otherwise.
+- Neovim's config (`vim.pack`) needs Neovim 0.12+. Every profile links `nvim`;
+  WSL gets a current Neovim from Arch's `neovim` package.
 - Use `$HOME`, not a username, checkout location, or another machine's paths.
   Guard optional tools before running them during shell startup.
 - Keep secrets, private hostnames, and machine-specific signing keys out of Git.
@@ -28,6 +28,11 @@
   (dry-run, then apply or link), `vim.pack` add/update/del (headless
   `nvim --headless -c "lua vim.pack.update(nil, { force = true })" -c qa`), and
   similar. The safety rules above still apply. Do not change login shells.
+- New WSL machines follow the README's "Set up Arch Linux on WSL" checklist
+  (`scripts/wsl-arch-setup.sh`). Before linking, nothing reads `~/.gitlocal`, so
+  the first clone passes Git for Windows' Credential Manager with `git -c`;
+  never create a real `~/.gitconfig` to work around this. Keep that checklist
+  current when the setup changes.
 - Keep platform setup scripts explicit and opt-in. Native Windows linking is not
   implemented yet; do not assume GNU Stow works on native Windows.
 - Run `scripts/test-config.sh` after changes. Keep the README and profiles in sync.

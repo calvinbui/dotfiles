@@ -1,9 +1,9 @@
-# Debian/WSL baseline. Add tools here as they are checked on this machine.
+# Arch Linux/WSL baseline. Add tools here as they are checked on this machine.
 git
 linux
+nvim
 opencode
 python
 ssh
 terraform
 zsh
-# nvim: deliberately excluded; leave this machine's Neovim setup alone.
