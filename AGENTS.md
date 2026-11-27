@@ -34,6 +34,8 @@
   the first clone passes Git for Windows' Credential Manager with `git -c`;
   never create a real `~/.gitconfig` to work around this. Keep that checklist
   current when the setup changes.
-- Keep platform setup scripts explicit and opt-in. Native Windows linking is not
-  implemented yet; do not assume GNU Stow works on native Windows.
+- Keep platform setup scripts explicit and opt-in. GNU Stow does not work on
+  native Windows; `scripts/windows-install-opencode.ps1` links or copies the
+  `opencode` and `windows` packages there. Keep the Windows `opencode.jsonc` in
+  step with Linux's.
 - Run `scripts/test-config.sh` after changes. Keep the README and profiles in sync.

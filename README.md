@@ -4,7 +4,7 @@ Shared and machine-specific dotfiles, linked into `~` with
 [GNU Stow](https://www.gnu.org/software/stow/). The checkout can live anywhere.
 
 ```text
-symlinks/   Stow packages: shared tools plus macos/linux platform additions
+symlinks/   Stow packages: shared tools plus macos/linux/windows platform additions
 profiles/   explicit package selections for each machine
 scripts/    opt-in setup and linking scripts (nothing runs automatically)
 tests/      configuration checks, using temporary home directories
@@ -51,8 +51,8 @@ Inspect any conflicts first; the earlier `.gitlocal` migration still applies.
 
 Linux settings also apply to WSL. Add a `wsl` package only when there are actual
 WSL-only files/settings to manage; give it its own hook rather than conflicting
-with Linux files. Native Windows support is not implemented yet: its smaller
-config selection can live in this repo, but may need PowerShell-based linking.
+with Linux files. Native Windows has no Stow; its `windows` package is installed
+by a PowerShell script instead (see [Windows setup scripts](#windows-setup-scripts)).
 
 ## Set up Arch Linux on WSL
 
@@ -235,6 +235,7 @@ old links in `~/.oh-my-zsh/custom/` now dangle. History stays in `~/.zsh_history
 | python | `.pylintrc`, `.config/pycodestyle` |
 | ssh | `.ssh/config` |
 | terraform | `.terraformrc` |
+| windows | native Windows `.config/opencode/opencode.jsonc`; not Stow, see [Windows setup scripts](#windows-setup-scripts) |
 | zsh | `.zshrc`, `.zimrc`, `.p10k.zsh`, `.config/zsh/*.zsh` |
 
 ### Still to check on Linux/WSL
@@ -258,6 +259,8 @@ need locally, with restrictive permissions (`chmod 600`):
   token, no trailing newline. It is `mcp_tokens.actual_mcp_server` in the
   ansible repo's vaulted `group_vars/all/mcp-tokens.yml`.
 - `~/.config/opencode/secrets/agentgateway-api-key`.
+- `~/.config/opencode/secrets/nextcloud-mcp-basic`: the Nextcloud MCP server's
+  Basic auth credentials, no trailing newline (used by the Windows config).
 
 Both OpenCode configs need `secrets/domain` (for the agentgateway and
 Mattermost URLs), `secrets/actual-mcp-token` (for the Actual MCP server) and a
@@ -295,3 +298,25 @@ Rerun it after moving the checkout. To remove it:
 ```powershell
 Unregister-ScheduledTask -TaskName 'Show all tray icons'
 ```
+
+`scripts/windows-install-opencode.ps1` installs OpenCode's config on native
+Windows, where there is no Stow: the `windows` package's `opencode.jsonc` and
+the shared `opencode` package's `AGENTS.md`, into `~\.config\opencode\`. Like
+`stow-profile.sh`, it only shows what it would do unless you pass `-Apply`:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\windows-install-opencode.ps1
+powershell -ExecutionPolicy Bypass -File scripts\windows-install-opencode.ps1 -Apply
+```
+
+With Developer Mode on (or in an elevated shell) it links the files into this
+checkout. Otherwise it copies them, so rerun it after pulling or editing the
+repo; edit the repo files, not the copies. It is safe to rerun, and renames
+anything it replaces to `NAME.bak-TIMESTAMP` first. It never touches
+`secrets\`; it only warns about missing secret files. OpenCode merges
+`opencode.json` with `opencode.jsonc`, so the script also warns about a
+leftover `opencode.json`.
+
+The Windows config matches Linux except for the `browse` paths
+(`{env:USERPROFILE}\.local\bin\browse.exe`) and any servers Linux does not have
+yet; `scripts/test-config.sh` checks this. Change both when editing either.

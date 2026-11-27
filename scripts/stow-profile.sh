@@ -37,7 +37,7 @@ while IFS= read -r package || [ -n "$package" ]; do
   }
   case "$package:$(uname -s)" in
     macos:Darwin|linux:Linux) ;;
-    macos:*|linux:*) echo "Package $package does not match this OS." >&2; exit 1 ;;
+    macos:*|linux:*|windows:*) echo "Package $package does not match this OS." >&2; exit 1 ;;
   esac
   set -- "$@" "$package"
 done < "$profile_file"

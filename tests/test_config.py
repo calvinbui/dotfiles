@@ -91,6 +91,8 @@ class ConfigTests(unittest.TestCase):
             self.assertTrue(packages, profile.name)
             self.assertEqual(len(packages), len(set(packages)), profile.name)
             self.assertFalse({"macos", "linux"} <= set(packages), profile.name)
+            # Native Windows has no Stow; windows-install-opencode.ps1 installs it.
+            self.assertNotIn("windows", packages, profile.name)
             for name in packages:
                 package = ROOT / "symlinks" / name
                 self.assertTrue(package.is_dir(), name)
@@ -261,6 +263,66 @@ class ConfigTests(unittest.TestCase):
         self.assertNotIn("playwright", mac["mcp"]["servers"])
         self.assertNotIn("/Users/", json.dumps(mac))
         self.assertIn("home_assistant_mcp", mac["mcp"]["servers"])
+        windows = load_jsonc(ROOT / "symlinks/windows/.config/opencode/opencode.jsonc")
+        browse = windows["mcp"]["servers"]["browse"]
+        self.assertEqual(browse["command"][0], "{env:USERPROFILE}\\.local\\bin\\browse.exe")
+        self.assertEqual(browse["cwd"], "{env:USERPROFILE}")
+        self.assertNotRegex(json.dumps(windows), r"[A-Za-z]:\\\\")
+        # Apart from browse's paths, Windows matches Linux, plus servers Linux lacks.
+        win_servers = windows["mcp"]["servers"]
+        linux_servers = linux["mcp"]["servers"]
+        self.assertLessEqual(set(win_servers) - set(linux_servers), {"nextcloud-mcp"})
+        self.assertEqual(set(linux_servers) - set(win_servers), set())
+        for name in linux_servers:
+            win, lin = dict(win_servers[name]), dict(linux_servers[name])
+            if name == "browse":
+                for key in ("command", "cwd"):
+                    win.pop(key), lin.pop(key)
+            self.assertEqual(win, lin, name)
+        self.assertEqual(
+            {k: v for k, v in windows.items() if k != "mcp"},
+            {k: v for k, v in linux.items() if k != "mcp"},
+        )
+
+    def test_no_opencode_secrets_in_packages(self):
+        for path in (ROOT / "symlinks").rglob("*"):
+            self.assertNotIn("secrets", path.relative_to(ROOT).parts, path)
+            self.assertNotEqual(path.name, "service.json", path)
+        self.run_command(
+            "git", "-C", str(ROOT), "check-ignore",
+            "symlinks/windows/.config/opencode/secrets/domain",
+            "symlinks/windows/.config/opencode/service.json",
+        )
+
+    @unittest.skipUnless(
+        platform.system() == "Windows" and shutil.which("powershell"),
+        "Windows PowerShell is not available",
+    )
+    def test_windows_opencode_installer(self):
+        script = str(ROOT / "scripts/windows-install-opencode.ps1")
+        config = self.home / ".config/opencode"
+        (config / "secrets").mkdir(parents=True)
+        (config / "secrets/domain").write_text("example.test")
+        (config / "AGENTS.md").write_text("# old\n")
+
+        def install(*args):
+            return self.run_command(
+                "powershell", "-NoProfile", "-ExecutionPolicy", "Bypass",
+                "-File", script, "-Target", str(self.home), *args,
+            ).stdout
+
+        install()  # dry run
+        self.assertEqual((config / "AGENTS.md").read_text(), "# old\n")
+        self.assertFalse((config / "opencode.jsonc").exists())
+        install("-Apply")
+        output = install("-Apply")
+        self.assertEqual(output.count("up to date:"), 2, output)
+        backups = [path.read_text() for path in config.glob("AGENTS.md.bak-*")]
+        self.assertEqual(backups, ["# old\n"])
+        for package, name in (("opencode", "AGENTS.md"), ("windows", "opencode.jsonc")):
+            source = ROOT / "symlinks" / package / ".config/opencode" / name
+            self.assertEqual((config / name).read_bytes(), source.read_bytes())
+        self.assertEqual([path.name for path in (config / "secrets").iterdir()], ["domain"])
 
     @unittest.skipUnless(shutil.which("ssh"), "OpenSSH is not installed")
     def test_ssh_defaults_and_local_overrides(self):

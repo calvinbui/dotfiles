@@ -1,1 +1,4 @@
 .DS_Store
+# Secrets and the service password stay manual on each machine.
+**/.config/opencode/secrets/
+**/.config/opencode/service.json

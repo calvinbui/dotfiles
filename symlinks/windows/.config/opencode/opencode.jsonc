@@ -1,0 +1,74 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "anthropic/claude-opus-5-5",
+  "websearch": {
+    "provider": "native"
+  },
+  "providers": {
+    "anthropic": {
+      "settings": {
+        "baseURL": "https://agentgateway.{file:~/.config/opencode/secrets/domain}/v1"
+      },
+      "models": {
+        "claude-haiku-4-5-20251001": {
+          "settings": {
+            "websearch": "always"
+          }
+        }
+      }
+    }
+  },
+  "plugins": [
+    "opencode-websearch"
+  ],
+  "skills": [
+    "~/repos/skills"
+  ],
+  "mcp": {
+    "servers": {
+      "home_assistant_mcp": {
+        "type": "remote",
+        "url": "http://home-assistant-mcp:8086/mcp"
+      },
+      "actual-mcp-server": {
+        "type": "remote",
+        "url": "http://actual-mcp-server:3600/http",
+        "headers": {
+          "Authorization": "Bearer {file:~/.config/opencode/secrets/actual-mcp-token}"
+        },
+        "oauth": false
+      },
+      "nextcloud-mcp": {
+        "type": "remote",
+        "url": "http://nextcloud-mcp:8000/mcp",
+        "headers": {
+          "Authorization": "Basic {file:~/.config/opencode/secrets/nextcloud-mcp-basic}"
+        },
+        "oauth": false
+      },
+      "mattermost": {
+        "type": "remote",
+        "url": "https://mattermost.{file:~/.config/opencode/secrets/domain}/plugins/mattermost-ai/mcp-server/mcp"
+      },
+      "fastmail": {
+        "type": "remote",
+        "url": "https://api.fastmail.com/mcp",
+        "oauth": {
+          "auth_server_metadata_url": "https://api.fastmail.com/.well-known/oauth-authorization-server"
+        }
+      },
+      "browse": {
+        "type": "local",
+        "command": [
+          "{env:USERPROFILE}\\.local\\bin\\browse.exe",
+          "mcp"
+        ],
+        "cwd": "{env:USERPROFILE}",
+        "pool": true,
+        "environment": {
+          "OPENCODE_BROWSER_RUNTIME": "auto-update"
+        }
+      }
+    }
+  }
+}
