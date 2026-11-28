@@ -46,6 +46,14 @@
         },
         "oauth": false
       },
+      "obsidian-mcp": {
+        "type": "remote",
+        "url": "http://obsidian-mcp:8000/mcp",
+        "headers": {
+          "Authorization": "Bearer {file:~/.config/opencode/secrets/obsidian-mcp-token}"
+        },
+        "oauth": false
+      },
       "mattermost": {
         "type": "remote",
         "url": "https://mattermost.{file:~/.config/opencode/secrets/domain}/plugins/mattermost-ai/mcp-server/mcp"

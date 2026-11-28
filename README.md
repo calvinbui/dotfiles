@@ -262,10 +262,14 @@ need locally, with restrictive permissions (`chmod 600`):
 - `~/.config/opencode/secrets/nextcloud-mcp-basic`: the Nextcloud MCP server's
   Basic auth credentials (base64 of `username:app-password`), no trailing
   newline.
+- `~/.config/opencode/secrets/obsidian-mcp-token`: the Obsidian MCP server's
+  bearer token, no trailing newline. It is `mcp_tokens.obsidian_mcp` in the
+  ansible repo's vaulted `group_vars/all/mcp-tokens.yml`.
 
 All OpenCode configs need `secrets/domain` (for the agentgateway and
 Mattermost URLs), `secrets/actual-mcp-token` (for the Actual MCP server),
-`secrets/nextcloud-mcp-basic` (for the Nextcloud MCP server) and a clone of the
+`secrets/nextcloud-mcp-basic` (for the Nextcloud MCP server),
+`secrets/obsidian-mcp-token` (for the Obsidian MCP server) and a clone of the
 skills repo at `~/repos/skills`.
 
 ## Checks
